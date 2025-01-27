@@ -64,23 +64,46 @@ a {
 /*/////////////////////
 *Les composants 
 ///////////////////////*/
+/*-------------------------------------------------------- .menu */
 .menu {
-  background-color: #aaa;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 10px 0;
 }
-.menu ul {
-  margin: 0;
-  padding: 0;
-}
-.menu ul li {
-  display: inline-block;
-}
-.menu ul li a {
-  color: #333;
+.menu__li a {
   text-decoration: none;
+  padding: 4px;
+}
+
+/*-------------------------------------------------------- .recherche */
+.recherche {
+  display: flex;
+  height: 1.6rem;
+  width: 14rem;
+  border: 1px solid #000;
+}
+.recherche__input {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.01);
+  flex: 1 0 auto;
+  padding: 3px;
+}
+.recherche__input:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.recherche__input::placeholder {
+  color: rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+.recherche__img {
+  flex: 0 0 20px;
+  padding: 3px;
 }
 
 /*//////////////////////
-*Les composants 
+*Les layouts
 ///////////////////////*/
 .global {
   max-width: 1100px;
@@ -90,6 +113,12 @@ a {
 .entete {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.entete__navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero {
