@@ -2,7 +2,6 @@
 .recherche{
     display: flex;
     height: 1.6rem;
-    width: 14rem;
     border: 1px solid #000;
 // Le & prend la valeur du sélecteur parent
     &__input{
@@ -11,6 +10,7 @@
         background-color: rgba(0,0,0,0.01);
         flex: 1 0 auto;
         padding: 3px;
+        width: 100%;
         &:hover{
             background-color:  rgba(0,0,0,0.05);
         }
@@ -23,5 +23,12 @@
     &__img{
         flex: 0 0 20px;
         padding: 3px;
+        position: relative;
+        left: -27px;
+    }
+
+    //Request média
+    @media screen and (max-width: 800px){
+        display: none;
     }
 }

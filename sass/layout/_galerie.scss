@@ -1,3 +1,4 @@
+/*-------------------------------------------------------- .galerie */
 .galerie{
     &__contenu{
         display: grid;
@@ -5,6 +6,10 @@
         grid-template-rows: 1fr 1fr;
         grid-gap: 10px;
         width: auto;
+        @media screen and (max-width: 800px){
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
     }
 
     &__figure{
