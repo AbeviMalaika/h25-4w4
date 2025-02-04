@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px 40px;
     &__navigation{
         @media screen and (max-width: 800px){
             position: absolute;
@@ -19,5 +20,13 @@
 
         display: flex;
         align-items: center;
+    }
+
+    &__logo{
+        margin: 0;
+        width: 5vw;
+        img{
+            width: 100%;
+        }
     }
 }

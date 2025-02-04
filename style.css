@@ -129,19 +129,26 @@ a {
 .formulaire__input, .formulaire__inscription {
   width: 100%;
 }
+.formulaire__information {
+  margin: 0;
+}
 
 /*//////////////////////
 *Les layouts
 ///////////////////////*/
 .global {
-  max-width: 1100px;
   padding: 10vh 5vw;
+}
+
+body {
+  background-color: #fff9f9;
 }
 
 .entete {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 20px 40px;
 }
 .entete__navigation {
   width: auto;
@@ -162,6 +169,13 @@ a {
     width: 100vw;
   }
 }
+.entete__logo {
+  margin: 0;
+  width: 5vw;
+}
+.entete__logo img {
+  width: 100%;
+}
 
 .galerie__contenu {
   display: grid;
@@ -169,7 +183,6 @@ a {
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
   width: auto;
-  background-color: aqua;
 }
 .galerie__figure {
   padding: 0;
