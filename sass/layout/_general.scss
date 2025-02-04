@@ -1,4 +1,9 @@
+/*-------------------------------------------------------- Généralités */
 .global{
-    max-width: 1100px;
+    // max-width: 1100px;
     padding: 10vh 5vw;
+}
+
+body{
+    background-color: $couleur__principale;
 }

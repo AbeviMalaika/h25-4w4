@@ -1,16 +1,28 @@
 /*-------------------------------------------------------- .menu */
 .menu { //ul
   display: flex;
-  @media screen and (max-width: 800px){
-    flex-direction: column;
-  }
+  margin: 0;
+  padding: 0;
   flex-direction: row;
   list-style-type: none;
-  gap: 10px 0;
+  gap: 1vw;
+  //Request média
+  @media screen and (max-width: 800px){
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
   &__li{ // li
     a{ // a
       text-decoration: none;
       padding: 4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      font-size: clamp(0.6rem, 0.3137rem + 0.5719vw, 1rem);
+      @media screen and (max-width: 800px){
+        font-size: 1rem;
+      }
     }
   }
 }

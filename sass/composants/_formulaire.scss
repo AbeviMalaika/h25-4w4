@@ -1,3 +1,4 @@
+/*-------------------------------------------------------- .formulaire */
 .formulaire{
   display: flex;
   justify-content: center;
@@ -5,13 +6,20 @@
   top: -30px;
   &__contenu{
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
     justify-content: center;
     padding: 20px;
     gap: 20px;
-    width: 50vw;
-    background-color: #fff9f9;
+    // width: 50vw;
+    background-color: $couleur__principale;
     box-shadow: 0px 4px 6px #aaa;
+    min-width: 655px;
+    max-width: 60vw;
+    @media screen and (max-width: 800px){
+      flex-direction: column;
+      min-width: 350px;
+    }
   }
 
   &__case{
@@ -19,6 +27,19 @@
   }
 
   &__input, &__inscription{
+    box-sizing: border-box;
     width: 100%;
+    border: 1px solid $couleur__tertiaire;
+    padding: 7px;
+  }
+
+  &__inscription{
+    color: $couleur__secondaire;
+    background-color: $couleur__principale;
+    text-transform: uppercase;
+  }
+
+  &__information{
+    margin: 0;
   }
 }

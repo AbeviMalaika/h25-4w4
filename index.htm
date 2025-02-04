@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Prototype - page d'accueil</title>
 </head>
 <body>
@@ -13,6 +14,12 @@
             <figure class="entete__logo">
                 <img src="images/logo_luxe_voyage.png" alt=""> 
             </figure>
+            <input type="checkbox" id="checkboxburger" aria-label="checkbox" />
+            <label for="checkboxburger">
+              <div class="trait"></div>
+              <div class="trait"></div>
+              <div class="trait"></div>
+            </label>
             <div class="entete__navigation">
                 <nav class="entete__menu">
                     <ul class="menu">
@@ -58,9 +65,11 @@
 
     <section class="hero">
         <div class="hero__contenu global">
-            <h1 class="hero__titre">Voyagez Autrement avec Luxe Voyage</h1>
+            <h1 class="hero__titre">Voyagez Autrement avec LUXE VOYAGES</h1>
             <p class="hero__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident sed enim, neque adipisci ipsa sunt, vitae magnam delectus doloremque maxime itaque optio rem saepe iusto? Architecto suscipit molestias nemo facilis!
+                Plus qu'un voyage, une expérience transformatrice. Notre équipe d'experts est à votre disposition pour organiser un voyage personnalisé selon vos envies. 
+                Explorez le monde avec élégance et raffinement. Découvrez des destinations uniques et des expériences authentiques.
+                Laissez-nous vous guider vers des souvenirs précieux et des moments inoubliables.
             </p>
             <p class="hero__courriel">
                 <a href="#">info@cmaisonneuve.qc.ca</a>
@@ -83,22 +92,22 @@
             <form class="formulaire__contenu">
                 <div class="formulaire__case">
                     <p class="formulaire__information">Nom</p>
-                    <input type="text" class="formulaire__input">  
+                    <input type="text" class="formulaire__input" placeholder="Écrivez votre nom">  
                 </div>
     
                 <div class="formulaire__case">            
                     <p class="formulaire__information">Prénom</p>
-                    <input type="text" class="formulaire__input">
+                    <input type="text" class="formulaire__input" placeholder="Écrivez votre prénom">
                 </div>
     
                 <div class="formulaire__case">            
                     <p class="formulaire__information">Courriel</p>
-                    <input type="text" class="formulaire__input">
+                    <input type="text" class="formulaire__input" placeholder="Écrivez votre courriel">
                 </div>
     
                 <div class="formulaire__case">            
                     <p class="formulaire__information">Téléphone</p>
-                    <input type="text" class="formulaire__input">
+                    <input type="text" class="formulaire__input" placeholder="Écrivez votre téléphone">
                 </div>
     
                 <div class="formulaire__case">            
@@ -107,8 +116,8 @@
             </form>
         </div>
 
-        <div class="galerie"> <!-- global -->
-            <h3>Nos destinations favorites !</h3>
+        <div class="galerie global"> <!-- global -->
+            <h4 class="galerie__titre">Nos destinations favorites !</h4>
             <div class="galerie__contenu">
                 <figure class="galerie__figure">
                     <img src="images/emirats_galerie.jpg" alt="Émirats arabes unis" class="galerie__img">
