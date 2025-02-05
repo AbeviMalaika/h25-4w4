@@ -1,31 +1,47 @@
 /*-------------------------------------------------------- .hero */
-.hero{
+.hero {
     background-image: url("images/maldives.jpg");
     min-height: 100vh;
     background-size: cover;
-    &__titre{
+
+    &__titre {
         font-family: Arial, Helvetica, sans-serif;
         color: $couleur__principale;
         text-shadow: 3px 3px 4px $couleur__secondaire;
     }
-    &__contenu{
-        max-width: 1000px;
+
+    &__contenu {
+        max-width: 1500px;
     }
-    &__icone{
+
+    &__icone {
         padding: 20px 0;
     }
-    &__inscription{
+
+    &__description {
+        max-width: 700px;
+    }
+
+    &__courriel a{
+        text-decoration: none;
+    }
+
+    &__description, 
+    &__courriel,
+    &__adresse,
+    &__telephone {
+        // font-size: 1.2rem;
+        font-size: clamp(1rem, 0.8568rem + 0.286vw, 1.2rem);
+        font-weight: bold;
+    }
+    
+    &__bntinscription {
         box-sizing: border-box;
         background-color: $couleur__tertiaire;
         border: 1px solid $couleur__principale;
         border-radius: 3px;
         color: white;
-        padding: 7px;
+        padding: 7px 20px;
         text-transform: uppercase;
-    }
-    p{
-        font-size: 1.2rem;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: bold;
     }
 }

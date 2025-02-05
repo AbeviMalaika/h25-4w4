@@ -1,34 +1,43 @@
 /*-------------------------------------------------------- .recherche */
-.recherche{
+.recherche {
     display: flex;
     height: 1.6rem;
     border: 1px solid #000;
-// Le & prend la valeur du sélecteur parent
-    &__input{
+
+    // Le & prend la valeur du sélecteur parent
+    &__input {
         border: none;
         outline: none;
-        background-color: rgba(0,0,0,0.01);
+        background-color: rgba(0, 0, 0, 0.01);
         flex: 1 0 auto;
         padding: 3px;
         width: 100%;
-        &:hover{
-            background-color:  rgba(0,0,0,0.05);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
         }
-        &::placeholder{
-            color: rgba(0,0,0,0.1);
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.1);
             font-style: italic;
         }
     }
 
-    &__img{
+    &__img {
         flex: 0 0 20px;
         padding: 3px;
         position: relative;
         left: -27px;
     }
 
-    //Request média
-    @media screen and (max-width: 800px){
+    &__input::placeholder
+    {
+        font-style: normal;
+        color: #888;
+    }
+
+    //Requête média
+    @media screen and (max-width: 800px) {
         display: none;
     }
 }
