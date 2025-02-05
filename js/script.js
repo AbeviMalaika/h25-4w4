@@ -1,7 +1,7 @@
 let checkbox = document.getElementById("checkboxburger");
 let body = document.querySelector("body");
 let menu = document.getElementsByClassName("entete__navigation")[0];
-
+let entreeMobile = true;
 checkbox.addEventListener("click", gererCheckbox);
 setInterval(verificationEtatMenu, 1000/60);
 
@@ -13,14 +13,10 @@ function gererCheckbox() {
       {
         //-afficher menu
         menu.style.transform = "translateX(0)";
-        //-arreter scroll
-        body.style.overflow = "hidden";
       }   
       //sinon 
       else
       {
-        //-autoriser scroll
-        body.style.overflow = "scroll";
         //-cacher menu
         menu.style.transform = "translateX(-100%)";
       }
@@ -35,8 +31,6 @@ function gererCheckbox() {
       {
         //- cacher menu
         menu.style.transform = "translateX(-100%)";
-        //- arreter le scroll
-        body.style.overflow = "scroll";
         //- decocher la checkbox (pour faire revenir le burger)
         checkbox.checked = false; 
       }
@@ -44,10 +38,15 @@ function gererCheckbox() {
 } 
 
 // Fonction pour vérifier si le viewport est à un format Desktop pour ramener 
-// le menu en place
+// le menu en place et de même pour la version mobile 
 function verificationEtatMenu(){
   if(Math.max(document.documentElement.clientWidth) >= 800){
     checkbox.checked = true;
     menu.style.transform = "translateX(0)";
+    entreeMobile = false;
+  } else if (!entreeMobile){
+    checkbox.checked = false;
+    menu.style.transform = "translateX(-100%)";
+    entreeMobile = true;
   }
 }
