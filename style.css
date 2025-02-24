@@ -88,7 +88,7 @@ a:hover {
     gap: 20px;
   }
 }
-.menu__li a {
+.menu-item a {
   text-decoration: none;
   padding: 4px;
   text-transform: uppercase;
@@ -96,7 +96,7 @@ a:hover {
   font-size: clamp(0.6rem, 0.3137rem + 0.5719vw, 1rem);
 }
 @media screen and (max-width: 800px) {
-  .menu__li a {
+  .menu-item a {
     font-size: 1rem;
   }
 }
@@ -185,6 +185,20 @@ a:hover {
   margin: 0;
 }
 
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carte--grande {
+  flex: 1 1 250px;
+}
+.carte__image img {
+  width: 100%;
+}
+.carte__contenu {
+  background-color: aliceblue;
+}
 /*//////////////////////
 *Les layouts
 ///////////////////////*/
@@ -362,4 +376,35 @@ body {
   color: white;
   padding: 7px 20px;
   text-transform: uppercase;
+}
+
+/*
+ ---------------------------------------------------------Layout du pied de page
+*/
+footer {
+  background-color: goldenrod;
+  color: black;
+}
+
+.piedpage {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.piedpage__s1__externe {
+  flex: 0 0 20%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1__adresse {
+  flex: 0 0 40%;
+}
+.piedpage__s1__description {
+  flex: 1;
 }/*# sourceMappingURL=style.css.map */

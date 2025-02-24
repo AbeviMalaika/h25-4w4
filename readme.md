@@ -1,6 +1,5 @@
-# Exercice #1
-## Concevoir une page d'accueil en HTML/CSS à partir d'une maquette 
+# TP1: Club de voyage
+## La réalisation d'un thème WordPress et déploiment sur un serveur distant. 
 ### Auteur: Malaïka Abevi
-La réalisation de ce prototype représente une première étape pour la conception d'un thème Wordpress.
-
+#### Lien vers le site sur le serveur distant WHC : https://gftnth00.mywhc.ca/4w4_09
 #### Github-page : https://abevimalaika.github.io/h25-4w4/
