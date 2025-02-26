@@ -189,9 +189,13 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 3px 20px 0px;
 }
 .carte--grande {
-  flex: 1 1 250px;
+  width: 40vw;
 }
 .carte__image img {
   width: 100%;
@@ -199,12 +203,18 @@ a:hover {
 .carte__contenu {
   background-color: aliceblue;
 }
+/*-------------------------------------------------------- .galerie */
 /*//////////////////////
 *Les layouts
 ///////////////////////*/
 /*-------------------------------------------------------- Généralités */
 .global {
   padding: 10vh 5vw;
+}
+
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body {
@@ -253,6 +263,7 @@ body {
 }
 .entete__logo img {
   width: 100%;
+  height: 100%;
 }
 .entete__menu {
   padding-right: 20px;
@@ -315,30 +326,6 @@ body {
   #checkboxburger ~ .entete__burger {
     display: none;
   }
-}
-
-/*-------------------------------------------------------- .galerie */
-.galerie__contenu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
-  width: auto;
-}
-@media screen and (max-width: 800px) {
-  .galerie__contenu {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  }
-}
-.galerie__figure {
-  padding: 0;
-  margin: 0;
-}
-.galerie__figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /*-------------------------------------------------------- .hero */

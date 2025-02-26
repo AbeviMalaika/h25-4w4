@@ -2,9 +2,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 3px 20px 0px;
 
     &--grande{
-        flex: 1 1 250px;
+        // flex: 1 1 250px;
+        width: 40vw;
     }
 
     &__image{

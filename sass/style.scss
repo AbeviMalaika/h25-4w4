@@ -39,12 +39,12 @@ Fichier principal de la structure Sass*/
 @import "composants/recherche";
 @import "composants/formulaire";
 @import "composants/carte";
+@import "composants/galerie";
 
 /*//////////////////////
 *Les layouts
 ///////////////////////*/
 @import "layout/general";
 @import "layout/entete";
-@import "layout/galerie";
 @import "layout/hero";
 @import "layout/footer";
