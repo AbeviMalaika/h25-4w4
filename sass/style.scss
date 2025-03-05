@@ -25,6 +25,7 @@ Fichier principal de la structure Sass*/
 *Les variables 
 ///////////////////////*/
 @import "variables/couleurs";
+@import "variables/polices";
 
 /*/////////////////////
 *Les balises de base 
@@ -47,4 +48,5 @@ Fichier principal de la structure Sass*/
 @import "layout/general";
 @import "layout/entete";
 @import "layout/hero";
-@import "layout/footer";
+@import "layout/pied-de-page";
+@import "layout/populaire";

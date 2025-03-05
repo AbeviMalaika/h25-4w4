@@ -4,11 +4,25 @@
     padding: 10vh 5vw;
 }
 
+.populaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .populaire .global{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-body{
-    background-color: $couleur__principale;
+header{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    background-color: #4979bd;
+    justify-content: center;
 }

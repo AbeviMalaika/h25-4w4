@@ -1,17 +1,15 @@
 <?php get_header(); ?>
 <section class="hero">
         <div class="hero__contenu global">
-            <h1 class="hero__titre">Voyagez Autrement avec Luxe Voyages !</h1>
+            <h1 class="hero__titre"><?= bloginfo('name')  ?></h1>
             <p class="hero__description">
-                Plus qu'un voyage, une expérience transformatrice. Notre équipe d'experts est à votre disposition pour organiser un voyage personnalisé selon vos envies.
-                Explorez le monde avec élégance et raffinement. Découvrez des destinations uniques et des expériences authentiques.
-                Laissez-nous vous guider vers des souvenirs précieux et des moments inoubliables.
+            <?= bloginfo('description')  ?>
             </p>
             <p class="hero__auteur">
                 Malaïka Abevi
             </p>
             <p class="hero__courriel">
-                <a href="#">info@cmaisonneuve.qc.ca</a>
+                <a href="#"> <?= bloginfo('admin_email')  ?></a>
             </p>
             <p class="hero__adresse">
                 3800, rue Sherbrooke Est - Montréal (Québec) H1X 2A2
@@ -64,14 +62,16 @@
             <?php if (have_posts()) : while (have_posts()) : the_post();
             if (in_category("galerie")) {
                 the_content();
-            } else { ?>
-            <?php get_template_part('gabarits/carte'); ?>
-            <?php } ?>
-            <?php endwhile;  endif; ?>
+            ?> 
+            <div class="populaire__articles">
+                <?php } else { ?>
+                <?php get_template_part('gabarits/carte'); ?>
+                <?php } ?>
+                <?php endwhile;  endif; ?>
+            </div>
         </div>
     </section>
 
-    <footer></footer>
     <?php get_footer() ?>
 </body>
 </html>

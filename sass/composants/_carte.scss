@@ -5,11 +5,13 @@
     background-color: white;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 2px 3px 20px 0px;
+    box-shadow: 2px 3px 20px 0px $couleur__gris--pale;
 
     &--grande{
         // flex: 1 1 250px;
+        margin: 20px;
         width: 40vw;
+        max-width: 550px;
     }
 
     &__image{
@@ -19,7 +21,7 @@
     }
 
     &__contenu{
-        background-color: aliceblue;
+
     }
 
     &__titre{
@@ -31,6 +33,10 @@
     }
 
     &__bouton{
+        background-color: $couleur__secondaire--pale;
+        padding: 7px;
+        border-radius: 10px;
+        color: white;
         &--actif{
 
         }

@@ -21,6 +21,11 @@ Fichier principal de la structure Sass*/
 /*/////////////////////
 *Les variables 
 ///////////////////////*/
+/*-------------------------------------------------------- Variables pour les couleurs */
+/*-------------------------------------------------------- Variables pour les polices */
+/*--------------------------------------------------Familles de police*/
+/*--------------------------------------------------Tailles de police*/
+/*--------------------------------------------------Graisses de police*/
 /*/////////////////////
 *Les balises de base 
 ///////////////////////*/
@@ -28,14 +33,17 @@ Fichier principal de la structure Sass*/
 body {
   font-size: 16px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #fff9f9;
 }
 
 h1 {
   font-size: clamp(2rem, 3vw, 5rem);
+  font-family: "Quattrocento", serif;
 }
 
 h2 {
   font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-family: "Quattrocento", serif;
 }
 
 h3 {
@@ -44,6 +52,7 @@ h3 {
 
 h4 {
   font-size: clamp(0.9rem, 2vw, 1.5rem);
+  font-family: "Quattrocento", serif;
 }
 
 h5 {
@@ -56,6 +65,11 @@ h6 {
 
 p {
   font-size: clamp(0.5rem, 1.7vw, 1rem);
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-family: "Montserrat", sans-serif;
 }
 
 /*--------------------------------------------- Règles de base pour les liens */
@@ -106,6 +120,7 @@ a:hover {
   display: flex;
   height: 1.6rem;
   border: 1px solid #000;
+  padding: 5px;
 }
 .recherche__input {
   border: none;
@@ -125,12 +140,17 @@ a:hover {
 .recherche__img {
   flex: 0 0 20px;
   padding: 3px;
-  position: relative;
-  left: -27px;
 }
 .recherche__input::placeholder {
   font-style: normal;
   color: #888;
+}
+.recherche__bouton {
+  position: relative;
+  left: -28px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
 }
 @media screen and (max-width: 800px) {
   .recherche {
@@ -192,16 +212,21 @@ a:hover {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 2px 3px 20px 0px;
+  box-shadow: 2px 3px 20px 0px #ddd;
 }
 .carte--grande {
+  margin: 20px;
   width: 40vw;
+  max-width: 550px;
 }
 .carte__image img {
   width: 100%;
 }
-.carte__contenu {
-  background-color: aliceblue;
+.carte__bouton {
+  background-color: #4979bd;
+  padding: 7px;
+  border-radius: 10px;
+  color: white;
 }
 /*-------------------------------------------------------- .galerie */
 /*//////////////////////
@@ -212,13 +237,27 @@ a:hover {
   padding: 10vh 5vw;
 }
 
+.populaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .populaire .global {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-body {
-  background-color: #fff9f9;
+header {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  background-color: #4979bd;
+  justify-content: center;
 }
 
 /*-------------------------------------------------------- .entete */
@@ -228,6 +267,7 @@ body {
   align-items: center;
   margin: 20px 40px;
   gap: 30px;
+  max-width: 2300px;
   /*menu burger(traits)*/
 }
 .entete__navigation {
@@ -365,33 +405,49 @@ body {
   text-transform: uppercase;
 }
 
-/*
- ---------------------------------------------------------Layout du pied de page
-*/
-footer {
-  background-color: goldenrod;
-  color: black;
-}
-
+/*-------------------------------------------------------- .piedpage */
 .piedpage {
+  color: white;
+  background-color: #4979bd;
   display: flex;
   flex-direction: column;
+  gap: 60px;
+  max-width: 1300px;
+  padding: 50px;
 }
 .piedpage__s1 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 3rem;
 }
 .piedpage__s1__externe {
-  flex: 0 0 20%;
+  flex: 0 0 30%;
 }
 .piedpage__s1__externe .menu {
   display: flex;
   flex-direction: column;
 }
 .piedpage__s1__adresse {
-  flex: 0 0 40%;
+  flex: 0 0 30%;
+}
+.piedpage__s1__adresse__coord__titre {
+  padding: 0;
+  margin: 0;
 }
 .piedpage__s1__description {
-  flex: 1;
+  font-family: "Montserrat", sans-serif;
+  flex: 0 0 30%;
+}
+.piedpage__s2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*-------------------------------------------------------- .populaire */
+.populaire__articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+/*-------------------------------------------------------- .piedpage */
+.piedpage{
+    color: white;
+    background-color: $couleur__secondaire--pale;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1300px;
+    padding: 50px;
+    &__s1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3rem;
+        &__externe{
+            flex: 0 0 30%;
+            & .menu{ //ul
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &__adresse{
+            flex: 0 0 30%;
+            &__coord{
+                &__titre{
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            &__recherche{}
+        }
+        &__description{
+            font-family: $_police__paragraphe;
+            flex: 0 0 30%
+        }
+    }
+
+    &__s2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

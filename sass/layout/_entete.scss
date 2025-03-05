@@ -5,6 +5,7 @@
     align-items: center;
     margin: 20px 40px;
     gap: 30px;
+    max-width: 2300px;
     &__navigation{
         // Requête média pour la navigation
         @media screen and (max-width: 800px){
