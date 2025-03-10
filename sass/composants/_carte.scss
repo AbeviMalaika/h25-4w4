@@ -3,9 +3,9 @@
     flex-direction: column;
     justify-content: space-between;
     // background-color: white;
-    background-color: $couleur__secondaire--pale;
+    background-color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 2px 3px 20px 0px $couleur__gris--pale;
 
     &--grande{
@@ -34,9 +34,9 @@
         flex-direction: column;
         align-items: flex-start;
         // background-color: cadetblue;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(0, 119, 255, 0.114);
         border-radius: 10px;
-        padding: 20px;
+        padding: 10px;
     }
 
     &__description{
@@ -56,5 +56,15 @@
 
     &__temperature{
         align-self: flex-end;
+    }
+
+
+    & .post-categories{
+        display: flex;
+        li{
+            a{
+                text-decoration: none;
+            }
+        }
     }
 }

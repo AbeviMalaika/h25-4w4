@@ -209,9 +209,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #4979bd;
+  background-color: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 2px 3px 20px 0px #ddd;
 }
 .carte--grande {
@@ -226,9 +226,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 119, 255, 0.114);
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
 }
 .carte__description {
   height: 70px;
@@ -242,6 +242,12 @@ a:hover {
 }
 .carte__temperature {
   align-self: flex-end;
+}
+.carte .post-categories {
+  display: flex;
+}
+.carte .post-categories li a {
+  text-decoration: none;
 }
 
 /*-------------------------------------------------------- .galerie */
