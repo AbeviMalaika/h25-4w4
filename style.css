@@ -209,7 +209,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
+  background-color: #4979bd;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 2px 3px 20px 0px #ddd;
@@ -222,12 +222,28 @@ a:hover {
 .carte__image img {
   width: 100%;
 }
+.carte__conteneurinfosgenerales {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+}
+.carte__description {
+  height: 70px;
+}
 .carte__bouton {
   background-color: #4979bd;
   padding: 7px;
   border-radius: 10px;
+  text-decoration: none;
   color: white;
 }
+.carte__temperature {
+  align-self: flex-end;
+}
+
 /*-------------------------------------------------------- .galerie */
 /*//////////////////////
 *Les layouts

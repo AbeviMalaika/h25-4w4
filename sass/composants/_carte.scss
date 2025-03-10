@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    // background-color: white;
+    background-color: $couleur__secondaire--pale;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 2px 3px 20px 0px $couleur__gris--pale;
@@ -28,17 +29,32 @@
 
     }
 
-    &__description{
+    &__conteneurinfosgenerales{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // background-color: cadetblue;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 20px;
+    }
 
+    &__description{
+        height: 70px;
     }
 
     &__bouton{
         background-color: $couleur__secondaire--pale;
         padding: 7px;
         border-radius: 10px;
+        text-decoration: none;
         color: white;
         &--actif{
 
         }
+    }
+
+    &__temperature{
+        align-self: flex-end;
     }
 }
