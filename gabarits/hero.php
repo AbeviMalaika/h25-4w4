@@ -1,3 +1,8 @@
+<?php
+/*
+*Template part pour la zone hero
+*/
+?>
 <?php 
 $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
 $hero_background = get_theme_mod('hero_background', ''); 
@@ -22,11 +27,6 @@ $hero_background = get_theme_mod('hero_background', '');
         </p>
         <p class="hero__auteur">Auteur : <?php echo $hero_auteur; ?></p>
         <button class="hero__bntinscription">S'inscrire</button>
-        <div class="hero__icone">
-            <img class="hero_iconeImg" src="https://s2.svgbox.net/social.svg?ic=facebook&color=ffffff" width="20" height="20">
-            <img class="hero_iconeImg" src="https://s2.svgbox.net/social.svg?ic=linkedin&color=ffffff" width="20" height="20">
-            <img class="hero_iconeImg" src="https://s2.svgbox.net/social.svg?ic=wordpress&color=ffffff" width="20" height="20">
-            <img class="hero_iconeImg" src="https://s2.svgbox.net/social.svg?ic=snapchat&color=ffffff" width="20" height="20">
-        </div>
+        <?php get_template_part('gabarits/icones-sociaux'); ?>
     </div>
 </section>
