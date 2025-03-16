@@ -25,6 +25,20 @@ function theme_4w4_customize_register($wp_customize)
     ));
 
 
+    /**********/////////////////////////////////////////////////Début du champ hero_promo*/
+    ////////////////////////////////////////// ajout de la donnée
+    $wp_customize->add_setting('hero_promo', array(
+        'default' => __('Texte pour mettre de l\'avant le site web', 'theme_4w4'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    ////////////////////////////////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control('hero_promo', array(
+        'label' => __('Texte Promotionnel', 'theme_4w4'),
+        'section' => 'hero_section',
+        'type' => 'text',
+    ));
+
+
     /**********/////////////////////////////////////////////////Début du champ hero_background*/
     ////////////////////////////////////////// ajout de la donnée image en background
     $wp_customize->add_setting('hero_background', array(
