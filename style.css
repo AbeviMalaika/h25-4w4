@@ -211,8 +211,9 @@ a:hover {
   justify-content: space-between;
   background-color: white;
   border-radius: 10px;
-  padding: 10px;
+  padding: 25px;
   box-shadow: 2px 3px 20px 0px #ddd;
+  border: 1px solid #f7deac;
 }
 .carte--grande {
   margin: 20px;
@@ -221,6 +222,10 @@ a:hover {
 }
 .carte__image img {
   width: 100%;
+}
+.carte__titre {
+  padding: 0;
+  margin: 0;
 }
 .carte__conteneurinfosgenerales {
   display: flex;
@@ -236,18 +241,28 @@ a:hover {
 .carte__bouton {
   background-color: #4979bd;
   padding: 7px;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   color: white;
+  font-size: 0.75rem;
 }
 .carte__temperature {
   align-self: flex-end;
 }
 .carte .post-categories {
   display: flex;
+  margin: 0;
+  padding: 20px 0;
+  gap: 20px;
+}
+.carte .post-categories li {
+  list-style: none;
 }
 .carte .post-categories li a {
   text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*-------------------------------------------------------- .galerie */
@@ -450,10 +465,10 @@ footer {
   display: flex;
   flex-direction: column;
 }
-.piedpage__s1__adresse {
+.piedpage__s1__coord {
   flex: 0 0 30%;
 }
-.piedpage__s1__adresse__coord__titre {
+.piedpage__s1__coord__infos__titre {
   padding: 0;
   margin: 0;
 }

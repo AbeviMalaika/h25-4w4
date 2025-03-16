@@ -1,3 +1,9 @@
+<?php 
+$footer_telephone = get_theme_mod('footer_telephone', '(123) 456-7890');
+$footer_adresse = get_theme_mod('footer_adresse', '1234 rue Sherbrooke Est'); 
+$footer_courriel = get_theme_mod('footer_courriel', 'courriel@mail.com');
+$footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
+?>
 <footer>
     <div class="piedpage global">
         <section class="piedpage__s1">
@@ -8,21 +14,22 @@
                 )); ?>
             </div>
 
-            <div class="piedpage__s1__adresse">
-                <div class="piedpage__s1__adresse__coord">
-                    <h5 class="piedpage__s1__adresse__coord__titre">Nos coordonnées</h5>
-                    <p>3800, rue Sherbrooke Est - Montréal (Québec) H1X 2A2</p>
-                    <p>514 254-7131</p>
-                    <p>communic@cmaisonneuve.qc.ca</p>
+            <div class="piedpage__s1__coord">
+                <div class="piedpage__s1__coord__infos">
+                    <h5 class="piedpage__s1__coord__infos__titre">Nos coordonnées</h5>
+                    <p class="piedpage__s1__coord__infos_adresse"><?php echo $footer_adresse; ?></p>
+                    <p class="piedpage__s1__coord__infos_telephone"><?php echo $footer_telephone; ?></p>
+                    <p class="piedpage__s1__coord__infos_courriel"><?php echo $footer_courriel; ?></p>
+                    
                 </div>
 
-                <div class="piedpage__s1__adresse_recherche">
+                <div class="piedpage__s1__coord_recherche">
                     <?php get_search_form(); ?>
                 </div>
             </div>
 
             <div class="piedpage__s1__description">
-                LUXE VOYAGES vous invite à vivre des escapades exceptionnelles. Offrez-vous des destinations prestigieuses, un service personnalisé et un voyage alliant confort et raffinement. Explorez le monde autrement, avec élégance et sophistication, grâce à nos expériences sur-mesure. Voyagez avec LUXE, voyagez inoubliable.
+                <?php echo $footer_mission; ?>
             </div>
         </section>
 

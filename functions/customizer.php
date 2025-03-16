@@ -52,6 +52,34 @@ function theme_4w4_customize_register($wp_customize)
     ));
 
 
+    /**********/////////////////////////////////////////////////Début du champ hero_adresse*/
+    ////////////////////////////////////////// ajout de la donnée
+    $wp_customize->add_setting('hero_adresse', array(
+        'default' => __('1234 rue Sherbrooke', 'theme_4w4'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    ////////////////////////////////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control('hero_adresse', array(
+        'label' => __('Adresse', 'theme_4w4'),
+        'section' => 'hero_section',
+        'type' => 'text',
+    ));
+
+
+    /**********/////////////////////////////////////////////////Début du champ hero_telephone*/
+    ////////////////////////////////////////// ajout de la donnée
+    $wp_customize->add_setting('hero_telephone', array(
+        'default' => __('123-456-789', 'theme_4w4'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    ////////////////////////////////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control('hero_telephone', array(
+        'label' => __('Numéro de Téléphone', 'theme_4w4'),
+        'section' => 'hero_section',
+        'type' => 'text',
+    ));
+
+
     /**********/////////////////////////////////////////////////Début du champ hero_texteColo*/
     ////////////////////////////////////////// ajout de la donnée de couleur des icones
     $wp_customize->add_setting( 'hero_texteColo', array(
@@ -88,6 +116,7 @@ function theme_4w4_customize_register($wp_customize)
     ));
 
 
+    /**********/////////////////////////////////////////////////Début du champ footer_telephone*/
     ////////////////////////////////////////// ajout de la donnée
     $wp_customize->add_setting('footer_telephone', array(
         'default' => __('123-456-789', 'theme_4w4'),
@@ -101,6 +130,7 @@ function theme_4w4_customize_register($wp_customize)
     ));
 
 
+    /**********/////////////////////////////////////////////////Début du champ footer_adresse*/
     ////////////////////////////////////////// ajout de la donnée
     $wp_customize->add_setting('footer_adresse', array(
         'default' => __('1234 rue Sherbrooke', 'theme_4w4'),
@@ -114,6 +144,21 @@ function theme_4w4_customize_register($wp_customize)
     ));
 
 
+    /**********/////////////////////////////////////////////////Début du champ footer_courriel*/
+    ////////////////////////////////////////// ajout de la donnée
+    $wp_customize->add_setting('footer_courriel', array(
+        'default' => __('malaika.abevi@gmail.com', 'theme_4w4'),
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    ////////////////////////////////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control('footer_courriel', array(
+        'label' => __('Courriel', 'theme_4w4'),
+        'section' => 'footer_section',
+        'type' => 'text',
+    ));
+
+
+    /**********/////////////////////////////////////////////////Début du champ footer_mission*/
     ////////////////////////////////////////// ajout de la donnée
     $wp_customize->add_setting('footer_mission', array(
         'default' => __('Courte description de la mission du club de voyage', 'theme_4w4'),

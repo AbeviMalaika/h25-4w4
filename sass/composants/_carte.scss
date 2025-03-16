@@ -5,8 +5,9 @@
     // background-color: white;
     background-color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 25px;
     box-shadow: 2px 3px 20px 0px $couleur__gris--pale;
+    border: 1px solid #f7deac;
 
     &--grande{
         // flex: 1 1 250px;
@@ -26,7 +27,8 @@
     }
 
     &__titre{
-
+        padding: 0;
+        margin: 0;
     }
 
     &__conteneurinfosgenerales{
@@ -46,9 +48,10 @@
     &__bouton{
         background-color: $couleur__secondaire--pale;
         padding: 7px;
-        border-radius: 10px;
+        border-radius: 5px;
         text-decoration: none;
         color: white;
+        font-size: 0.75rem;
         &--actif{
 
         }
@@ -61,9 +64,16 @@
 
     & .post-categories{
         display: flex;
+        margin: 0;
+        padding: 20px 0;
+        gap: 20px;
         li{
+            list-style: none;
             a{
                 text-decoration: none;
+                list-style: none;
+                margin: 0;
+                padding: 0;
             }
         }
     }

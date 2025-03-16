@@ -6,6 +6,9 @@
 <?php 
 $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
 $hero_background = get_theme_mod('hero_background', ''); 
+$hero_telephone = get_theme_mod('hero_telephone', '(123) 456-7890');
+$hero_adresse = get_theme_mod('hero_adresse', '1234 rue Sherbrooke Est'); 
+$hero_courriel = get_theme_mod('hero_courriel', 'courriel@mail.com');
 $hero_texteColo = get_theme_mod('hero_texteColo', '');
 ?>
 <section class="hero" style="background-image: url(<?php echo $hero_background; ?>);"> 
@@ -18,13 +21,13 @@ $hero_texteColo = get_theme_mod('hero_texteColo', '');
             Autrice : <?php echo $hero_auteur; ?>
         </p>
         <p class="hero__courriel">
-            <a href="#"> <?= bloginfo('admin_email')  ?></a>
+            <a href="#"> <?php echo $hero_courriel; ?> </a>
         </p>
         <p class="hero__adresse">
-            3800, rue Sherbrooke Est - Montréal (Québec) H1X 2A2
+            <?php echo $hero_adresse; ?>
         </p>
         <p class="hero__telephone">
-            514 254-7131
+            <?php echo $hero_telephone; ?>
         </p>
         <button class="hero__bntinscription">S'inscrire</button>
         <?php get_template_part('gabarits/icones-sociaux'); ?>
