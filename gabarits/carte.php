@@ -3,6 +3,13 @@
 * Template part pour la carte
 */
 ?>
+<?php
+/* Pour les cartes, on ne veut pas de carte "galerie", dont on vérifie si 
+   l'article appartient à la catégorie "galerie". Si elle y appartient, la carte
+   ne sera pas créée.
+*/
+  if (!(in_category("galerie"))){
+?>
 <article class="carte carte--grande">
   <div class="carte__contenu">
     <?php
@@ -22,3 +29,4 @@
     </div>
   </div>
 </article>
+<?php }; ?>

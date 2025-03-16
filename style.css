@@ -487,4 +487,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+/*-------------------------------------------------------- .categorie */
+.categorie .global {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }/*# sourceMappingURL=style.css.map */
