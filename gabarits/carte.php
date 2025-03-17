@@ -18,7 +18,6 @@ if (!(in_category("galerie"))) {
           the_post_thumbnail('medium');
         }
         ?>
-        <!-- <div class="carte__image__degrade"></div> -->
       </div>
 
       <h4 class="carte__titre"><?php the_title(); ?></h4>

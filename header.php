@@ -21,7 +21,6 @@
                         the_custom_logo();
                     }
                 ?>
-                <!-- <img src="images/logo_luxe_voyage.png" alt="Le logo de Luxe Voyage"> -->
             </figure>
             <input type="checkbox" id="checkboxburger" aria-label="checkbox" />
             <label for="checkboxburger" class="entete__burger">

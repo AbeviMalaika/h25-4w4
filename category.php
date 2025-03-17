@@ -1,7 +1,10 @@
 <?php get_header() ?>
-<h1><?php single_cat_title(); ?></h1>
-<p><?php echo category_description(); ?></p>
+
     <section class="categorie">
+        <div class="categorie__infos">
+            <h1 class="categorie__titre"><?php single_cat_title(); ?></h1>
+            <p class="categorie__description"><?php echo category_description(); ?></p>
+        </div>
         <div class="global">
         <?php if (have_posts()) : while (have_posts()) : the_post(); 
         ?>

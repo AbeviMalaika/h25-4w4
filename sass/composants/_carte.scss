@@ -1,3 +1,4 @@
+/*-------------------------------------------------------- .carte */
 .carte{
     display: flex;
     flex-direction: column;
@@ -17,13 +18,6 @@
         max-width: 550px;
     }
     &__image{
-        &__degrade{
-            background-color: aqua;
-            position: relative;
-            width: -webkit-fill-available;
-            height: 100%;
-            z-index: 2;
-        }
         img{
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
             width: -webkit-fill-available;

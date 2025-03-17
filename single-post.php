@@ -1,24 +1,37 @@
     <?php get_header() ?>
-    <section class="populaire">
+    <section class="destination"> 
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <article>
-                    <?php
-                        if (has_post_thumbnail()) {
-                        the_post_thumbnail('large'); }
-                    ?>
-                        <h2><?php the_title(); ?></h2>
-                        <div><?php the_content(); ?></div>
-                        <?php the_category(); ?>
-                        <p>Température maximum : <?= the_field('temperature_maximum'); ?> C&#176;</p>
-                        <p>Température minimum : <?= the_field('temperature_minimum'); ?> C&#176;</p>
-                        <p>Température moyenne : <?= the_field('temperature_moyenne'); ?> C&#176;</p>
+                    <article class="destination__article">
+                        <div class="destination__image">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail('large');
+                            }
+                            ?>
+                        </div>
+                        <div class="destination__contenu">
+                            <h2 class="destination__contenu__titre"><?php the_title(); ?></h2>
+                            <div class="destination__contenu__categorie">
+                                <h6 class="destination__contenu__categorie__titre">Catégorie(s) : </h6>
+                                <?= the_category(); ?>
+                            </div>
+                            <div class="destination__temperature">
+                                <h6 class="destination__temperature__titre">Températures : </h6>
+                                <p class="destination__temperature__valeurs">
+                                    Max : <?= the_field('temperature_maximum'); ?> C&#176;
+                                    Min : <?= the_field('temperature_minimum'); ?> C&#176;
+                                    Moyenne : <?= the_field('temperature_moyenne'); ?> C&#176;
+                                </p>
+                            </div>
+                            <div class="destination__description"><?php the_content(); ?></div>
+                        </div>
                     </article>
             <?php endwhile;
             endif; ?>
         </div>
     </section>
     <?php get_footer() ?>
-</body>
+    </body>
 
-</html>
+    </html>
