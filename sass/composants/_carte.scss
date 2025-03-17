@@ -5,9 +5,10 @@
     // background-color: white;
     background-color: white;
     border-radius: 10px;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 2px 3px 20px 0px $couleur__gris--pale;
     border: 1px solid #f7deac;
+
 
     &--grande{
         // flex: 1 1 250px;
@@ -15,61 +16,104 @@
         width: 40vw;
         max-width: 550px;
     }
-
     &__image{
+        &__degrade{
+            background-color: aqua;
+            position: relative;
+            width: -webkit-fill-available;
+            height: 100%;
+            z-index: 2;
+        }
         img{
-            width: 100%;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+            width: -webkit-fill-available;
+            height: 30vh;
+            object-fit: cover;
+            border-radius: 15px 15px 0px 0px;
         }
     }
 
-    &__contenu{
-
-    }
 
     &__titre{
         padding: 0;
         margin: 0;
+        color: $couleur__secondaire;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    &__contenu{
+        display: flex;    
+        flex-direction: column;
+        gap: 15px;
     }
 
     &__conteneurinfosgenerales{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        // background-color: cadetblue;
-        background-color: rgba(0, 119, 255, 0.114);
-        border-radius: 10px;
-        padding: 10px;
     }
 
     &__description{
         height: 70px;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 20px 0;
     }
 
     &__bouton{
-        background-color: $couleur__secondaire--pale;
-        padding: 7px;
         border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        font-size: 0.75rem;
+        font-size: 1.5rem;
+        color: $couleur__secondaire;
+        font-family: $_police__soustitre;
         &--actif{
 
         }
     }
 
-    &__temperature{
-        align-self: flex-end;
+    &__categorie{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: $_police__soustitre;
+        &__titre{
+            font-weight: normal;
+            padding: 0;
+            margin: 0;
+        }
     }
 
+    &__temperature{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: $_police__soustitre;
+        &__titre{
+            font-weight: normal;
+            padding: 0;
+            margin: 0;
+        }
+        &__valeurs{
+            font-family: $_police__soustitre;
+            background-color: $couleur__secondaire--trespale;
+            border-radius: 7px;
+            padding: 4px 22px;    
+            margin: 0;
+        }
+    }
 
     & .post-categories{
         display: flex;
         margin: 0;
-        padding: 20px 0;
+        padding: 0;
         gap: 20px;
         li{
             list-style: none;
+            background-color: $couleur__tertiaire--pale;
+            border-radius: 7px;
+            padding: 5px 22px;        
             a{
+                font-family: $_police__soustitre;
                 text-decoration: none;
                 list-style: none;
                 margin: 0;

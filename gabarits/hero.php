@@ -12,7 +12,7 @@ $hero_adresse = get_theme_mod('hero_adresse', '1234 rue Sherbrooke Est');
 $hero_courriel = get_theme_mod('hero_courriel', 'courriel@mail.com');
 $hero_texteColo = get_theme_mod('hero_texteColo', '');
 ?>
-<section class="hero" style="background-image: url(<?php echo $hero_background; ?>);"> 
+<section class="hero" style="background-image: linear-gradient(to bottom, rgba(26, 107, 152, 0.3), rgba(26, 107, 152, 1)), url(<?php echo $hero_background; ?>);"> 
     <div class="hero__contenu global">
         <p class="hero__promo"><?php echo $hero_promo; ?></p>
         <h1 class="hero__titre"><?= bloginfo('name')  ?></h1>

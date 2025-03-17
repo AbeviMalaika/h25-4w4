@@ -38,12 +38,12 @@ body {
 
 h1 {
   font-size: clamp(2rem, 3vw, 5rem);
-  font-family: "Quattrocento", serif;
+  font-family: "Italiana", sans-serif;
 }
 
 h2 {
   font-size: clamp(1.5rem, 2.5vw, 3rem);
-  font-family: "Quattrocento", serif;
+  font-family: "Italiana", sans-serif;
 }
 
 h3 {
@@ -52,7 +52,7 @@ h3 {
 
 h4 {
   font-size: clamp(0.9rem, 2vw, 1.5rem);
-  font-family: "Quattrocento", serif;
+  font-family: "Italiana", sans-serif;
 }
 
 h5 {
@@ -65,11 +65,11 @@ h6 {
 
 p {
   font-size: clamp(0.5rem, 1.7vw, 1rem);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Arsenal", sans-serif;
 }
 
 a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Arsenal", sans-serif;
 }
 
 /*--------------------------------------------- Règles de base pour les liens */
@@ -196,7 +196,7 @@ a:hover {
   padding: 7px;
 }
 .formulaire__bntinscription {
-  color: #10305a;
+  color: #254086;
   background-color: #fff9f9;
   text-transform: uppercase;
 }
@@ -211,7 +211,7 @@ a:hover {
   justify-content: space-between;
   background-color: white;
   border-radius: 10px;
-  padding: 25px;
+  padding: 30px;
   box-shadow: 2px 3px 20px 0px #ddd;
   border: 1px solid #f7deac;
 }
@@ -220,45 +220,92 @@ a:hover {
   width: 40vw;
   max-width: 550px;
 }
+.carte__image__degrade {
+  background-color: aqua;
+  position: relative;
+  width: -webkit-fill-available;
+  height: 100%;
+  z-index: 2;
+}
 .carte__image img {
-  width: 100%;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  width: -webkit-fill-available;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
 }
 .carte__titre {
   padding: 0;
   margin: 0;
+  color: #254086;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.carte__contenu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .carte__conteneurinfosgenerales {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: rgba(0, 119, 255, 0.114);
-  border-radius: 10px;
-  padding: 10px;
 }
 .carte__description {
   height: 70px;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 20px 0;
 }
 .carte__bouton {
-  background-color: #4979bd;
-  padding: 7px;
   border-radius: 5px;
-  text-decoration: none;
-  color: white;
-  font-size: 0.75rem;
+  font-size: 1.5rem;
+  color: #254086;
+  font-family: "Arsenal SC", sans-serif;
+}
+.carte__categorie {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Arsenal SC", sans-serif;
+}
+.carte__categorie__titre {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
 }
 .carte__temperature {
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Arsenal SC", sans-serif;
+}
+.carte__temperature__titre {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+.carte__temperature__valeurs {
+  font-family: "Arsenal SC", sans-serif;
+  background-color: #A1CFE9;
+  border-radius: 7px;
+  padding: 4px 22px;
+  margin: 0;
 }
 .carte .post-categories {
   display: flex;
   margin: 0;
-  padding: 20px 0;
+  padding: 0;
   gap: 20px;
 }
 .carte .post-categories li {
   list-style: none;
+  background-color: #dfb758;
+  border-radius: 7px;
+  padding: 5px 22px;
 }
 .carte .post-categories li a {
+  font-family: "Arsenal SC", sans-serif;
   text-decoration: none;
   list-style: none;
   margin: 0;
@@ -417,7 +464,7 @@ footer {
 .hero__titre {
   font-family: Arial, Helvetica, sans-serif;
   color: #fff9f9;
-  text-shadow: 3px 3px 4px #10305a;
+  text-shadow: 3px 3px 4px #254086;
 }
 .hero__contenu {
   max-width: 1500px;
@@ -488,7 +535,7 @@ footer {
   margin: 0;
 }
 .piedpage__s1__description {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Arsenal", sans-serif;
   flex: 0 0 30%;
 }
 .piedpage__s2 {
