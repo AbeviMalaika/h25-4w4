@@ -3,6 +3,15 @@
 * Template part pour la carte
 */
 ?>
+
+<?php
+$categorie_page = get_category(get_query_var('cat'));
+$categorie_nom = $categorie_page->cat_name;
+$liste_categories = get_the_category();
+$total_categorie = count($liste_categories);
+// print_r($categorie_nom);
+?>
+
 <?php
 /* Pour les cartes, on ne veut pas de carte "galerie", dont on vérifie si 
    l'article appartient à la catégorie "galerie". Si elle y appartient, la carte
@@ -23,8 +32,25 @@ if (!(in_category("galerie"))) {
       <h4 class="carte__titre"><?php the_title(); ?></h4>
 
       <div class="carte__categorie">
-        <h6 class="carte__categorie__titre">Catégorie(s) : </h6>
-        <?= the_category(); ?>
+        <?php
+
+        if ($total_categorie > 1) { ?>
+          <h6 class="carte__categorie__titre">Catégorie(s) : </h6>
+        <?php  }
+        ?>
+        <ul>
+          <?php
+          for ($x = 0; $x < $total_categorie; $x++) {
+            $categorie = $liste_categories[$x]->name;
+            if ($categorie != $categorie_nom) {
+          ?>
+              <li>
+                <a href="<?php echo get_category_link($liste_categories[$x]->term_id); ?>"> <?php print_r($liste_categories[$x]->name); ?> </a>
+              </li>
+          <?php
+            }
+          } ?>
+        </ul>
       </div>
 
       <div class="carte__temperature">
@@ -44,3 +70,5 @@ if (!(in_category("galerie"))) {
     </div>
   </article>
 <?php }; ?>
+
+<!-- the_category(); -->
