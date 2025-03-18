@@ -1,11 +1,20 @@
 /*-------------------------------------------------------- .populaire */
 .populaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     &__articles{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
+    .global{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
     .global figure{
         max-width: 1300px;
     }

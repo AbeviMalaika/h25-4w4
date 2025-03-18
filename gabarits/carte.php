@@ -57,10 +57,11 @@ if (!(in_category("galerie"))) {
 
       <div class="carte__temperature">
         <h6 class="carte__temperature__titre">Températures : </h6>
+
         <p class="carte__temperature__valeurs">
-          Max : <?= the_field('temperature_maximum'); ?> C&#176;
-          Min : <?= the_field('temperature_minimum'); ?> C&#176;
-          Moyenne : <?= the_field('temperature_moyenne'); ?> C&#176;
+          Max : <?= affichage_temperature('temperature_maximum'); ?> C&#176;
+          Min : <?= affichage_temperature('temperature_minimum'); ?> C&#176;
+          Moyenne : <?= affichage_temperature('temperature_moyenne'); ?> C&#176;
         </p>
       </div>
 

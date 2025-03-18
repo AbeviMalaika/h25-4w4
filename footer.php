@@ -29,17 +29,13 @@ $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
             </div>
 
             <div class="piedpage__s1__description">
+                <h5 class="piedpage__s1__description__titre">Notre mission</h5>
                 <?php echo $footer_mission; ?>
             </div>
         </section>
 
         <section class="piedpage__s2">
-            <div class="piedpage__s2__icone">
-                <img class="piedpage__s2__icone__img" src="https://s2.svgbox.net/social.svg?ic=facebook&color=ffffff" width="20" height="20">
-                <img class="piedpage__s2__icone__img" src="https://s2.svgbox.net/social.svg?ic=linkedin&color=ffffff" width="20" height="20">
-                <img class="piedpage__s2__icone__img" src="https://s2.svgbox.net/social.svg?ic=wordpress&color=ffffff" width="20" height="20">
-                <img class="piedpage__s2__icone__img" src="https://s2.svgbox.net/social.svg?ic=snapchat&color=ffffff" width="20" height="20">
-            </div>
+            <?php get_template_part('gabarits/icones-sociaux'); ?>
             <div class="piedpage__s2__navigation">
                 <?php wp_nav_menu(array(
                     "menu" => "principal",
@@ -48,7 +44,9 @@ $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
                 ));?>
             </div>
         </section>
-        <!-- <section class="piedpage__s3"></section> -->
+        <section class="piedpage__s3">
+            <h6 class="piedpage__s3__notice">© 2025 Luxe Voyages, Inc. Tous droits réservés.</h6>
+        </section>
     </div>
 </footer>
 <?php wp_footer(); ?>

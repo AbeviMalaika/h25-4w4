@@ -22,7 +22,7 @@ $hero_texteColo = get_theme_mod('hero_texteColo', '');
         <button class="hero__bntinscription">S'inscrire</button>
 
         <div class="hero__coord">
-            <h4 class="hero__coord_titre">Nos coordonnées</h4>
+            <h4 class="hero__coord__titre">Nos coordonnées</h4>
             <div class="hero__coord__infos">
                 <p class="hero__auteur">
                     Autrice : <?php echo $hero_auteur; ?>

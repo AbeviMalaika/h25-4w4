@@ -1,43 +1,92 @@
 /*-------------------------------------------------------- .piedpage */
-.piedpage{
+.piedpage {
     color: white;
-    background-color: $couleur__secondaire--pale;
     display: flex;
     flex-direction: column;
     gap: 60px;
     max-width: 1300px;
     padding: 50px;
-    &__s1{
+
+    @media screen and (max-width: 800px) {
+        gap: 50px;
+    }
+
+    &__s1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 3rem;
-        &__externe{
+
+        @media screen and (max-width: 800px) {
+            flex-wrap: nowrap;
+            gap: 3rem;
+            flex-direction: column;
+        }
+
+        &__externe {
             flex: 0 0 30%;
-            & .menu{ //ul
+
+            & .menu {
+                //ul
                 display: flex;
                 flex-direction: column;
             }
         }
-        &__coord{
+
+        &__coord {
             flex: 0 0 30%;
-            &__infos{
-                &__titre{
+
+            @media screen and (max-width: 800px) {
+                text-align: center;
+                flex: 0;
+            }
+
+            &__infos {
+                &__titre {
                     padding: 0;
                     margin: 0;
                 }
             }
-            &__recherche{}
+
+            .recherche {
+                border: 1px solid white;
+            }
         }
-        &__description{
+
+        &__description {
             font-family: $_police__paragraphe;
-            flex: 0 0 30%
+            flex: 0 0 30%;
+
+            @media screen and (max-width: 800px) {
+                text-align: center;
+                max-width: 55vw;
+            }
+
+            &__titre {
+                padding: 0;
+                margin: 0 0 15px 0;
+            }
         }
     }
 
-    &__s2{
+    &__s2 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 50px;
+        }
+
+    }
+
+    &__s3 {
+        &__notice {
+            text-align: center;
+            margin: 0;
+            font-size: 0.7rem;
+        }
     }
 }
