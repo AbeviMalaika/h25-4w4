@@ -40,6 +40,12 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+.site__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1 {
   font-size: clamp(2rem, 3vw, 5rem);
   font-family: "Italiana", sans-serif;
@@ -52,6 +58,7 @@ h2 {
 
 h3 {
   font-size: clamp(1rem, 2.3vw, 2rem);
+  font-family: "Italiana", sans-serif;
 }
 
 h4 {
@@ -667,4 +674,21 @@ footer {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.recherche__section {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 2vh 16vw 10vh;
+}
+.recherche__section__resultat {
+  background-color: white;
+  padding: 16px;
+  border-radius: 15px;
+  border: 1px solid #dae9fd;
+}
+.recherche__section__titre {
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

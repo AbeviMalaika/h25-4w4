@@ -9,7 +9,6 @@ $categorie_page = get_category(get_query_var('cat'));
 $categorie_nom = $categorie_page->cat_name;
 $liste_categories = get_the_category();
 $total_categorie = count($liste_categories);
-// print_r($categorie_nom);
 ?>
 
 <?php

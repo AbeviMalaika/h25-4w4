@@ -2,7 +2,7 @@
 
 <section class="categorie">
     <div class="categorie__infos">
-        <h1 class="categorie__infos__titre"><?php single_cat_title(); ?></h1>
+        <h2 class="categorie__infos__titre"><?php single_cat_title(); ?></h2>
         <div class="categorie__infos__description">
             <?php echo category_description(); ?>
         </div>
