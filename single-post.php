@@ -16,15 +16,15 @@
                                 <h6 class="destination__contenu__categorie__titre">Catégorie(s) : </h6>
                                 <?= the_category(); ?>
                             </div>
-                            <div class="destination__temperature">
-                                <h6 class="destination__temperature__titre">Températures : </h6>
-                                <p class="destination__temperature__valeurs">
+                            <div class="destination__contenu__temperature">
+                                <h6 class="destination__contenu__temperature__titre">Températures : </h6>
+                                <p class="destination__contenu__temperature__valeurs">
                                     Max : <?= the_field('temperature_maximum'); ?> C&#176;
                                     Min : <?= the_field('temperature_minimum'); ?> C&#176;
                                     Moyenne : <?= the_field('temperature_moyenne'); ?> C&#176;
                                 </p>
                             </div>
-                            <div class="destination__description"><?php the_content(); ?></div>
+                            <div class="destination__contenu__description"><?php the_content(); ?></div>
                         </div>
                     </article>
             <?php endwhile;

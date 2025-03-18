@@ -2,8 +2,10 @@
 
 <section class="categorie">
     <div class="categorie__infos">
-        <h1 class="categorie__titre"><?php single_cat_title(); ?></h1>
-        <p class="categorie__description"><?php echo category_description(); ?></p>
+        <h1 class="categorie__infos__titre"><?php single_cat_title(); ?></h1>
+        <div class="categorie__infos__description">
+            <?php echo category_description(); ?>
+        </div>
     </div>
     <div class="global">
         <?php if (have_posts()) : while (have_posts()) : the_post();

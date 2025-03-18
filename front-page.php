@@ -36,10 +36,12 @@
 
     <section class="populaire">
         <div class="global">
+            <h2 class="populaire__titre">Les clichés "Aventure" de la semaine</h2>
             <?php if (have_posts()) : while (have_posts()) : the_post();
             if (in_category("galerie")) {
                 the_content();
             ?> 
+            <h2 class="populaire__titre">Nos destinations populaires</h2>
             <div class="populaire__articles">
                 <?php } else { ?>
                 <?php get_template_part('gabarits/carte'); ?>

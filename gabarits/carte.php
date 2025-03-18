@@ -20,31 +20,34 @@ $total_categorie = count($liste_categories);
 if (!(in_category("galerie"))) {
 ?>
   <article class="carte carte--grande">
-    <div class="carte__contenu">
-      <div class="carte__image">
+  <div class="carte__image">
         <?php
         if (has_post_thumbnail()) {
           the_post_thumbnail('medium');
         }
         ?>
       </div>
+    <div class="carte__contenu">
+
 
       <h4 class="carte__titre"><?php the_title(); ?></h4>
+      <div>
 
+      </div>
       <div class="carte__categorie">
         <?php
 
         if ($total_categorie > 1) { ?>
-          <h6 class="carte__categorie__titre">Catégorie(s) : </h6>
+          <h6 class="carte__categorie__titre">Autres catégorie(s) : </h6>
         <?php  }
         ?>
-        <ul>
+        <ul class="carte__categorie__liste">
           <?php
           for ($x = 0; $x < $total_categorie; $x++) {
             $categorie = $liste_categories[$x]->name;
             if ($categorie != $categorie_nom) {
           ?>
-              <li>
+              <li class="carte__categorie__liste__tag">
                 <a href="<?php echo get_category_link($liste_categories[$x]->term_id); ?>"> <?php print_r($liste_categories[$x]->name); ?> </a>
               </li>
           <?php

@@ -5,4 +5,19 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+
+    .global figure{
+        max-width: 1300px;
+    }
+
+    &__titre{
+        font-family: $_police__titre;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(18 47 91) 20%, rgb(18 47 91) 80%, rgba(255, 255, 255, 0) 100%);
+        color: white;
+    }
 }
