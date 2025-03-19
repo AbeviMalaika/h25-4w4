@@ -1,9 +1,18 @@
-/*-------------------------------------------------------- Généralités */
-.global{
+/*
+******************************************************** layout : Généralités
+*/
+.global {
     // max-width: 1100px;
     padding: 10vh 5vw;
 }
 
-body{
-    background-color: $couleur__principale;
+header {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    background-color: $couleur__secondaire--foncee;
+    justify-content: center;
 }

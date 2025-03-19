@@ -7,7 +7,7 @@ setInterval(verificationEtatMenu, 1000/60);
 
 // Fonction pour afficher et cacher le menu en mobile
 function gererCheckbox() {
-  
+  console.log("coucou")
     //si la checkbox est cochée 
     if(checkbox.checked) 
       {

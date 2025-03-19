@@ -1,0 +1,107 @@
+/*
+******************************************************** layout : .piedpage
+*/
+.piedpage {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1300px;
+    padding: 50px;
+
+    a {
+        color: white;
+    }
+
+    @media screen and (max-width: 800px) {
+        gap: 50px;
+    }
+
+    &__s1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3rem;
+
+        @media screen and (max-width: 800px) {
+            flex-wrap: nowrap;
+            gap: 3rem;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__externe {
+            flex: 0 0 30%;
+
+            & .menu {
+                //ul
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+            }
+
+            &__titre {
+                margin: 0;
+            }
+        }
+
+        &__coord {
+            flex: 0 0 30%;
+
+            @media screen and (max-width: 800px) {
+                text-align: center;
+                flex: 0;
+            }
+
+            &__infos {
+                &__titre {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .recherche {
+                border: 1px solid white;
+            }
+        }
+
+        &__description {
+            font-family: $_police__paragraphe;
+            flex: 0 0 30%;
+
+            @media screen and (max-width: 800px) {
+                text-align: center;
+                max-width: 55vw;
+            }
+
+            &__titre {
+                padding: 0;
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+
+    &__s2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 50px;
+        }
+    }
+
+    &__s3 {
+        &__notice {
+            text-align: center;
+            margin: 0;
+            font-size: 0.7rem;
+        }
+    }
+}

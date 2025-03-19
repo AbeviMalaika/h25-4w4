@@ -21,6 +21,9 @@ Fichier principal de la structure Sass*/
 /*/////////////////////
 *Les variables 
 ///////////////////////*/
+/*-------------------------------------------------------- Variables pour les couleurs */
+/*-------------------------------------------------------- Variables pour les polices */
+/*--------------------------------------------------Familles de police*/
 /*/////////////////////
 *Les balises de base 
 ///////////////////////*/
@@ -28,22 +31,37 @@ Fichier principal de la structure Sass*/
 body {
   font-size: 16px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #fff9f9;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.site__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   font-size: clamp(2rem, 3vw, 5rem);
+  font-family: "Italiana", sans-serif;
 }
 
 h2 {
   font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-family: "Italiana", sans-serif;
 }
 
 h3 {
   font-size: clamp(1rem, 2.3vw, 2rem);
+  font-family: "Italiana", sans-serif;
 }
 
 h4 {
   font-size: clamp(0.9rem, 2vw, 1.5rem);
+  font-family: "Italiana", sans-serif;
 }
 
 h5 {
@@ -56,6 +74,11 @@ h6 {
 
 p {
   font-size: clamp(0.5rem, 1.7vw, 1rem);
+  font-family: "Arsenal", sans-serif;
+}
+
+a {
+  font-family: "Arsenal", sans-serif;
 }
 
 /*--------------------------------------------- Règles de base pour les liens */
@@ -88,7 +111,7 @@ a:hover {
     gap: 20px;
   }
 }
-.menu__li a {
+.menu-item a {
   text-decoration: none;
   padding: 4px;
   text-transform: uppercase;
@@ -96,7 +119,7 @@ a:hover {
   font-size: clamp(0.6rem, 0.3137rem + 0.5719vw, 1rem);
 }
 @media screen and (max-width: 800px) {
-  .menu__li a {
+  .menu-item a {
     font-size: 1rem;
   }
 }
@@ -106,6 +129,8 @@ a:hover {
   display: flex;
   height: 1.6rem;
   border: 1px solid #000;
+  padding: 5px;
+  border-radius: 10px;
 }
 .recherche__input {
   border: none;
@@ -125,16 +150,21 @@ a:hover {
 .recherche__img {
   flex: 0 0 20px;
   padding: 3px;
-  position: relative;
-  left: -27px;
 }
 .recherche__input::placeholder {
   font-style: normal;
   color: #888;
 }
+.recherche__bouton {
+  position: relative;
+  left: -28px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+}
 @media screen and (max-width: 800px) {
   .recherche {
-    display: none;
+    margin-top: 10px;
   }
 }
 
@@ -158,6 +188,7 @@ a:hover {
   box-shadow: 0px 4px 6px #aaa;
   min-width: 655px;
   max-width: 60vw;
+  border-radius: 10px;
 }
 @media screen and (max-width: 800px) {
   .formulaire__contenu {
@@ -174,15 +205,142 @@ a:hover {
   width: 100%;
   border: 1px solid #c09137;
   padding: 7px;
+  border-radius: 11px;
 }
 .formulaire__bntinscription {
-  color: #10305a;
+  color: #254086;
   background-color: #fff9f9;
   text-transform: uppercase;
 }
 .formulaire__information {
   font-size: 1rem;
   margin: 0;
+}
+
+/*-------------------------------------------------------- .carte */
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 3px 20px 0px #ddd;
+  border: 1px solid #f7deac;
+  margin: 20px;
+  width: 40vw;
+  max-width: 550px;
+}
+@media screen and (max-width: 800px) {
+  .carte {
+    width: fit-content;
+    max-width: none;
+  }
+}
+.carte__image img {
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  width: -webkit-fill-available;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+@media screen and (max-width: 800px) {
+  .carte__image img {
+    height: 50vh;
+  }
+}
+.carte__titre {
+  padding: 0;
+  margin: 0;
+  color: #254086;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 800px) {
+  .carte__titre {
+    font-size: 2rem;
+  }
+}
+.carte__contenu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px;
+  height: -webkit-fill-available;
+}
+.carte__conteneurinfosgenerales {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.carte__description {
+  height: auto;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 20px 0;
+}
+@media screen and (max-width: 800px) {
+  .carte__description {
+    height: auto;
+  }
+}
+.carte__bouton {
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: #254086;
+  font-family: "Arsenal SC", sans-serif;
+}
+.carte__categorie {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Arsenal SC", sans-serif;
+}
+.carte__categorie__titre {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+.carte__temperature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Arsenal SC", sans-serif;
+}
+.carte__temperature__titre {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+.carte__temperature__valeurs {
+  font-family: "Arsenal SC", sans-serif;
+  background-color: #adc5eb;
+  border-radius: 7px;
+  padding: 4px 22px;
+  margin: 0;
+}
+.carte__categorie__liste {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+.carte__categorie__liste__tag {
+  list-style: none;
+  background-color: #F3C366;
+  border-radius: 7px;
+  padding: 5px 22px;
+}
+.carte__categorie__liste__tag a {
+  font-family: "Arsenal SC", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*-------------------------------------------------------- .galerie */
+.icones {
+  display: flex;
+  gap: 10px;
 }
 
 /*//////////////////////
@@ -193,8 +351,15 @@ a:hover {
   padding: 10vh 5vw;
 }
 
-body {
-  background-color: #fff9f9;
+header {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  background-color: #112f5b;
+  justify-content: center;
 }
 
 /*-------------------------------------------------------- .entete */
@@ -204,7 +369,17 @@ body {
   align-items: center;
   margin: 20px 40px;
   gap: 30px;
+  max-width: 2300px;
   /*menu burger(traits)*/
+}
+@media screen and (max-width: 800px) {
+  .entete {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "burger logo vide";
+    width: 100%;
+  }
 }
 .entete__navigation {
   align-items: center;
@@ -220,7 +395,7 @@ body {
     position: absolute;
     right: 0;
     left: 0%;
-    top: 95px;
+    top: 130px;
     padding: 20px;
     flex-direction: column;
     width: 100vw;
@@ -237,8 +412,15 @@ body {
   min-width: 65px;
   max-width: 5vw;
 }
+@media screen and (max-width: 800px) {
+  .entete__logo {
+    grid-area: logo;
+    justify-self: center;
+  }
+}
 .entete__logo img {
   width: 100%;
+  height: 100%;
 }
 .entete__menu {
   padding-right: 20px;
@@ -246,6 +428,11 @@ body {
 @media screen and (max-width: 800px) {
   .entete__menu {
     padding-right: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .entete__burger {
+    grid-area: burger;
   }
 }
 .entete .entete__traitburger {
@@ -303,43 +490,27 @@ body {
   }
 }
 
-/*-------------------------------------------------------- .galerie */
-.galerie__contenu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
-  width: auto;
-}
-@media screen and (max-width: 800px) {
-  .galerie__contenu {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  }
-}
-.galerie__figure {
-  padding: 0;
-  margin: 0;
-}
-.galerie__figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /*-------------------------------------------------------- .hero */
 .hero {
   background-image: url("images/maldives.jpg");
   min-height: 100vh;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 .hero__titre {
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(4.5rem, 3vw, 5rem);
+  font-weight: normal;
   color: #fff9f9;
-  text-shadow: 3px 3px 4px #10305a;
+  margin: 25px;
 }
 .hero__contenu {
   max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero__icone {
   padding: 20px 0;
@@ -350,16 +521,311 @@ body {
 .hero__courriel a {
   text-decoration: none;
 }
-.hero__description, .hero__courriel, .hero__adresse, .hero__telephone {
+.hero__coord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.3rem 0 1rem 0;
+}
+.hero__coord__titre {
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+.hero__coord__infos {
+  display: flex;
+  gap: 1.5vw;
+  border-bottom: 1px solid white;
+}
+@media screen and (max-width: 800px) {
+  .hero__coord__infos {
+    display: flex;
+    gap: 1.5vw;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.hero__auteur, .hero__courriel a, .hero__adresse, .hero__telephone {
   font-size: clamp(1rem, 0.8568rem + 0.286vw, 1.2rem);
-  font-weight: bold;
+  color: white;
+}
+.hero__promo, .hero__description {
+  font-size: clamp(2rem, 0.8568rem + 0.286vw, 1.2rem);
+  font-family: "Arima", system-ui;
+  margin: 0;
 }
 .hero__bntinscription {
+  font-family: "Arsenal SC", sans-serif;
   box-sizing: border-box;
-  background-color: #c09137;
-  border: 1px solid #fff9f9;
-  border-radius: 3px;
-  color: white;
+  background-color: #F3C366;
+  border: none;
+  border-radius: 11px;
   padding: 7px 20px;
+  margin: 30px;
+  text-transform: uppercase;
+}
+
+/*-------------------------------------------------------- .piedpage */
+.piedpage {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1300px;
+  padding: 50px;
+}
+.piedpage a {
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  .piedpage {
+    gap: 50px;
+  }
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+@media screen and (max-width: 800px) {
+  .piedpage__s1 {
+    flex-wrap: nowrap;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.piedpage__s1__externe {
+  flex: 0 0 30%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.piedpage__s1__externe__titre {
+  margin: 0;
+}
+.piedpage__s1__coord {
+  flex: 0 0 30%;
+}
+@media screen and (max-width: 800px) {
+  .piedpage__s1__coord {
+    text-align: center;
+    flex: 0;
+  }
+}
+.piedpage__s1__coord__infos__titre {
+  padding: 0;
+  margin: 0;
+}
+.piedpage__s1__coord__infos p {
+  font-size: 1rem;
+}
+.piedpage__s1__coord .recherche {
+  border: 1px solid white;
+}
+.piedpage__s1__description {
+  font-family: "Arsenal", sans-serif;
+  flex: 0 0 30%;
+}
+@media screen and (max-width: 800px) {
+  .piedpage__s1__description {
+    text-align: center;
+    max-width: 55vw;
+  }
+}
+.piedpage__s1__description__titre {
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+.piedpage__s2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+  .piedpage__s2 {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+}
+.piedpage__s3__notice {
+  text-align: center;
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+/*-------------------------------------------------------- .populaire */
+.populaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.populaire__articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 800px) {
+  .populaire__articles {
+    grid-template-columns: 1fr;
+  }
+}
+.populaire .global {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.populaire .global figure {
+  max-width: 1300px;
+}
+.populaire__titre {
+  font-family: "Italiana", sans-serif;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(18, 47, 91) 20%, rgb(18, 47, 91) 80%, rgba(255, 255, 255, 0) 100%);
+  color: white;
+}
+
+/*-------------------------------------------------------- .categorie */
+.categorie .global {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1vh 5vw 10vh;
+}
+.categorie__infos {
+  display: flex;
+  flex-direction: row;
+  padding: 2vh 16vw;
+  gap: 30px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(18, 47, 91) 20%, rgb(18, 47, 91) 80%, rgba(255, 255, 255, 0) 100%);
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  .categorie__infos {
+    flex-direction: column;
+  }
+}
+.categorie__infos__titre {
+  text-transform: uppercase;
+  font-weight: 100;
+  margin: 0;
+  white-space: nowrap;
+}
+.categorie__infos__description p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+/*-------------------------------------------------------- .destination */
+.destination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+}
+.destination .global {
+  max-width: 1300px;
+}
+.destination__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.destination__article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 15px;
+}
+@media screen and (max-width: 800px) {
+  .destination__article {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.destination__contenu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 2.5vw;
+}
+.destination__contenu__categorie {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Arsenal SC", sans-serif;
+}
+.destination__contenu__categorie__titre {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+.destination__contenu__temperature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Arsenal SC", sans-serif;
+}
+.destination__contenu__temperature__titre {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+.destination__contenu__temperature__valeurs {
+  font-family: "Arsenal SC", sans-serif;
+  background-color: #adc5eb;
+  border-radius: 7px;
+  padding: 4px 22px;
+  margin: 0;
+}
+.destination__contenu__description p {
+  font-size: 1.2rem;
+}
+.destination__contenu figure img {
+  border-radius: 10px;
+}
+.destination .post-categories {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+.destination .post-categories li {
+  list-style: none;
+  background-color: #F3C366;
+  border-radius: 7px;
+  padding: 5px 22px;
+}
+.destination .post-categories li a {
+  font-family: "Arsenal SC", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.recherche__section {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 2vh 16vw 10vh;
+}
+.recherche__section__resultat {
+  background-color: white;
+  padding: 16px;
+  border-radius: 15px;
+  border: 1px solid #dae9fd;
+}
+.recherche__section__titre {
   text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

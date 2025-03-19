@@ -1,17 +1,30 @@
-/*-------------------------------------------------------- .entete */
-.entete{
+/*
+******************************************************** layout : .entete
+*/
+.entete {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 40px;
     gap: 30px;
-    &__navigation{
+    max-width: 2300px;
+
+    @media screen and (max-width: 800px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "burger logo vide";
+        width: 100%;
+    }
+
+    &__navigation {
+
         // Requête média pour la navigation
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 800px) {
             position: absolute;
             right: 0;
             left: 0%;
-            top: 95px;
+            top: 130px;
             padding: 20px;
             flex-direction: column;
             width: 100vw;
@@ -23,6 +36,7 @@
             -ms-transform: translateX(-100%);
             -o-transform: translateX(-100%);
         }
+
         align-items: center;
         background-color: $couleur__principale;
         box-sizing: border-box;
@@ -32,22 +46,36 @@
         position: static;
     }
 
-    &__logo{
+    &__logo {
         margin: 0;
         min-width: 65px;
         max-width: 5vw;
-        img{
+
+        @media screen and (max-width: 800px) {
+            grid-area: logo;
+            justify-self: center;
+        }
+
+        img {
             width: 100%;
+            height: 100%;
         }
     }
 
-    &__menu{
+    &__menu {
         padding-right: 20px;
+
         @media screen and (max-width: 800px) {
             padding-right: 0;
         }
     }
-      
+
+    &__burger {
+        @media screen and (max-width: 800px) {
+            grid-area: burger;
+        }
+    }
+
     /*menu burger(traits)*/
     .entete__traitburger {
         background: black;
@@ -61,7 +89,7 @@
         -o-transition: 0.2s;
     }
 
-    #checkboxburger:checked ~ &__burger .entete__traitburger:nth-of-type(1) {
+    #checkboxburger:checked~&__burger .entete__traitburger:nth-of-type(1) {
         transform: translateY(12px) rotate(45deg);
         -webkit-transform: translateY(12px) rotate(45deg);
         -moz-transform: translateY(12px) rotate(45deg);
@@ -73,7 +101,8 @@
         -ms-transition: 0.2s;
         -o-transition: 0.2s;
     }
-    #checkboxburger:checked ~ &__burger .entete__traitburger:nth-of-type(3) {
+
+    #checkboxburger:checked~&__burger .entete__traitburger:nth-of-type(3) {
         transform: translateY(-12px) rotate(-45deg);
         -webkit-transform: translateY(-12px) rotate(-45deg);
         -moz-transform: translateY(-12px) rotate(-45deg);
@@ -81,7 +110,8 @@
         -o-transform: translateY(-12px) rotate(-45deg);
         transition: 0.2s;
     }
-    #checkboxburger:checked ~ &__burger .entete__traitburger:nth-of-type(2) {
+
+    #checkboxburger:checked~&__burger .entete__traitburger:nth-of-type(2) {
         transform: scale(0);
         -webkit-transform: scale(0);
         -moz-transform: scale(0);
@@ -89,23 +119,23 @@
         -o-transform: scale(0);
         transition: 0.2s;
     }
-    
-    #checkboxburger:checked ~ #menu-phone {
+
+    #checkboxburger:checked~#menu-phone {
         transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
     }
-    
+
     #checkboxburger {
         display: none;
     }
-    
-        @media (width>800px) {
-        #checkboxburger ~ &__burger {
-          display: none;
+
+    @media (width>800px) {
+        #checkboxburger~&__burger {
+            display: none;
         }
 
-    }      
+    }
 }

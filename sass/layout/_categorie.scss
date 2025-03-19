@@ -1,0 +1,38 @@
+/*
+******************************************************** layout : .categorie
+*/
+.categorie {
+    .global {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1vh 5vw 10vh;
+    }
+
+    &__infos {
+        display: flex;
+        flex-direction: row;
+        padding: 2vh 16vw;
+        gap: 30px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(18 47 91) 20%, rgb(18 47 91) 80%, rgba(255, 255, 255, 0) 100%);
+        color: white;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+        }
+
+        &__titre {
+            text-transform: uppercase;
+            font-weight: 100;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        &__description {
+            p {
+                font-size: 1.3rem;
+                margin: 0;
+            }
+        }
+    }
+}

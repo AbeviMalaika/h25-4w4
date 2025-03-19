@@ -3,15 +3,24 @@
     background-image: url("images/maldives.jpg");
     min-height: 100vh;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 
     &__titre {
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: clamp(4.5rem, 3vw, 5rem);
+        font-weight: normal;
         color: $couleur__principale;
-        text-shadow: 3px 3px 4px $couleur__secondaire;
+        // text-shadow: 3px 3px 4px $couleur__secondaire;
+        margin: 25px;
     }
 
     &__contenu {
         max-width: 1500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__icone {
@@ -26,22 +35,53 @@
         text-decoration: none;
     }
 
-    &__description, 
-    &__courriel,
+    &__coord{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.3rem 0 1rem 0;
+        &__titre{
+            font-family: $_police__soustitre;
+            font-weight: normal;
+            margin: 0;    
+        }
+
+        &__infos{
+            display: flex;
+            gap: 1.5vw;
+            border-bottom: 1px solid white;
+            @media screen and (max-width: 800px) {
+                display: flex;
+                gap: 1.5vw;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    &__auteur,
+    &__courriel a,
     &__adresse,
     &__telephone {
-        // font-size: 1.2rem;
         font-size: clamp(1rem, 0.8568rem + 0.286vw, 1.2rem);
-        font-weight: bold;
+        color: white;
+    }
+
+    &__promo,
+    &__description{
+        font-size: clamp(2rem, 0.8568rem + 0.286vw, 1.2rem);
+        font-family: $_police__titre__secondaire;
+        margin: 0;
     }
     
     &__bntinscription {
+        font-family: $_police__soustitre;
         box-sizing: border-box;
-        background-color: $couleur__tertiaire;
-        border: 1px solid $couleur__principale;
-        border-radius: 3px;
-        color: white;
+        background-color: $couleur__tertiaire--pale;
+        border: none;
+        border-radius: 11px;
         padding: 7px 20px;
+        margin: 30px;
         text-transform: uppercase;
     }
 }

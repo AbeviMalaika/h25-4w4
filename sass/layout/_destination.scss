@@ -1,0 +1,112 @@
+/*
+******************************************************** layout : .destination
+*/
+.destination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+
+    .global {
+        max-width: 1300px;
+    }
+
+    &__image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+
+    &__article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: white;
+        border-radius: 15px;
+
+        @media screen and (max-width: 800px) {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__contenu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 2.5vw;
+
+        &__categorie {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: $_police__soustitre;
+
+            &__titre {
+                font-weight: normal;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        &__temperature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: $_police__soustitre;
+
+            &__titre {
+                font-weight: normal;
+                padding: 0;
+                margin: 0;
+            }
+
+            &__valeurs {
+                font-family: $_police__soustitre;
+                background-color: $couleur__secondaire--trespale;
+                border-radius: 7px;
+                padding: 4px 22px;
+                margin: 0;
+            }
+        }
+
+        &__description p {
+            font-size: 1.2rem;
+        }
+
+        figure {
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+
+
+
+    .post-categories {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 20px;
+
+        li {
+            list-style: none;
+            background-color: $couleur__tertiaire--pale;
+            border-radius: 7px;
+            padding: 5px 22px;
+
+            a {
+                font-family: $_police__soustitre;
+                text-decoration: none;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+
+}
