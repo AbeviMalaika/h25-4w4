@@ -1,17 +1,21 @@
-.recherche__section{
+/*
+******************************************************** layout : .recherche__section
+*/
+.recherche__section {
     max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 2vh 16vw 10vh;
-    &__resultat{
+
+    &__resultat {
         background-color: white;
         padding: 16px;
         border-radius: 15px;
         border: 1px solid #dae9fd;
     }
 
-    &__titre{
+    &__titre {
         text-transform: uppercase;
     }
 }

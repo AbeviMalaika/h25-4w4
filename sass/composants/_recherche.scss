@@ -1,10 +1,13 @@
-/*-------------------------------------------------------- .recherche */
+/*
+******************************************************** Composant : .recherche
+*/
 .recherche {
     display: flex;
     height: 1.6rem;
     border: 1px solid #000;
     padding: 5px;
     border-radius: 10px;
+
     // Le & prend la valeur du sélecteur parent
     &__input {
         border: none;
@@ -29,13 +32,12 @@
         padding: 3px;
     }
 
-    &__input::placeholder
-    {
+    &__input::placeholder {
         font-style: normal;
         color: #888;
     }
 
-    &__bouton{
+    &__bouton {
         position: relative;
         left: -28px;
         background-color: transparent;

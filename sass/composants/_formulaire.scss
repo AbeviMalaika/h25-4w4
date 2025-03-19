@@ -1,4 +1,6 @@
-/*-------------------------------------------------------- .formulaire */
+/*
+******************************************************** Composant : .formulaire
+*/
 .formulaire {
     display: flex;
     justify-content: center;
@@ -18,6 +20,7 @@
         box-shadow: 0px 4px 6px #aaa;
         min-width: 655px;
         max-width: 60vw;
+        border-radius: 10px;
 
         @media screen and (max-width: 800px) {
             flex-direction: column;
@@ -36,6 +39,7 @@
         width: 100%;
         border: 1px solid $couleur__tertiaire;
         padding: 7px;
+        border-radius: 11px;
     }
 
     &__bntinscription {

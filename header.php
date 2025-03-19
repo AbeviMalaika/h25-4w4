@@ -1,3 +1,4 @@
+<?php //***********************************Page pour le header/entête ?>
 <!DOCTYPE html>
 <html lang="fr">
 

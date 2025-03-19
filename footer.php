@@ -1,3 +1,4 @@
+<?php //***********************************Page pour le footer/pied de page ?>
 <?php
 $footer_telephone = get_theme_mod('footer_telephone', '(123) 456-7890');
 $footer_adresse = get_theme_mod('footer_adresse', '1234 rue Sherbrooke Est');

@@ -5,6 +5,7 @@
 ?>
 
 <?php 
+// Déclarations des variables qui contient les données venant du customizer
 $hero_icones = get_theme_mod('hero_icones', 'ffffff');
 ?>
 

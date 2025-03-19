@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Fonction pour l'ajout des fonctionnalités necéssaires pour le thème WordPress
+ */
 function mon_theme_supports()
 {
     add_theme_support('title-tag');
@@ -13,7 +17,10 @@ function mon_theme_supports()
 }
 add_action('after_setup_theme', 'mon_theme_supports');
 
-
+/**
+ * Fonction pour ajouter les fichiers nécessaires pour le thème WordPress, comme
+ * les fichiers de style ou les scripts Javascript 
+ */
 function theme_4w4_enqueue_styles()
 {
     wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css');

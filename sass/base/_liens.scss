@@ -1,14 +1,12 @@
 /*--------------------------------------------- Règles de base pour les liens */
-a{
+a {
     color: $couleur__lien;
 
-    &:visited{
+    &:visited {
         color: $couleur__lien--fonce;
     }
 
-    &:hover{
+    &:hover {
         color: $couleur__lien--pale;
     }
 }
-
-

@@ -1,28 +1,31 @@
-/*-------------------------------------------------------- .populaire */
-.populaire{
+/*
+******************************************************** layout : .populaire
+*/
+.populaire {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    &__articles{
+    &__articles {
         display: grid;
         grid-template-columns: 1fr 1fr;
+
         @media screen and (max-width: 800px) {
             grid-template-columns: 1fr;
         }
     }
 
-    .global{
+    .global {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
-    .global figure{
+
+    .global figure {
         max-width: 1300px;
     }
 
-    &__titre{
+    &__titre {
         font-family: $_police__titre;
         width: 100%;
         padding: 15px;

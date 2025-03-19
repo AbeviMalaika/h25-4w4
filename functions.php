@@ -1,3 +1,4 @@
+<?php //***********************************Inclusion des fonctions pour le fonctionnment du thème ?>
 <?php
 // Définir le chemin vers le dossier "functions"
 $functions_dir = get_template_directory() . '/functions/';

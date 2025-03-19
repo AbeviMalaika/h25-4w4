@@ -1,3 +1,4 @@
+<?php //Page pour une catégorie d'articles ?>
 <?php get_header() ?>
 
 <section class="categorie">

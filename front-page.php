@@ -1,3 +1,4 @@
+<?php //***********************************Page principale ?>
 <!-- SECTION ENTÊTE -->
 <?php get_header(); ?>
 

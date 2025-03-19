@@ -1,5 +1,7 @@
-/*-------------------------------------------------------- .carte */
-.carte{
+/*
+************************************************************* Composant : .carte
+*/
+.carte {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,110 +12,116 @@
     margin: 20px;
     width: 40vw;
     max-width: 550px;
+
     @media screen and (max-width: 800px) {
         width: fit-content;
         max-width: none;
     }
 
-    &__image{
-        img{
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    &__image {
+        img {
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
             width: -webkit-fill-available;
             height: 30vh;
             object-fit: cover;
             border-radius: 8px 8px 0px 0px;
+
             @media screen and (max-width: 800px) {
                 height: 50vh;
             }
         }
     }
 
-    &__titre{
+    &__titre {
         padding: 0;
         margin: 0;
         color: $couleur__secondaire;
         text-transform: uppercase;
+
         @media screen and (max-width: 800px) {
             font-size: 2rem;
         }
     }
 
-    &__contenu{
-        display: flex;    
+    &__contenu {
+        display: flex;
         flex-direction: column;
         gap: 15px;
         margin: 30px;
         height: -webkit-fill-available;
     }
 
-    &__conteneurinfosgenerales{
+    &__conteneurinfosgenerales {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    &__description{
+    &__description {
         height: auto;
         font-size: 1.2rem;
         margin: 0;
         padding: 20px 0;
+
         @media screen and (max-width: 800px) {
             height: auto;
         }
     }
 
-    &__bouton{
+    &__bouton {
         border-radius: 5px;
         font-size: 1.5rem;
         color: $couleur__secondaire;
         font-family: $_police__soustitre;
-        &--actif{
-
-        }
     }
 
-    &__categorie{
+    &__categorie {
         display: flex;
         align-items: center;
         gap: 12px;
         font-family: $_police__soustitre;
-        &__titre{
+
+        &__titre {
             font-weight: normal;
             padding: 0;
             margin: 0;
         }
     }
 
-    &__temperature{
+    &__temperature {
         display: flex;
         align-items: center;
         gap: 12px;
         font-family: $_police__soustitre;
-        &__titre{
+
+        &__titre {
             font-weight: normal;
             padding: 0;
             margin: 0;
         }
-        &__valeurs{
+
+        &__valeurs {
             font-family: $_police__soustitre;
             background-color: $couleur__secondaire--trespale;
             border-radius: 7px;
-            padding: 4px 22px;    
+            padding: 4px 22px;
             margin: 0;
         }
     }
 
-    &__categorie__liste{
+    &__categorie__liste {
         display: flex;
         margin: 0;
         padding: 0;
-        gap: 20px; 
-        &__tag{
+        gap: 20px;
+
+        &__tag {
             list-style: none;
             background-color: $couleur__tertiaire--pale;
             border-radius: 7px;
-            padding: 5px 22px;        
-            a{
+            padding: 5px 22px;
+
+            a {
                 font-family: $_police__soustitre;
                 text-decoration: none;
                 list-style: none;

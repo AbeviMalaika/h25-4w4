@@ -1,4 +1,5 @@
-    <?php get_header() ?>
+<?php //***********************************Page index - défaut ?>
+<?php get_header() ?>
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

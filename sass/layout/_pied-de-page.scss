@@ -1,4 +1,6 @@
-/*-------------------------------------------------------- .piedpage */
+/*
+******************************************************** layout : .piedpage
+*/
 .piedpage {
     color: white;
     display: flex;
@@ -7,7 +9,7 @@
     max-width: 1300px;
     padding: 50px;
 
-    a{
+    a {
         color: white;
     }
 
@@ -38,7 +40,7 @@
                 margin-top: 15px;
             }
 
-            &__titre{
+            &__titre {
                 margin: 0;
             }
         }
@@ -57,7 +59,7 @@
                     margin: 0;
                 }
 
-                p{
+                p {
                     font-size: 1rem;
                 }
             }

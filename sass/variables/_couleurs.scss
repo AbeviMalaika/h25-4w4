@@ -1,8 +1,10 @@
-/*-------------------------------------------------------- Variables pour les couleurs */
+/*--------------------------- Variables pour les couleurs importantes du thème*/
+// Couleur pour les liens
 $couleur__lien : #1b4781;
 $couleur__lien--fonce : #020e1f;
 $couleur__lien--pale : #4979bd;
 
+// Couleurs de base
 $couleur__principale : #fff9f9;
 $couleur__secondaire : #254086;
 $couleur__secondaire--pale : #4979bd;
@@ -11,6 +13,7 @@ $couleur__secondaire--foncee : #112f5b;
 $couleur__tertiaire : #c09137;
 $couleur__tertiaire--pale : #F3C366;
 
+// Teinte de gris
 $couleur__gris : #ddd;
-$couleur__gris--pale : #ddd;
+$couleur__gris--pale : #4d4d4d;
 $couleur__gris--fonce : #ddd;
