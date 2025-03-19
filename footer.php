@@ -1,6 +1,6 @@
-<?php 
+<?php
 $footer_telephone = get_theme_mod('footer_telephone', '(123) 456-7890');
-$footer_adresse = get_theme_mod('footer_adresse', '1234 rue Sherbrooke Est'); 
+$footer_adresse = get_theme_mod('footer_adresse', '1234 rue Sherbrooke Est');
 $footer_courriel = get_theme_mod('footer_courriel', 'courriel@mail.com');
 $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
 ?>
@@ -8,6 +8,7 @@ $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
     <div class="piedpage global">
         <section class="piedpage__s1">
             <div class="piedpage__s1__externe">
+            <h5 class="piedpage__s1__externe__titre">Liens utiles sur le voyage</h5>
                 <?php wp_nav_menu(array(
                     "menu" => "externe",
                     "container" => "nav",
@@ -20,7 +21,7 @@ $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
                     <p class="piedpage__s1__coord__infos_adresse"><?php echo $footer_adresse; ?></p>
                     <p class="piedpage__s1__coord__infos_telephone"><?php echo $footer_telephone; ?></p>
                     <p class="piedpage__s1__coord__infos_courriel"><?php echo $footer_courriel; ?></p>
-                    
+
                 </div>
 
                 <div class="piedpage__s1__coord_recherche">
@@ -41,7 +42,7 @@ $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
                     "menu" => "principal",
                     "container" => "nav",
                     "container_class" => "piedpage__menu"
-                ));?>
+                )); ?>
             </div>
         </section>
         <section class="piedpage__s3">

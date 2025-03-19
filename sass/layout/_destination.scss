@@ -23,6 +23,10 @@
         grid-template-columns: 1fr 1fr;
         background-color: white;
         border-radius: 15px;
+        @media screen and (max-width: 800px) {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
     }
 
     &__contenu{
@@ -63,6 +67,12 @@
 
         &__description p{
             font-size: 1.2rem;
+        }
+
+        figure{
+            img{
+                border-radius: 10px;
+            }
         }
     }
 

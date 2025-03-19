@@ -7,12 +7,14 @@
     border-radius: 10px;
     box-shadow: 2px 3px 20px 0px $couleur__gris--pale;
     border: 1px solid #f7deac;
-
-    &--grande{
-        margin: 20px;
-        width: 40vw;
-        max-width: 550px;
+    margin: 20px;
+    width: 40vw;
+    max-width: 550px;
+    @media screen and (max-width: 800px) {
+        width: fit-content;
+        max-width: none;
     }
+
     &__image{
         img{
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
@@ -20,6 +22,9 @@
             height: 30vh;
             object-fit: cover;
             border-radius: 8px 8px 0px 0px;
+            @media screen and (max-width: 800px) {
+                height: 50vh;
+            }
         }
     }
 
@@ -28,6 +33,9 @@
         margin: 0;
         color: $couleur__secondaire;
         text-transform: uppercase;
+        @media screen and (max-width: 800px) {
+            font-size: 2rem;
+        }
     }
 
     &__contenu{
@@ -45,10 +53,13 @@
     }
 
     &__description{
-        height: 70px;
+        height: auto;
         font-size: 1.2rem;
         margin: 0;
         padding: 20px 0;
+        @media screen and (max-width: 800px) {
+            height: auto;
+        }
     }
 
     &__bouton{

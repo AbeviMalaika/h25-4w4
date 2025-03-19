@@ -19,9 +19,9 @@
                             <div class="destination__contenu__temperature">
                                 <h6 class="destination__contenu__temperature__titre">Températures : </h6>
                                 <p class="destination__contenu__temperature__valeurs">
-                                    Max : <?= the_field('temperature_maximum'); ?> C&#176;
-                                    Min : <?= the_field('temperature_minimum'); ?> C&#176;
-                                    Moyenne : <?= the_field('temperature_moyenne'); ?> C&#176;
+                                    Max : <?= affichage_temperature('temperature_maximum', 20, 30); ?> C&#176;
+                                    Min : <?= affichage_temperature('temperature_minimum', -15, 20); ?> C&#176;
+                                    Moyenne : <?= affichage_temperature('temperature_moyenne', 15, 25); ?> C&#176;
                                 </p>
                             </div>
                             <div class="destination__contenu__description"><?php the_content(); ?></div>

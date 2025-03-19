@@ -18,7 +18,7 @@ $total_categorie = count($liste_categories);
 */
 if (!(in_category("galerie"))) {
 ?>
-  <article class="carte carte--grande">
+  <article class="carte">
   <div class="carte__image">
         <?php
         if (has_post_thumbnail()) {
@@ -59,9 +59,9 @@ if (!(in_category("galerie"))) {
         <h6 class="carte__temperature__titre">Températures : </h6>
 
         <p class="carte__temperature__valeurs">
-          Max : <?= affichage_temperature('temperature_maximum'); ?> C&#176;
-          Min : <?= affichage_temperature('temperature_minimum'); ?> C&#176;
-          Moyenne : <?= affichage_temperature('temperature_moyenne'); ?> C&#176;
+          Max : <?= affichage_temperature('temperature_maximum', 20, 30); ?> C&#176;
+          Min : <?= affichage_temperature('temperature_minimum', -15, 20); ?> C&#176;
+          Moyenne : <?= affichage_temperature('temperature_moyenne', 15, 25); ?> C&#176;
         </p>
       </div>
 
@@ -73,5 +73,3 @@ if (!(in_category("galerie"))) {
     </div>
   </article>
 <?php }; ?>
-
-<!-- the_category(); -->

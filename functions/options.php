@@ -46,14 +46,16 @@ add_action('pre_get_posts', 'modifie_requete_principal');
  * La fonction retourne un nombre entier, soit la température enregistrée ou 
  * le nombre généré aléatoirement.
  * @param String $fieldTemperature : Nom du field de température
+ * @param Int $tempRandMin : Nombre entier minimum pour la génération aléatoire de la température
+ * @param Int $tempRandMax : Nombre entier maximum pour la génération aléatoire de la température
  * @return Number $valeurTemperature : Nombre entier pour la température
  */
-function affichage_temperature($fieldTemperature)
+function affichage_temperature($fieldTemperature, $tempRandMin, $tempRandMax)
 {
     if (get_field($fieldTemperature)) {
         $valeurTemperature = the_field($fieldTemperature);
     } else {
-        $valeurTemperature = rand(-10, 40);
+        $valeurTemperature = rand($tempRandMin, $tempRandMax);
     }
 
     return $valeurTemperature;

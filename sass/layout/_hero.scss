@@ -39,23 +39,32 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 1.3rem 0 1rem 0;
         &__titre{
             font-family: $_police__soustitre;
             font-weight: normal;
+            margin: 0;    
         }
 
         &__infos{
             display: flex;
             gap: 1.5vw;
+            border-bottom: 1px solid white;
+            @media screen and (max-width: 800px) {
+                display: flex;
+                gap: 1.5vw;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 
-    &__courriel,
+    &__auteur,
+    &__courriel a,
     &__adresse,
     &__telephone {
-        // font-size: 1.2rem;
         font-size: clamp(1rem, 0.8568rem + 0.286vw, 1.2rem);
-        font-weight: bold;
+        color: white;
     }
 
     &__promo,
