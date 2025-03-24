@@ -21,13 +21,13 @@ Fichier principal de la structure Sass*/
 /*/////////////////////
 *Les variables 
 ///////////////////////*/
-/*-------------------------------------------------------- Variables pour les couleurs */
+/*--------------------------- Variables pour les couleurs importantes du thème*/
 /*-------------------------------------------------------- Variables pour les polices */
 /*--------------------------------------------------Familles de police*/
 /*/////////////////////
 *Les balises de base 
 ///////////////////////*/
-/*-------------------------------------------------------- Règles simples */
+/*-------------------------------------------------------- Règles de bases simples */
 body {
   font-size: 16px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -95,7 +95,9 @@ a:hover {
 /*/////////////////////
 *Les composants 
 ///////////////////////*/
-/*-------------------------------------------------------- .menu */
+/*
+******************************************************** Composant : .menu
+*/
 .menu {
   display: flex;
   margin: 0;
@@ -124,7 +126,9 @@ a:hover {
   }
 }
 
-/*-------------------------------------------------------- .recherche */
+/*
+******************************************************** Composant : .recherche
+*/
 .recherche {
   display: flex;
   height: 1.6rem;
@@ -168,7 +172,9 @@ a:hover {
   }
 }
 
-/*-------------------------------------------------------- .formulaire */
+/*
+******************************************************** Composant : .formulaire
+*/
 .formulaire {
   display: flex;
   justify-content: center;
@@ -217,14 +223,16 @@ a:hover {
   margin: 0;
 }
 
-/*-------------------------------------------------------- .carte */
+/*
+************************************************************* Composant : .carte
+*/
 .carte {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 2px 3px 20px 0px #ddd;
+  box-shadow: 2px 3px 20px 0px #4d4d4d;
   border: 1px solid #f7deac;
   margin: 20px;
   width: 40vw;
@@ -337,7 +345,9 @@ a:hover {
   padding: 0;
 }
 
-/*-------------------------------------------------------- .galerie */
+/*
+******************************************************** Composant : .icones
+*/
 .icones {
   display: flex;
   gap: 10px;
@@ -346,7 +356,9 @@ a:hover {
 /*//////////////////////
 *Les layouts
 ///////////////////////*/
-/*-------------------------------------------------------- Généralités */
+/*
+******************************************************** layout : Généralités
+*/
 .global {
   padding: 10vh 5vw;
 }
@@ -362,7 +374,9 @@ footer {
   justify-content: center;
 }
 
-/*-------------------------------------------------------- .entete */
+/*
+******************************************************** layout : .entete
+*/
 .entete {
   display: flex;
   justify-content: space-between;
@@ -565,7 +579,9 @@ footer {
   text-transform: uppercase;
 }
 
-/*-------------------------------------------------------- .piedpage */
+/*
+******************************************************** layout : .piedpage
+*/
 .piedpage {
   color: white;
   display: flex;
@@ -658,7 +674,9 @@ footer {
   font-size: 0.7rem;
 }
 
-/*-------------------------------------------------------- .populaire */
+/*
+******************************************************** layout : .populaire
+*/
 .populaire {
   display: flex;
   flex-direction: column;
@@ -692,7 +710,9 @@ footer {
   color: white;
 }
 
-/*-------------------------------------------------------- .categorie */
+/*
+******************************************************** layout : .categorie
+*/
 .categorie .global {
   display: flex;
   flex-wrap: wrap;
@@ -723,7 +743,9 @@ footer {
   margin: 0;
 }
 
-/*-------------------------------------------------------- .destination */
+/*
+******************************************************** layout : .destination
+*/
 .destination {
   display: flex;
   flex-direction: column;
@@ -813,6 +835,9 @@ footer {
   padding: 0;
 }
 
+/*
+******************************************************** layout : .recherche__section
+*/
 .recherche__section {
   max-width: 1000px;
   display: flex;
@@ -828,4 +853,18 @@ footer {
 }
 .recherche__section__titre {
   text-transform: uppercase;
+}
+
+.erreur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.erreur__message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.erreur__message__image {
+  width: 30vw;
 }/*# sourceMappingURL=style.css.map */
