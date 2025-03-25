@@ -1,0 +1,55 @@
+/* The animation code */
+@keyframes animationAvion {
+    0% {
+        transform: translateX(-200%) scale(1);
+        top: 200px;
+    }
+
+    100% {
+        transform: translateX(300%) scale(0.5);
+        top: 55px;
+    }
+}
+
+.erreur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__contenu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-transform: uppercase;
+
+        &__imgIle {
+            width: 30vw;
+            z-index: 1;
+        }
+
+        &__imgAvion {
+            position: absolute;
+            width: 30vw;
+            animation-name: animationAvion;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    &__recherche {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+
+        &__form {
+            width: 30%;
+        }
+    }
+}

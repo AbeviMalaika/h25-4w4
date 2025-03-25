@@ -199,15 +199,27 @@ function theme_4w4_customize_register($wp_customize)
         'priority' => 30,
     ));
 
-    /**********/ ////////////////////////////////////////////////Début du champ 404_background*/
-    ////////////////////////////////////////// ajout de la donnée image en background
-    $wp_customize->add_setting('404_background', array(
+    /**********/ ////////////////////////////////////////////////Début du champ 404_imgprincipale*/
+    ////////////////////////////////////////// ajout de la donnée de l'image principale de la page
+    $wp_customize->add_setting('404_imgprincipale', array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
     ));
-    ////////////////////////////////////////// ajout du contrôle de la donnée image en background
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_background', array(
-        'label' => __('Image Arrière-plan 404', 'theme_4w4'),
+    ////////////////////////////////////////// ajout du contrôle de la donnée image en imgprincipale
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_imgprincipale', array(
+        'label' => __('Image Principale', 'theme_4w4'),
+        'section' => '404_section',
+    )));
+
+    /**********/ ////////////////////////////////////////////////Début du champ 404_imganimation*/
+    ////////////////////////////////////////// ajout de la donnée image qui s'anime dans la page
+    $wp_customize->add_setting('404_imganimation', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    ////////////////////////////////////////// ajout du contrôle de la donnée image en imgprincipale
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_imganimation', array(
+        'label' => __('Image Animée', 'theme_4w4'),
         'section' => '404_section',
     )));
 }

@@ -36,6 +36,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
 }
 
 .site__main {
@@ -855,7 +856,23 @@ footer {
   text-transform: uppercase;
 }
 
+/* The animation code */
+@keyframes animationAvion {
+  0% {
+    transform: translateX(-200%) scale(1);
+    top: 200px;
+  }
+  100% {
+    transform: translateX(300%) scale(0.5);
+    top: 55px;
+  }
+}
 .erreur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.erreur__contenu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -864,7 +881,26 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  text-transform: uppercase;
 }
-.erreur__message__image {
+.erreur__message__imgIle {
   width: 30vw;
+  z-index: 1;
+}
+.erreur__message__imgAvion {
+  position: absolute;
+  width: 30vw;
+  animation-name: animationAvion;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.erreur__recherche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.erreur__recherche__form {
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */
