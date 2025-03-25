@@ -222,6 +222,18 @@ function theme_4w4_customize_register($wp_customize)
         'label' => __('Image Animée', 'theme_4w4'),
         'section' => '404_section',
     )));
+
+        /**********/ ////////////////////////////////////////////////Début du champ 404_background*/
+    ////////////////////////////////////////// ajout de la donnée image en background
+    $wp_customize->add_setting('404_background', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    ////////////////////////////////////////// ajout du contrôle de la donnée image en background
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_background', array(
+        'label' => __('Image Background', 'theme_4w4'),
+        'section' => '404_section',
+    )));
 }
 
 add_action('customize_register', 'theme_4w4_customize_register');

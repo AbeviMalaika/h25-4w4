@@ -507,7 +507,6 @@ footer {
 
 /*-------------------------------------------------------- .hero */
 .hero {
-  background-image: url("images/maldives.jpg");
   min-height: 100vh;
   background-size: cover;
   display: flex;
@@ -871,10 +870,16 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 10vh;
+  background-size: cover;
+}
+.erreur__titre {
+  text-transform: uppercase;
+  color: rgb(11, 139, 133);
 }
 .erreur__contenu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 .erreur__message {
@@ -882,7 +887,6 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  text-transform: uppercase;
 }
 .erreur__message__imgIle {
   width: 30vw;
@@ -901,6 +905,9 @@ footer {
   align-items: center;
   margin: 20px;
 }
+.erreur__recherche__titre {
+  text-align: center;
+}
 .erreur__recherche__form {
-  width: 30%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
