@@ -199,17 +199,18 @@ function theme_4w4_customize_register($wp_customize)
         'priority' => 30,
     ));
 
-    /**********/ ////////////////////////////////////////////////Début du champ 404_imgprincipale*/
-    ////////////////////////////////////////// ajout de la donnée de l'image principale de la page
-    $wp_customize->add_setting('404_imgprincipale', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+    /**********/ ////////////////////////////////////////////////Début du champ footer_mission*/
+    ////////////////////////////////////////// ajout de la donnée
+    $wp_customize->add_setting('404_titre', array(
+        'default' => __('Titre de la page 404', 'theme_4w4'),
+        'sanitize_callback' => 'sanitize_text_field'
     ));
-    ////////////////////////////////////////// ajout du contrôle de la donnée image en imgprincipale
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_imgprincipale', array(
-        'label' => __('Image Principale', 'theme_4w4'),
+    ////////////////////////////////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control('404_titre', array(
+        'label' => __('Mission', 'theme_4w4'),
         'section' => '404_section',
-    )));
+        'type' => 'textarea',
+    ));
 
     /**********/ ////////////////////////////////////////////////Début du champ 404_imganimation*/
     ////////////////////////////////////////// ajout de la donnée image qui s'anime dans la page
@@ -223,7 +224,7 @@ function theme_4w4_customize_register($wp_customize)
         'section' => '404_section',
     )));
 
-        /**********/ ////////////////////////////////////////////////Début du champ 404_background*/
+    /**********/ ////////////////////////////////////////////////Début du champ 404_background*/
     ////////////////////////////////////////// ajout de la donnée image en background
     $wp_customize->add_setting('404_background', array(
         'default' => '',
