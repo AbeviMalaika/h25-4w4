@@ -17,6 +17,7 @@
     align-items: center;
     padding-bottom: 10vh;
     background-size: cover;
+    gap: 20px;
 
     &__titre {
         text-transform: uppercase;
@@ -24,6 +25,11 @@
         font-size: clamp(2rem, -2.7353rem + 9.4588vw, 15rem);
         width: 100vw;
         text-align: center;
+        margin-bottom: 0;
+    }
+
+    &__sous-titre{
+        color: white;
     }
 
     &__contenu {
@@ -75,14 +81,21 @@
         gap: 25px;
         width: 30%;
 
-        .menu {
-            display: flex;
-            flex-direction: column;
+        &__menu{
+            .menu {
+                display: flex;
+                flex-direction: column;
+                a{
+                    color: rgb(211, 206, 238);
+                    font-weight: bold
+                }
+            }
         }
     }
 
     h4 {
         margin: 0;
         width: 100%;
+        color: white;
     }
 }

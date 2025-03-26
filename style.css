@@ -872,6 +872,7 @@ footer {
   align-items: center;
   padding-bottom: 10vh;
   background-size: cover;
+  gap: 20px;
 }
 .erreur__titre {
   text-transform: uppercase;
@@ -879,6 +880,10 @@ footer {
   font-size: clamp(2rem, -2.7353rem + 9.4588vw, 15rem);
   width: 100vw;
   text-align: center;
+  margin-bottom: 0;
+}
+.erreur__sous-titre {
+  color: white;
 }
 .erreur__contenu {
   display: flex;
@@ -922,11 +927,16 @@ footer {
   gap: 25px;
   width: 30%;
 }
-.erreur__navigation .menu {
+.erreur__navigation__menu .menu {
   display: flex;
   flex-direction: column;
+}
+.erreur__navigation__menu .menu a {
+  color: rgb(211, 206, 238);
+  font-weight: bold;
 }
 .erreur h4 {
   margin: 0;
   width: 100%;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
