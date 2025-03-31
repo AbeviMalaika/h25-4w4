@@ -855,88 +855,41 @@ footer {
   text-transform: uppercase;
 }
 
-/* The animation code */
-@keyframes animationAvion {
-  0% {
-    transform: translateX(-200%) scale(1);
-    top: 200px;
-  }
-  100% {
-    transform: translateX(300%) scale(0.5);
-    top: 55px;
-  }
-}
 .erreur {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 10vh;
+  height: 100vh;
   background-size: cover;
-  gap: 20px;
-}
-.erreur__titre {
-  text-transform: uppercase;
-  color: white;
-  font-size: clamp(2rem, -2.7353rem + 9.4588vw, 15rem);
-  width: 100vw;
-  text-align: center;
-  margin-bottom: 0;
-}
-.erreur__sous-titre {
-  color: white;
+  background-position: center;
+  display: flex;
+  justify-content: center;
 }
 .erreur__contenu {
+  margin: 10%;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-.erreur__message {
-  display: flex;
+  max-width: 1300px;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  /*Adaptabilité sur tablette*/
 }
-.erreur__message__imgIle {
-  width: 30vw;
-  z-index: 1;
-}
-.erreur__message__imgAvion {
-  position: absolute;
-  width: 30vw;
-  animation-name: animationAvion;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-}
-.erreur__recherche {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30%;
-  gap: 25px;
-}
-.erreur__recherche__titre {
+.erreur__titre {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: clamp(6rem, 4.75rem + 2.5vw, 7rem);
   text-align: center;
+  padding: 20px 40px;
 }
-.erreur__recherche__form {
-  width: 100%;
+.erreur__description {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 1rem;
 }
 .erreur__navigation {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  width: 30%;
 }
 .erreur__navigation__menu .menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .erreur__navigation__menu .menu a {
   color: rgb(211, 206, 238);
   font-weight: bold;
-}
-.erreur h4 {
-  margin: 0;
-  width: 100%;
-  color: white;
 }/*# sourceMappingURL=style.css.map */

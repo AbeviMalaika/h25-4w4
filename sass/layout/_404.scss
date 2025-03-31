@@ -1,101 +1,54 @@
-/* The animation code */
-@keyframes animationAvion {
-    0% {
-        transform: translateX(-200%) scale(1);
-        top: 200px;
-    }
-
-    100% {
-        transform: translateX(300%) scale(0.5);
-        top: 55px;
-    }
-}
-
 .erreur {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10vh;
+    height: 100vh;
     background-size: cover;
-    gap: 20px;
-
-    &__titre {
-        text-transform: uppercase;
-        color: white;
-        font-size: clamp(2rem, -2.7353rem + 9.4588vw, 15rem);
-        width: 100vw;
-        text-align: center;
-        margin-bottom: 0;
-    }
-
-    &__sous-titre{
-        color: white;
-    }
+    background-position: center;
+    display: flex;
+    justify-content: center;
 
     &__contenu {
+        margin: 10%;
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-
-    &__message {
-        display: flex;
+        max-width: 1300px;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-
-        &__imgIle {
-            width: 30vw;
-            z-index: 1;
-        }
-
-        &__imgAvion {
-            position: absolute;
-            width: 30vw;
-            animation-name: animationAvion;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-        }
+        /*Adaptabilité sur tablette*/
+        // @media screen and (max-width: 800px) {
+        //     flex-direction: column;
+        // }
     }
 
-    &__recherche {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 30%;
-        gap: 25px;
-
-        &__titre {
-            text-align: center;
-        }
-
-        &__form {
-            width: 100%;
-        }
+    &__titre {
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+        font-size: clamp(6rem, 4.75rem + 2.5vw, 7rem);
+        text-align: center;
+        padding: 20px 40px;
+        // font-size: 7rem;
     }
+
+    &__description {
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    &__boutonAccueil {}
 
     &__navigation {
         display: flex;
         flex-direction: column;
-        gap: 25px;
-        width: 30%;
+        // gap: 25px;
+        // width: 30%;
 
-        &__menu{
+        &__menu {
             .menu {
                 display: flex;
-                flex-direction: column;
-                a{
+                flex-direction: row;
+
+                a {
                     color: rgb(211, 206, 238);
                     font-weight: bold
                 }
             }
         }
-    }
-
-    h4 {
-        margin: 0;
-        width: 100%;
-        color: white;
     }
 }
