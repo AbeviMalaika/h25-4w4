@@ -226,6 +226,19 @@ function theme_4w4_customize_register($wp_customize)
         'type' => 'textarea',
     ));
 
+    /**********/ ////////////////////////////////////////////////Début du champ hero_texteColo*/
+    ////////////////////////////////////////// ajout de la donnée de couleur des icones
+    $wp_customize->add_setting('404_texteColo', array(
+        'default' => '#ffffff',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control($wp_customize, '404_texteColo', array(
+            'label' => __('Couleur Texte'),
+            'section' => 'section_404',
+        ))
+    );
+
     /**********/ ////////////////////////////////////////////////Début du champ 404_background*/
     ////////////////////////////////////////// ajout de la donnée image en background
     $wp_customize->add_setting('404_background', array(

@@ -5,23 +5,18 @@
 $error_background = get_theme_mod('404_background', '');
 $error_titre = get_theme_mod('404_titre', 'Un titre pour la page erreur 404!');
 $error_description = get_theme_mod('404_description', 'Petite description pour la page erreur 404.');
+$error_texteColor = get_theme_mod('404_texteColo', '#000000');
 ?>
 
 <?php get_header() ?>
 <div class="erreur" style="background-image: url(<?php echo $error_background; ?>);">
-    <h1 class="erreur__titre"><?php echo $error_titre; ?></h1>
-    <p class="erreur__description"><?php echo $error_description; ?></p>
+    <h1 class="erreur__titre" style="color = <?php echo $error_texteColor; ?>;"><?php echo $error_titre; ?></h1>
+    <p class="erreur__description" style="color = <?php echo $error_texteColor; ?>;"><?php echo $error_description; ?></p>
+
+    <button><a href="<?php echo home_url(); ?>">Retour à l'accueil</a></button>
 
     <div class="erreur__contenu">
-        <div class="erreur__recherche">
-            <h4 class="erreur__recherche__titre">Une petite recherche pourrait vous rediriger au bon endroit</h4>
-            <div class="erreur__recherche__form">
-                <?php get_search_form(); ?>
-            </div>
-            <?php get_template_part("gabarits/icones-sociaux"); ?>
-        </div>
         <div class="erreur__navigation">
-            <h4 class="erreur__navigation_titre">Une de ses destinations pourrait vous conquérir</h4>
             <?php wp_nav_menu(array(
                 "menu" => "recommandation",
                 "container" => "nav",
@@ -34,6 +29,3 @@ $error_description = get_theme_mod('404_description', 'Petite description pour l
 </body>
 
 </html>
-    <!-- <div class="erreur__message">
-
-    </div> -->
