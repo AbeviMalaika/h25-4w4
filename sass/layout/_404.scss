@@ -20,7 +20,8 @@
     }
 
     &__titre {
-        background-color: rgba(255, 255, 255, 0.2);
+        // background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgb(24, 45, 86, 0.4);
         font-size: clamp(6rem, 4.75rem + 2.5vw, 7rem);
         text-align: center;
         padding: 20px 40px;
@@ -39,7 +40,7 @@
         gap: 20px;
 
         &__description {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgb(24, 45, 86, 0.4);
             text-align: center;
             font-size: 1rem;
             font-weight: bold;
@@ -61,6 +62,11 @@
                 font-size: 1.5rem;
                 font-weight: bold;
                 text-decoration: none;
+                color: $couleur__lien;
+
+                &:hover{
+                    color: $couleur__lien--pale;
+                }
 
                 /*Adaptabilité sur mobile*/
                 @media screen and (max-width: 800px) {
@@ -82,7 +88,7 @@
                 justify-content: center;
 
                 li {
-                    background-color: rgb(26, 104, 217, 0.4);
+                    background-color: rgb(243 195 102 / 50%);
                     padding: 10px 15px;
                     border-radius: 5px;
                 }

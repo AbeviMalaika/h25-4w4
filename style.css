@@ -877,7 +877,7 @@ footer {
   }
 }
 .erreur__titre {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(24, 45, 86, 0.4);
   font-size: clamp(6rem, 4.75rem + 2.5vw, 7rem);
   text-align: center;
   padding: 20px 40px;
@@ -896,7 +896,7 @@ footer {
   gap: 20px;
 }
 .erreur__redirection__description {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(24, 45, 86, 0.4);
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -918,7 +918,11 @@ footer {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+  color: #1b4781;
   /*Adaptabilité sur mobile*/
+}
+.erreur__redirection__boutonAccueil a:hover {
+  color: #4979bd;
 }
 @media screen and (max-width: 800px) {
   .erreur__redirection__boutonAccueil a {
@@ -936,7 +940,7 @@ footer {
   justify-content: center;
 }
 .erreur__navigation__menu .menu li {
-  background-color: rgba(26, 104, 217, 0.4);
+  background-color: rgba(243, 195, 102, 0.5);
   padding: 10px 15px;
   border-radius: 5px;
 }
