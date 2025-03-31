@@ -868,18 +868,62 @@ footer {
   max-width: 1300px;
   flex-direction: column;
   align-items: center;
-  /*Adaptabilité sur tablette*/
+  gap: 40px;
+  /*Adaptabilité sur mobile*/
+}
+@media screen and (max-width: 800px) {
+  .erreur__contenu {
+    margin: 15%;
+  }
 }
 .erreur__titre {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   font-size: clamp(6rem, 4.75rem + 2.5vw, 7rem);
   text-align: center;
   padding: 20px 40px;
+  margin: 0;
+  /*Adaptabilité sur mobile*/
 }
-.erreur__description {
-  background-color: rgba(255, 255, 255, 0.1);
+@media screen and (max-width: 800px) {
+  .erreur__titre {
+    font-size: 4rem;
+  }
+}
+.erreur__redirection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.erreur__redirection__description {
+  background-color: rgba(255, 255, 255, 0.2);
   text-align: center;
   font-size: 1rem;
+  font-weight: bold;
+  padding: 15px;
+  margin: 0;
+  /*Adaptabilité sur mobile*/
+}
+@media screen and (max-width: 800px) {
+  .erreur__redirection__description {
+    font-size: 1.2rem;
+  }
+}
+.erreur__redirection__boutonAccueil {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.erreur__redirection__boutonAccueil a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  /*Adaptabilité sur mobile*/
+}
+@media screen and (max-width: 800px) {
+  .erreur__redirection__boutonAccueil a {
+    font-size: 2rem;
+  }
 }
 .erreur__navigation {
   display: flex;
@@ -888,8 +932,27 @@ footer {
 .erreur__navigation__menu .menu {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.erreur__navigation__menu .menu li {
+  background-color: rgba(26, 104, 217, 0.4);
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 .erreur__navigation__menu .menu a {
-  color: rgb(211, 206, 238);
   font-weight: bold;
+  color: black;
+  text-transform: none;
+  font-size: 1.3rem;
+  font-weight: normal;
+  /*Adaptabilité sur mobile*/
+}
+@media screen and (max-width: 800px) {
+  .erreur__navigation__menu .menu a {
+    font-size: 1.6rem;
+  }
+}
+.erreur__navigation__menu .menu a:hover {
+  color: #1b4781;
 }/*# sourceMappingURL=style.css.map */

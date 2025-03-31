@@ -13,10 +13,12 @@ $error_texteColor = get_theme_mod('404_texteColo', '#000000');
     <div class="erreur__contenu">
         <!-- Titre -->
         <h1 class="erreur__titre" style="color: <?php echo $error_texteColor; ?>;"><?php echo $error_titre; ?></h1>
-        <!-- Description -->
-        <p class="erreur__description" style="color:<?php echo $error_texteColor; ?>;"><?php echo $error_description; ?></p>
-        <!-- Bouton pour retourner à l'accueil -->
-        <button><a href="<?php echo home_url(); ?>">Retour à l'accueil</a></button>
+        <div class="erreur__redirection">
+            <!-- Description -->
+            <p class="erreur__redirection__description" style="color:<?php echo $error_texteColor; ?>;"><?php echo $error_description; ?></p>
+            <!-- Bouton pour retourner à l'accueil -->
+            <button class="erreur__redirection__boutonAccueil"><a href="<?php echo home_url(); ?>">Retour à l'accueil</a></button>
+        </div>
         <!-- Menu pour différente destination -->
         <div class="erreur__navigation">
             <?php wp_nav_menu(array(

@@ -11,42 +11,98 @@
         max-width: 1300px;
         flex-direction: column;
         align-items: center;
-        /*Adaptabilité sur tablette*/
-        // @media screen and (max-width: 800px) {
-        //     flex-direction: column;
-        // }
+        gap: 40px;
+
+        /*Adaptabilité sur mobile*/
+        @media screen and (max-width: 800px) {
+            margin: 15%;
+        }
     }
 
     &__titre {
-        background-color: rgba($color: #ffffff, $alpha: 0.1);
+        background-color: rgba(255, 255, 255, 0.2);
         font-size: clamp(6rem, 4.75rem + 2.5vw, 7rem);
         text-align: center;
         padding: 20px 40px;
-        // font-size: 7rem;
+        margin: 0;
+
+        /*Adaptabilité sur mobile*/
+        @media screen and (max-width: 800px) {
+            font-size: 4rem;
+        }
     }
 
-    &__description {
-        background-color: rgba($color: #ffffff, $alpha: 0.1);
-        text-align: center;
-        font-size: 1rem;
-    }
+    &__redirection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
 
-    &__boutonAccueil {}
+        &__description {
+            background-color: rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 15px;
+            margin: 0;
+
+            /*Adaptabilité sur mobile*/
+            @media screen and (max-width: 800px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__boutonAccueil {
+            padding: 20px;
+            border-radius: 5px;
+            border: none;
+
+            a {
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+
+                /*Adaptabilité sur mobile*/
+                @media screen and (max-width: 800px) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
 
     &__navigation {
         display: flex;
         flex-direction: column;
-        // gap: 25px;
-        // width: 30%;
 
         &__menu {
             .menu {
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                li {
+                    background-color: rgb(26, 104, 217, 0.4);
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                }
 
                 a {
-                    color: rgb(211, 206, 238);
-                    font-weight: bold
+                    font-weight: bold;
+                    color: black;
+                    text-transform: none;
+                    font-size: 1.3rem;
+
+                    font-weight: normal;
+
+                    /*Adaptabilité sur mobile*/
+                    @media screen and (max-width: 800px) {
+                        font-size: 1.6rem;
+                    }
+
+                    &:hover {
+                        color: $couleur__lien;
+                    }
                 }
             }
         }
