@@ -191,15 +191,16 @@ function theme_4w4_customize_register($wp_customize)
     ));
 
 
-    /*----------------PAGE ERREUR 404-----------------*/
+    /*SECTION POUR LA PAGE ERREUR 404 - EXAMEN INTRA*/
+    /*-----------------------------------------------PAGE ERREUR 404-----------------*/
     // Création d'une nouvelle section dans le customizer
     ///////////////////////////////////////////////////////////////Début de la zone 404
-    $wp_customize->add_section('404_section', array(
+    $wp_customize->add_section('section_404', array(
         'title' => __('Section 404', 'theme_4w4'),
         'priority' => 30,
     ));
 
-    /**********/ ////////////////////////////////////////////////Début du champ footer_mission*/
+    /**********/ ////////////////////////////////////////////////Début du champ 404_titre*/
     ////////////////////////////////////////// ajout de la donnée
     $wp_customize->add_setting('404_titre', array(
         'default' => __('Titre de la page 404', 'theme_4w4'),
@@ -207,22 +208,23 @@ function theme_4w4_customize_register($wp_customize)
     ));
     ////////////////////////////////////////// ajout du contrôle de la donnée
     $wp_customize->add_control('404_titre', array(
-        'label' => __('Mission', 'theme_4w4'),
-        'section' => '404_section',
+        'label' => __('Titre', 'theme_4w4'),
+        'section' => 'section_404',
         'type' => 'textarea',
     ));
 
-    /**********/ ////////////////////////////////////////////////Début du champ 404_imganimation*/
-    ////////////////////////////////////////// ajout de la donnée image qui s'anime dans la page
-    $wp_customize->add_setting('404_imganimation', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+    /**********/ ////////////////////////////////////////////////Début du champ 404_description*/
+    ////////////////////////////////////////// ajout de la donnée
+    $wp_customize->add_setting('404_description', array(
+        'default' => __('Description de la page 404', 'theme_4w4'),
+        'sanitize_callback' => 'sanitize_text_field'
     ));
-    ////////////////////////////////////////// ajout du contrôle de la donnée image en imgprincipale
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_imganimation', array(
-        'label' => __('Image Animée', 'theme_4w4'),
-        'section' => '404_section',
-    )));
+    ////////////////////////////////////////// ajout du contrôle de la donnée
+    $wp_customize->add_control('404_description', array(
+        'label' => __('Description', 'theme_4w4'),
+        'section' => 'section_404',
+        'type' => 'textarea',
+    ));
 
     /**********/ ////////////////////////////////////////////////Début du champ 404_background*/
     ////////////////////////////////////////// ajout de la donnée image en background
@@ -233,7 +235,7 @@ function theme_4w4_customize_register($wp_customize)
     ////////////////////////////////////////// ajout du contrôle de la donnée image en background
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_background', array(
         'label' => __('Image Background', 'theme_4w4'),
-        'section' => '404_section',
+        'section' => 'section_404',
     )));
 }
 

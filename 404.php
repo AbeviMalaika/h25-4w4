@@ -2,20 +2,16 @@
 ?>
 
 <?php
-$error_imgprincipale = get_theme_mod('404_imgprincipale', '');
-$error_titre = get_theme_mod('404_titre', '');
-$error_avion =  get_theme_mod('404_imganimation', '');
-$error_background = get_theme_mod('404_background', '')
+$error_background = get_theme_mod('404_background', '');
+$error_titre = get_theme_mod('404_titre', 'Un titre pour la page erreur 404!');
+$error_description = get_theme_mod('404_description', 'Petite description pour la page erreur 404.');
 ?>
 
 <?php get_header() ?>
-<div class="erreur" style="background-image: linear-gradient(180deg, rgba(250, 214, 214, 0.27) 0%, rgba(105, 208, 204, 0.5) 89%, rgba(66, 207, 200, 0.25) 100%), url(<?php echo $error_background; ?>);">
+<div class="erreur" style="background-image: url(<?php echo $error_background; ?>);">
     <h1 class="erreur__titre"><?php echo $error_titre; ?></h1>
-    <h2 class="erreur__sous-titre">Vous n'avez pas atterri à la bonne destination...</h2>
-    <div class="erreur__message">
-            <img class="erreur__message__imgAvion" src="<?php echo $error_avion; ?>" alt="">
-            <!-- <img class="erreur__message__imgIle" src="<?php echo $error_imgprincipale; ?>" alt=""> -->
-    </div>
+    <p class="erreur__description"><?php echo $error_description; ?></p>
+
     <div class="erreur__contenu">
         <div class="erreur__recherche">
             <h4 class="erreur__recherche__titre">Une petite recherche pourrait vous rediriger au bon endroit</h4>
@@ -38,3 +34,6 @@ $error_background = get_theme_mod('404_background', '')
 </body>
 
 </html>
+    <!-- <div class="erreur__message">
+
+    </div> -->
