@@ -15,9 +15,6 @@ bouton-categories.scss ---------------------------------------------------- .cat
         color: $couleur__secondaire;
         font-family: $_police__soustitre;
         list-style: none;
-        &:visited{
-            background-color: #35df3e;
-        }
         &:focus{
             background-color: $couleur__secondaire--pale;
             color: white;

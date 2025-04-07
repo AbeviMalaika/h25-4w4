@@ -41,7 +41,3 @@ function afficherDestination(event){
 }    
 }
 )()
-
-// function afficherDestination(){
-    
-// }

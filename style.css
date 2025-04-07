@@ -372,9 +372,6 @@ bouton-categories.scss ---------------------------------------------------- .cat
   font-family: "Arsenal SC", sans-serif;
   list-style: none;
 }
-.categorie__ul__li:visited {
-  background-color: #35df3e;
-}
 .categorie__ul__li:focus {
   background-color: #4979bd;
   color: white;
@@ -993,6 +990,9 @@ footer {
   color: #1b4781;
 }
 
+/**
+_destination-liste.scss ---------------------------------------------------- .destination__list
+*/
 .destination__list {
   display: flex;
   flex-direction: column;
