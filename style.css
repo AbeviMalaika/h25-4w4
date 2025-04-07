@@ -357,6 +357,26 @@ a:hover {
 /**
 bouton-categories.scss ---------------------------------------------------- .categorie__ul
 */
+.categorie__ul {
+  display: flex;
+  gap: 5px;
+}
+.categorie__ul__li {
+  background-color: #F3C366;
+  border-radius: 7px;
+  padding: 5px 22px;
+  border-radius: 5px;
+  color: #254086;
+  font-family: "Arsenal SC", sans-serif;
+  list-style: none;
+}
+.categorie__ul__li:hover {
+  background-color: #fad691;
+}
+.categorie__ul__li:focus {
+  background-color: #dfa535;
+}
+
 /*//////////////////////
 *Les layouts
 ///////////////////////*/
