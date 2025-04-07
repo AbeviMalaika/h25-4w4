@@ -191,7 +191,7 @@ function theme_4w4_customize_register($wp_customize)
     ));
 
 
-    /*SECTION POUR LA PAGE ERREUR 404 - EXAMEN INTRA*/
+    /*########################### SECTION POUR LA PAGE ERREUR 404 - EXAMEN INTRA ##############################*/
     /*-----------------------------------------------PAGE ERREUR 404-----------------*/
     // Création d'une nouvelle section dans le customizer
     ///////////////////////////////////////////////////////////////Début de la zone 404
@@ -226,7 +226,7 @@ function theme_4w4_customize_register($wp_customize)
         'type' => 'textarea',
     ));
 
-    /**********/ ////////////////////////////////////////////////Début du champ hero_texteColo*/
+    /**********/ ////////////////////////////////////////////////Début du champ 404_texteColo*/
     ////////////////////////////////////////// ajout de la donnée de couleur des icones
     $wp_customize->add_setting('404_texteColo', array(
         'default' => '#ffffff',

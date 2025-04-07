@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
 
+    //Conteneur du contenu de la page
     &__contenu {
         margin: 10%;
         display: flex;
@@ -19,6 +20,7 @@
         }
     }
 
+    //Titre de la page
     &__titre {
         // background-color: rgba(255, 255, 255, 0.2);
         background-color: rgb(24, 45, 86, 0.4);
@@ -33,12 +35,14 @@
         }
     }
 
+    //Conteneur avec la description et le bouton pour le retour à l'accueil
     &__redirection {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
 
+        //Description de la page 404
         &__description {
             background-color: rgb(24, 45, 86, 0.4);
             text-align: center;
@@ -53,6 +57,7 @@
             }
         }
 
+        //Bouton pour retourner à la page d'accueil
         &__boutonAccueil {
             padding: 20px;
             border-radius: 5px;
@@ -76,6 +81,7 @@
         }
     }
 
+    //Conteneur pour le menu de destination recommandées
     &__navigation {
         display: flex;
         flex-direction: column;
