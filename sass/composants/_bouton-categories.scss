@@ -2,10 +2,12 @@
 bouton-categories.scss ---------------------------------------------------- .categorie__ul
 */
 .categorie__ul{
+    padding: 0;
     display: flex;
     gap: 5px;
 
     &__li{
+        cursor: pointer;
         background-color: $couleur__tertiaire--pale;
         border-radius: 7px;
         padding: 5px 22px;;
@@ -13,10 +15,17 @@ bouton-categories.scss ---------------------------------------------------- .cat
         color: $couleur__secondaire;
         font-family: $_police__soustitre;
         list-style: none;
+        &:visited{
+            background-color: #35df3e;
+        }
+        &:focus{
+            background-color: $couleur__secondaire--pale;
+            color: white;
+        }
         &:hover{
             background-color: #fad691;
         }
-        &:focus{
+        &:active{
             background-color: #dfa535;
         }
     }

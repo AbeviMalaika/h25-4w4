@@ -4,4 +4,11 @@
     align-content: center;
     align-items: center;
     max-width: 1000px;
+    padding-bottom: 9rem;
+    div{
+        padding: 15px;
+        &:hover{
+            background-color: rgba($color: rgb(119, 156, 230), $alpha: 0.1);
+        }
+    }
 }

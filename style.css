@@ -358,10 +358,12 @@ a:hover {
 bouton-categories.scss ---------------------------------------------------- .categorie__ul
 */
 .categorie__ul {
+  padding: 0;
   display: flex;
   gap: 5px;
 }
 .categorie__ul__li {
+  cursor: pointer;
   background-color: #F3C366;
   border-radius: 7px;
   padding: 5px 22px;
@@ -370,10 +372,17 @@ bouton-categories.scss ---------------------------------------------------- .cat
   font-family: "Arsenal SC", sans-serif;
   list-style: none;
 }
+.categorie__ul__li:visited {
+  background-color: #35df3e;
+}
+.categorie__ul__li:focus {
+  background-color: #4979bd;
+  color: white;
+}
 .categorie__ul__li:hover {
   background-color: #fad691;
 }
-.categorie__ul__li:focus {
+.categorie__ul__li:active {
   background-color: #dfa535;
 }
 
@@ -982,4 +991,19 @@ footer {
 }
 .erreur__navigation__menu .menu a:hover {
   color: #1b4781;
+}
+
+.destination__list {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  max-width: 1000px;
+  padding-bottom: 9rem;
+}
+.destination__list div {
+  padding: 15px;
+}
+.destination__list div:hover {
+  background-color: rgba(119, 156, 230, 0.1);
 }/*# sourceMappingURL=style.css.map */
