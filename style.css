@@ -1009,13 +1009,20 @@ _destination-liste.scss ---------------------------------------------------- .de
   display: flex;
   flex-direction: column;
   align-content: center;
-  align-items: center;
+  align-items: stretch;
   max-width: 1000px;
   padding-bottom: 9rem;
+  width: 100%;
 }
 .destination__list div {
   padding: 15px;
 }
+.destination__list div section {
+  display: none;
+}
 .destination__list div:hover {
   background-color: rgba(119, 156, 230, 0.1);
+}
+.destination__list .affichage {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

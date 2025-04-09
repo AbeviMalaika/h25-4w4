@@ -7,14 +7,17 @@
 // Déclarations des variables qui contient les données venant du customizer
 $hero_auteur = get_theme_mod('hero_auteur', 'Default Title');
 $hero_promo = get_theme_mod('hero_promo', 'Texte de mise en avant');
-
 $hero_telephone = get_theme_mod('hero_telephone', '(123) 456-7890');
 $hero_adresse = get_theme_mod('hero_adresse', '1234 rue Sherbrooke Est');
 $hero_courriel = get_theme_mod('hero_courriel', 'courriel@mail.com');
 $hero_texteColo = get_theme_mod('hero_texteColo', '');
+
+
+
 for ($k = 0; $k<3; $k++){
     $hero_background[$k] = get_theme_mod('hero_background_' . $k, '');
 }
+
 ?>
 <section class="hero">
 

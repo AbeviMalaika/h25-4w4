@@ -28,26 +28,31 @@
                 destinationList.innerHTML = "";
                 data.forEach(article => {
                     const articleElement = document.createElement('div');
+                    articleElement.classList.add("destination__list__article")
 
                     articleElement.innerHTML = `
                     <h3>${article.title.rendered}</h3>
                     <button>...</button>
-                    <p>${article.excerpt.rendered}</p>
-                    <a href="${article.link}">Lire plus</a>
+                    <section>
+                        ${article.excerpt.rendered}
+                        <a href="${article.link}">Lire plus</a>
+                    </section>
                 `;
                     let deroulant = document.querySelectorAll('div > button');
                     deroulant.forEach(elm => {
-                        elm.addEventListener("click", afficherDestination);
+                        elm.addEventListener("click", afficherTexte);
+                        console.log(elm)
                     })
-                    console.log(deroulant);
                     destinationList.appendChild(articleElement);
                 });
             })
             .catch(error => console.error('Erreur lors de la récupération des articles:', error));
     }
 
-    function afficherTexte(event){
-        event.target.closest("");
+    function afficherTexte(event) {
+        let description = event.target.closest("div").querySelector("section");
+        console.log(description);
+        description.classList.toggle("affichage");
     }
 }
 )()

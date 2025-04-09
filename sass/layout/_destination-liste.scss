@@ -5,13 +5,24 @@ _destination-liste.scss ---------------------------------------------------- .de
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
+    align-items: stretch;
     max-width: 1000px;
     padding-bottom: 9rem;
-    div{
+    width: 100%;
+
+    div {
+        section{
+            display: none;
+        }
+
         padding: 15px;
-        &:hover{
+
+        &:hover {
             background-color: rgba($color: rgb(119, 156, 230), $alpha: 0.1);
         }
+    }
+
+    .affichage {
+        display: block;
     }
 }
