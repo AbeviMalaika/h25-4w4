@@ -44,15 +44,17 @@ function theme_4w4_customize_register($wp_customize)
 
     /**********/ ////////////////////////////////////////////////Début du champ hero_background*/
     ////////////////////////////////////////// ajout de la donnée image en background
-    $wp_customize->add_setting('hero_background', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    ////////////////////////////////////////// ajout du contrôle de la donnée image en background
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
-        'label' => __('Image Arrière-plan Hero', 'theme_4w4'),
-        'section' => 'hero_section',
-    )));
+    for ($k = 0; $k < 3; $k++) {
+        $wp_customize->add_setting('hero_background_' . $k, array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+        ////////////////////////////////////////// ajout du contrôle de la donnée image en background
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_' . $k, array(
+            'label' => __('Image Arrière-plan Hero' . ($k + 1), 'theme_4w4'),
+            'section' => 'hero_section',
+        )));
+    }
 
 
     /**********/ ////////////////////////////////////////////////Début du champ hero_courriel*/
