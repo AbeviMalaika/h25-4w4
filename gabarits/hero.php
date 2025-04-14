@@ -14,18 +14,23 @@ $hero_texteColo = get_theme_mod('hero_texteColo', '');
 
 
 
-for ($k = 0; $k<3; $k++){
+for ($k = 0; $k < 3; $k++) {
     $hero_background[$k] = get_theme_mod('hero_background_' . $k, '');
 }
 
 ?>
 <section class="hero">
 
-<div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[0]; ?>);"></div> 
-<div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[1]; ?>);"></div> 
-<div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2]; ?>);"></div>    
+    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[0]; ?>);"></div>
+    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[1]; ?>);"></div>
+    <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2]; ?>);"></div>
+    <div class="hero__radio">
+        <input class="hero__radio__input" data-id_radio="0" type="radio" name="carrousel" checked="checked">
+        <input class="hero__radio__input" data-id_radio="1" type="radio" name="carrousel">
+        <input class="hero__radio__input" data-id_radio="2" type="radio" name="carrousel">
+    </div>
 
-<div class="hero__contenu global">
+    <div class="hero__contenu global">
         <p class="hero__promo"><?php echo $hero_promo; ?></p>
         <h1 class="hero__titre"><?= bloginfo('name')  ?></h1>
         <p class="hero__description" style="color: <?php echo $hero_texteColo; ?>;">

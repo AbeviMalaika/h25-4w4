@@ -25,9 +25,10 @@ function categories_liste($parent_slug)
             }
             echo '</ul>';
         } else {
-            echo 'Aucune sous-catégorie trouvée pour "destination".';
+            echo 'Aucune sous-catégorie trouvée pour "' . esc_html($parent_slug) . '".';
         }
     } else {
-        echo 'La catégorie "destination" n\'existe pas.';
+        echo 'La catégorie "' . esc_html($parent_slug) . '" n\'existe pas.';
     }
 }
+?>
