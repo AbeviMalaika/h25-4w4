@@ -11,12 +11,25 @@
     flex-direction: column;
 
     &__carrousel{
+        transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
         position: absolute;
         min-height: 100vh;
         width: 100%;
         background-position: center;
         background-size: cover;
         z-index: -1;
+        opacity: 0;
+
+        &--active{ // .hero__carrousel --active
+            transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+            position: absolute;
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            z-index: -1;
+            opacity: 1;
+        }
     }
 
     &__radio{

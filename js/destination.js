@@ -20,7 +20,7 @@
             .then(data => {
                 const destinationList = document.querySelector('.destination__list');
                 const destinationTitre = document.querySelector('.destination__titre');
-                console.log(data);
+                // console.log(data);
                 destinationList.innerHTML = "";
                 data.forEach(article => {
                     const articleElement = document.createElement('div');
