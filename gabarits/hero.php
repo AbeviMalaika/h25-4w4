@@ -26,8 +26,8 @@ for ($k = 0; $k < 3; $k++) {
     <div class="hero__carrousel" style="background-image: url(<?php echo $hero_background[2]; ?>);"></div>
     <div class="hero__radio">
         <input class="hero__radio__input" data-id_radio="0" type="radio" name="carrousel" checked="checked">
-        <input class="hero__radio__input" data-id_radio="1" type="radio" name="carrousel">
-        <input class="hero__radio__input" data-id_radio="2" type="radio" name="carrousel">
+        <input class="hero__radio__input" data-id_radio="1" type="radio" name="carrousel" checked="">
+        <input class="hero__radio__input" data-id_radio="2" type="radio" name="carrousel" checked="">
     </div>
 
     <div class="hero__contenu global">
