@@ -813,6 +813,8 @@ footer {
   align-items: center;
   width: 100%;
   border-radius: 10px;
+  box-shadow: 2px 3px 20px 0px #a1a1a1;
+  background: linear-gradient(2deg, rgb(255, 249, 249) 0%, #dce3ed 50%, rgb(255, 249, 249) 100%);
 }
 .destination .global {
   max-width: 1300px;
@@ -1035,6 +1037,7 @@ footer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 15px;
 }
 .destination__list div section {
@@ -1053,6 +1056,12 @@ footer {
   border-radius: 10px;
   border: none;
   margin-left: 20px;
+}
+.destination__list button img {
+  content: url("https://s2.svgbox.net/octicons.svg?ic=chevron-down");
+}
+.destination__list .ouvert img {
+  content: url("https://s2.svgbox.net/octicons.svg?ic=chevron-up");
 }
 .destination__list .affichage {
   max-height: 500px;

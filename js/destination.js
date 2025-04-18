@@ -19,7 +19,6 @@
             .then(response => response.json())
             .then(data => {
                 const destinationList = document.querySelector('.destination__list');
-                const destinationTitre = document.querySelector('.destination__titre');
                 // console.log(data);
                 destinationList.innerHTML = "";
                 data.forEach(article => {
@@ -28,16 +27,17 @@
 
                     articleElement.innerHTML = `
                     <h3>${article.title.rendered}</h3>
-                    <button><img src="https://s2.svgbox.net/octicons.svg?ic=chevron-down"></button>
-                    <section class="disparition">
+                    <button class="bntArticle"><img src=""></button>
+                    <section>
                         ${article.excerpt.rendered}
                         <a href="${article.link}">Lire plus</a>
                     </section>
                 `;
-                    let deroulant = document.querySelectorAll('div > button');
-                    deroulant.forEach(elm => {
-                        elm.addEventListener("click", afficherTexte);
-                    })
+                let deroulant = document.querySelectorAll('.bntArticle');
+                console.log(deroulant);
+                deroulant.forEach(elm => {
+                    elm.addEventListener("click", afficherTexte);
+                })
                     destinationList.appendChild(articleElement);
                 });
             })
@@ -45,10 +45,10 @@
     }
 
     function afficherTexte(event) {
+        console.log("Allo");
         let description = event.target.closest("div").querySelector("section");
-        event.target.classList.toggle("contenuAffiche");
+        event.target.closest("button").classList.toggle("ouvert");
         description.classList.toggle("affichage");
-        description.classList.toggle("disparition");
     }
 }
 )()
