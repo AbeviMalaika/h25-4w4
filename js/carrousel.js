@@ -41,7 +41,6 @@
     // Fonction pour changer les images automatiquement
     function changerImageAutomatique() {
         console.log(index);
-        // On applique à toutes les images 
         hero__carrousel.forEach(element => {
             element.className = 'hero__carrousel';
         });
