@@ -136,6 +136,19 @@ function theme_4w4_customize_register($wp_customize)
         'priority' => 30,
     ));
 
+    /**********/ ////////////////////////////////////////////////Début du champ hero_icones*/
+    ////////////////////////////////////////// ajout de la donnée de couleur des icones
+    $wp_customize->add_setting('footer_couleur', array(
+        'default' => '#ffffff',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control($wp_customize, 'footer_couleur', array(
+            'label' => __('Couleur Background Footer'),
+            'section' => 'footer_section',
+        ))
+    );
+
 
     /**********/ ////////////////////////////////////////////////Début du champ footer_telephone*/
     ////////////////////////////////////////// ajout de la donnée

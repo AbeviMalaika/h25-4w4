@@ -1,11 +1,17 @@
 <?php //***********************************Page pour le footer/pied de page ?>
+
 <?php
 $footer_telephone = get_theme_mod('footer_telephone', '(123) 456-7890');
 $footer_adresse = get_theme_mod('footer_adresse', '1234 rue Sherbrooke Est');
 $footer_courriel = get_theme_mod('footer_courriel', 'courriel@mail.com');
 $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
+$footer_couleur = get_theme_mod('footer_couleur', '#aaa');
+
 ?>
-<footer>
+
+<?php genere_vague($footer_couleur); ?>
+
+<footer style="background-color: <?php echo $footer_couleur; ?>;">
     <div class="piedpage global">
         <section class="piedpage__s1">
             <div class="piedpage__s1__externe">

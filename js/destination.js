@@ -12,7 +12,7 @@
         })
     })()
 
-    function afficherDestination(event) {
+    async function afficherDestination(event) {
         const categoryId = event.target.getAttribute('data-categoryID'); // Remplacez par l'ID de la catégorie souhaitée
         const apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
         fetch(apiUrl)
@@ -45,7 +45,6 @@
     }
 
     function afficherTexte(event) {
-        console.log("Allo");
         let description = event.target.closest("div").querySelector("section");
         event.target.closest("button").classList.toggle("ouvert");
         description.classList.toggle("affichage");
