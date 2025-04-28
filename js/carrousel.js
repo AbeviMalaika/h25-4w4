@@ -5,8 +5,8 @@
 
     // Ajout d'un écouteur d'évènement pour chaque bouton radio, qui
     // déclencheront la fonction pour changer d'image
-    hero__radio__input.forEach(element => {
-        addEventListener('change', changerImage);
+    hero__radio__input.forEach((radio) => {
+        radio.addEventListener('change', changerImage);
     });
 
     // Initialisation du carrousel

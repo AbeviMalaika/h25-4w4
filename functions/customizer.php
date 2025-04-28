@@ -42,9 +42,43 @@ function theme_4w4_customize_register($wp_customize)
     ));
 
 
+    /**********/ ////////////////////////////////////////////////Début du champ hero_nbimagescarrousel*/
+    ////////////////////////////////////////// ajout de la donnée nombre d'image
+    $wp_customize->add_setting( 'hero_nbimagescarrousel', array(
+        'sanitize_callback' => 'themeslug_sanitize_number_absint',
+        'default' => 1,
+      ) );
+      
+      $wp_customize->add_control( 'hero_nbimagescarrousel', array(
+        'type' => 'number',
+        'section' => 'hero_section', // Add a default or your own section
+        'label' => __( 'Nombre Images Carroussel' ),
+      ) );
+
+    // $wp_customize->add_setting('hero_nbimagescarrousel', array(
+    //     'default' => __('1', 'theme_4w4'),
+    //     'sanitize_callback' => 'themeslug_sanitize_number_absint'
+    // ));
+    // ////////////////////////////////////////// ajout du contrôle de la donnée
+    // $wp_customize->add_control('hero_nbimagescarrousel', array(
+    //     'label' => __('Nombre Images Carroussel', 'theme_4w4'),
+    //     'section' => 'hero_section',
+    //     'type' => 'text',
+    // ));
+
+    function themeslug_sanitize_number_absint( $number, $setting ) {
+        // Ensure $number is an absolute integer (whole number, zero or greater).
+        $number = absint( $number );
+      
+        // If the input is an absolute integer, return it; otherwise, return the default
+        return ( $number ? $number : $setting->default );
+    }
+
     /**********/ ////////////////////////////////////////////////Début du champ hero_background*/
     ////////////////////////////////////////// ajout de la donnée image en background
-    for ($k = 0; $k < 3; $k++) {
+    $hero_nbimagescarrousel = get_theme_mod('hero_nbimagescarrousel', '1');
+
+    for ($k = 0; $k < $hero_nbimagescarrousel; $k++) {
         $wp_customize->add_setting('hero_background_' . $k, array(
             'default' => '',
             'sanitize_callback' => 'esc_url_raw',

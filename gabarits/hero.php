@@ -11,8 +11,7 @@ $hero_telephone = get_theme_mod('hero_telephone', '(123) 456-7890');
 $hero_adresse = get_theme_mod('hero_adresse', '1234 rue Sherbrooke Est');
 $hero_courriel = get_theme_mod('hero_courriel', 'courriel@mail.com');
 $hero_texteColo = get_theme_mod('hero_texteColo', '');
-
-
+$hero_nbimagescarrousel = get_theme_mod('hero_nbimagescarrousel', '1');
 
 for ($k = 0; $k < 3; $k++) {
     $hero_background[$k] = get_theme_mod('hero_background_' . $k, '');
@@ -21,13 +20,34 @@ for ($k = 0; $k < 3; $k++) {
 ?>
 <section class="hero">
 
-    <div class="hero__carrousel" style="background-image: linear-gradient(to bottom, rgba(26, 107, 152, 0.3), rgba(26, 107, 152, 1)), url(<?php echo $hero_background[0]; ?>);"></div>
-    <div class="hero__carrousel" style="background-image: linear-gradient(to bottom, rgba(26, 107, 152, 0.3), rgba(26, 107, 152, 1)), url(<?php echo $hero_background[1]; ?>);"></div>
-    <div class="hero__carrousel" style="background-image: linear-gradient(to bottom, rgba(26, 107, 152, 0.3), rgba(26, 107, 152, 1)), url(<?php echo $hero_background[2]; ?>);"></div>
+<!-- Affichage dynamique des images du carrousel -->
+    <?php
+    for ($k = 0; $k < $hero_nbimagescarrousel; $k++) {
+    ?>
+
+        <div class="hero__carrousel" style="background-image: linear-gradient(to bottom, rgba(26, 107, 152, 0.3), rgba(26, 107, 152, 1)), url(<?php echo $hero_background[$k]; ?>);"></div>
+
+    <?php
+    }
+    ?>
+
+<!-- Affichage dynamique des boutons radio du carrousel -->
     <div class="hero__radio">
-        <input class="hero__radio__input" data-id_radio="0" type="radio" name="carrousel" checked>
-        <input class="hero__radio__input" data-id_radio="1" type="radio" name="carrousel">
-        <input class="hero__radio__input" data-id_radio="2" type="radio" name="carrousel">
+        <?php
+        for ($k = 0; $k < $hero_nbimagescarrousel; $k++) {
+            if ($k == 0) {
+        ?>
+                <input class="hero__radio__input" data-id_radio="<?php echo $k; ?>" type="radio" name="carrousel" checked>
+            <?php
+            } else {
+            ?>
+                <input class="hero__radio__input" data-id_radio="<?php echo $k; ?>" type="radio" name="carrousel">
+            <?php
+            }
+            ?>
+        <?php
+        }
+        ?>
     </div>
 
     <div class="hero__contenu global">

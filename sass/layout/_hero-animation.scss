@@ -1,0 +1,11 @@
+.hero__titre{
+    position: relative;
+    animation: contenu linear 1s forwards;
+    transform: translateY(-1000px);
+}
+
+@keyframes contenu{
+    100% {
+        transform: translateY(0); 
+    }
+}
