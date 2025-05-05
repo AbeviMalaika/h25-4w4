@@ -1,17 +1,26 @@
+<!-- ANCIEN GABARIT POUR LES ICONES -->
+
 <?php
 /*
 *Template part pour les îcones de réseaux sociaux
 */
 ?>
 
-<?php 
+<?php
 // Déclarations des variables qui contient les données venant du customizer
-$hero_icones = get_theme_mod('hero_icones', 'ffffff');
+// $hero_couleur_icones = get_theme_mod('hero_icones', 'ffffff');
+// $hero_nb_icones = get_theme_mod('hero_nb_icones', 1);
+// for ($k = 0; $k < $hero_nb_icones; $k++) {
+//     $hero_icones[$k] = get_theme_mod('hero_icones_' . $k, 'wordpress');
+// }
 ?>
 
-<div class="icones">
-    <img class="iconeImg" src="https://s2.svgbox.net/social.svg?ic=facebook&color=<?= $hero_icones ?>" width="20" height="20">
-    <img class="iconeImg" src="https://s2.svgbox.net/social.svg?ic=linkedin&color=<?= $hero_icones ?>" width="20" height="20">
-    <img class="iconeImg" src="https://s2.svgbox.net/social.svg?ic=wordpress&color=<?= $hero_icones ?>" width="20" height="20">
-    <img class="iconeImg" src="https://s2.svgbox.net/social.svg?ic=snapchat&color=<?= $hero_icones ?>" width="20" height="20">
-</div>
+<!-- <div class="icones"> -->
+    <?php // echo genere_icone($hero_icones[2], $hero_couleur_icones); ?>
+
+    <?php
+    // for ($k = 0; $k < $hero_nb_icones; $k++) {
+    //     echo genere_icone($hero_icones[$k], $hero_couleur_icones);
+    // }
+    ?>
+<!-- </div> -->

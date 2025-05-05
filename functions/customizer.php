@@ -44,34 +44,24 @@ function theme_4w4_customize_register($wp_customize)
 
     /**********/ ////////////////////////////////////////////////Début du champ hero_nbimagescarrousel*/
     ////////////////////////////////////////// ajout de la donnée nombre d'image
-    $wp_customize->add_setting( 'hero_nbimagescarrousel', array(
+    $wp_customize->add_setting('hero_nbimagescarrousel', array(
         'sanitize_callback' => 'themeslug_sanitize_number_absint',
         'default' => 1,
-      ) );
-      
-      $wp_customize->add_control( 'hero_nbimagescarrousel', array(
+    ));
+
+    $wp_customize->add_control('hero_nbimagescarrousel', array(
         'type' => 'number',
         'section' => 'hero_section', // Add a default or your own section
-        'label' => __( 'Nombre Images Carroussel' ),
-      ) );
+        'label' => __('Nombre Images Carroussel'),
+    ));
 
-    // $wp_customize->add_setting('hero_nbimagescarrousel', array(
-    //     'default' => __('1', 'theme_4w4'),
-    //     'sanitize_callback' => 'themeslug_sanitize_number_absint'
-    // ));
-    // ////////////////////////////////////////// ajout du contrôle de la donnée
-    // $wp_customize->add_control('hero_nbimagescarrousel', array(
-    //     'label' => __('Nombre Images Carroussel', 'theme_4w4'),
-    //     'section' => 'hero_section',
-    //     'type' => 'text',
-    // ));
-
-    function themeslug_sanitize_number_absint( $number, $setting ) {
+    function themeslug_sanitize_number_absint($number, $setting)
+    {
         // Ensure $number is an absolute integer (whole number, zero or greater).
-        $number = absint( $number );
-      
+        $number = absint($number);
+
         // If the input is an absolute integer, return it; otherwise, return the default
-        return ( $number ? $number : $setting->default );
+        return ($number ? $number : $setting->default);
     }
 
     /**********/ ////////////////////////////////////////////////Début du champ hero_background*/
@@ -147,14 +137,61 @@ function theme_4w4_customize_register($wp_customize)
     );
 
 
-    /**********/ ////////////////////////////////////////////////Début du champ hero_icones*/
+    /**********/ ////////////////////////////////////////////////Début du champ hero_nb_icones*/
+    ////////////////////////////////////////// ajout de la donnée nombre d'image
+    $wp_customize->add_setting('hero_nb_icones', array(
+        'sanitize_callback' => 'themeslug_sanitize_number_absint',
+        'default' => 1,
+    ));
+
+    $wp_customize->add_control('hero_nb_icones', array(
+        'type' => 'number',
+        'section' => 'hero_section', // Add a default or your own section
+        'label' => __('Nombre Icones Sociaux'),
+    ));
+
+    /**********/ ////////////////////////////////////////////////Début des champs hero_icones*/
+    ////////////////////////////////////////// ajout de la donnée 
+    $hero_nb_icones = get_theme_mod('hero_nb_icones', '1');
+
+    for ($k = 0; $k < $hero_nb_icones; $k++) {
+        $wp_customize->add_setting('hero_icones_' . $k, array(
+            'default' => __('wordpress', 'theme_4w4'),
+            'sanitize_callback' => 'sanitize_text_field'
+        ));
+
+        ////////////////////////////////////////// ajout du contrôle de la donnée
+        $wp_customize->add_control('hero_icones_' . $k, array(
+            'label' => __('Icones Reseaux Sociaux', 'theme_4w4'),
+            'section' => 'hero_section',
+            'type' => 'text',
+        ));
+    }
+
+    /**********/ ////////////////////////////////////////////////Début des champs hero_lien_reseaux*/
+    ////////////////////////////////////////// ajout de la donnée 
+    for ($k = 0; $k < $hero_nb_icones; $k++) {
+        $wp_customize->add_setting('hero_lien_reseaux_' . $k, array(
+            'default' => __('https://github.com/AbeviMalaika/h25-4w4', 'theme_4w4'),
+            'sanitize_callback' => 'sanitize_text_field'
+        ));
+
+        ////////////////////////////////////////// ajout du contrôle de la donnée
+        $wp_customize->add_control('hero_lien_reseaux_' . $k, array(
+            'label' => __('Liens Reseaux Sociaux', 'theme_4w4'),
+            'section' => 'hero_section',
+            'type' => 'text',
+        ));
+    }
+
+    /**********/ ////////////////////////////////////////////////Début du champ hero_couleur_icones*/
     ////////////////////////////////////////// ajout de la donnée de couleur des icones
-    $wp_customize->add_setting('hero_icones', array(
+    $wp_customize->add_setting('hero_couleur_icones', array(
         'default' => 'ffffff',
         'sanitize_callback' => 'sanitize_hex_color_no_hash',
     ));
     $wp_customize->add_control(
-        new WP_Customize_Color_Control($wp_customize, 'hero_icones', array(
+        new WP_Customize_Color_Control($wp_customize, 'hero_couleur_icones', array(
             'label' => __('Couleur Îcones Sociaux'),
             'section' => 'hero_section',
         ))
@@ -170,8 +207,8 @@ function theme_4w4_customize_register($wp_customize)
         'priority' => 30,
     ));
 
-    /**********/ ////////////////////////////////////////////////Début du champ hero_icones*/
-    ////////////////////////////////////////// ajout de la donnée de couleur des icones
+    /**********/ ////////////////////////////////////////////////Début du champ footer_couleur*/
+    ////////////////////////////////////////// ajout de la donnée de couleur du footer
     $wp_customize->add_setting('footer_couleur', array(
         'default' => '#ffffff',
         'sanitize_callback' => 'sanitize_hex_color',

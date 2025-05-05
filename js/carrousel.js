@@ -1,6 +1,7 @@
 (function () {
     let hero__radio__input = document.querySelectorAll(".hero__radio__input");
     let hero__carrousel = document.querySelectorAll(".hero__carrousel");
+    let hero__animation = document.querySelectorAll(".hero__animation");
     let index = 0;
 
     // Ajout d'un écouteur d'évènement pour chaque bouton radio, qui
@@ -16,7 +17,6 @@
 
     hero__radio__input.forEach(element => {
         if (element.checked) {
-            console.log(hero__carrousel[element.getAttribute('data-id_radio')])
             hero__carrousel[element.getAttribute('data-id_radio')].className = 'hero__carrousel--active';
         }
     });
@@ -40,7 +40,6 @@
 
     // Fonction pour changer les images automatiquement
     function changerImageAutomatique() {
-        console.log(index);
         hero__carrousel.forEach(element => {
             element.className = 'hero__carrousel';
         });

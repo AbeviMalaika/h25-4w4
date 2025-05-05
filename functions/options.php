@@ -27,7 +27,7 @@ function theme_4w4_enqueue_styles()
     wp_enqueue_style('normalize', get_template_directory_uri() . '/normalize.css');
     wp_enqueue_style('main-style', get_stylesheet_uri());
     wp_enqueue_script('script-animation-menu', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true);
-    
+
     wp_enqueue_script(
         'destination_restapi',
         get_template_directory_uri() . '/js/destination.js',
@@ -86,4 +86,50 @@ function affichage_temperature($fieldTemperature, $tempRandMin, $tempRandMax)
 
     return $valeurTemperature;
 }
+add_action('wp_enqueue_scripts', 'theme_4w4_enqueue_styles');
+
+
+/**
+ * Afficher les noms de catégorie, mais ne pas afficher le nom de la catégorie
+ * correspondant à la page sélectionnée
+ * @param String $categorie_nom : Nom de la catégorie de la page
+ */
+
+function categorie_par_destination($categorie_nom)
+{
+    // Variable pour avoir la liste des 
+    $liste_categories = get_the_category();
+    // Variable pour avoir le nombre total de catégorie dans un article
+    $total_categorie = count($liste_categories);
+
+    /* 
+    On ne veut pas que la catégorie de la page même apparaisse dans
+    la carte d'un article, sinon c'est redondant. Alors on vérifie les
+    catégorie de l'article et on affiche des catégories seulement si
+    elles ne sont pas identique à celle de la page
+    */
+    if ($total_categorie > 1) { ?>
+
+        <h6 class="carte__categorie__titre">Autres catégorie(s) : </h6>
+
+    <?php  } ?>
+
+    <ul class="carte__categorie__liste">
+
+        <?php
+        for ($x = 0; $x < $total_categorie; $x++) {
+            $categorie = $liste_categories[$x]->name;
+            if ($categorie != $categorie_nom) {
+        ?>
+
+                <li class="carte__categorie__liste__tag">
+                    <a href="<?php echo get_category_link($liste_categories[$x]->term_id); ?>"> <?php print_r($liste_categories[$x]->name); ?> </a>
+                </li>
+
+        <?php
+            }
+        } ?>
+    </ul>
+<?php }
+
 add_action('wp_enqueue_scripts', 'theme_4w4_enqueue_styles');

@@ -19,12 +19,13 @@
             .then(response => response.json())
             .then(data => {
                 const destinationList = document.querySelector('.destination__list');
-                // console.log(data);
+                // console.log(`data = ` + data);
                 destinationList.innerHTML = "";
                 data.forEach(article => {
                     const articleElement = document.createElement('div');
                     articleElement.classList.add("destination__list__article")
-
+                    console.log(article.title.rendered);
+                    
                     articleElement.innerHTML = `
                     <h3>${article.title.rendered}</h3>
                     <button class="bntArticle"><img src=""></button>
@@ -33,8 +34,9 @@
                         <a href="${article.link}">Lire plus</a>
                     </section>
                 `;
-                let deroulant = document.querySelectorAll('.bntArticle');
-                console.log(deroulant);
+
+                let deroulant = document.querySelectorAll('.destination__list__article');
+                // console.log(deroulant);
                 deroulant.forEach(elm => {
                     elm.addEventListener("click", afficherTexte);
                 })

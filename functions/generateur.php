@@ -33,6 +33,10 @@ function categories_liste($parent_slug)
     }
 }
 
+/**
+ * Génére une vague en svg
+ * @param string $couleur la couleur de la vague
+ */
 function genere_vague($couleur)
 { ?>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -49,4 +53,15 @@ function genere_vague($couleur)
                 repeatCount="indefinite" />
         </path>
     </svg>
+<?php  }
+
+/**
+ * Génére une icone de réseaux sociaux
+ * @param string $reseau l'image de l'icone du reseau social
+ * @param string $lien_reseau le lien vers le reseau social
+ * @param string $couleur la couleur de l'icone
+ */
+function genere_icone($reseau, $lien_reseau, $couleur)
+{ ?>
+    <a href="<?= $lien_reseau; ?>"><img class="iconeImg" src="https://s2.svgbox.net/social.svg?ic=<?= $reseau ?>&color=<?= $couleur ?>" width="20" height="20"></a>
 <?php  }

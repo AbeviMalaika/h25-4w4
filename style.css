@@ -1065,4 +1065,31 @@ footer {
 .destination__list .affichage {
   max-height: 500px;
   opacity: 1;
+}
+
+.hero__animation {
+  display: none;
+}
+.hero__animation--active {
+  display: block;
+}
+.hero__animation--active .hero__titre, .hero__animation--active .hero__description {
+  position: relative;
+  animation: contenu linear 1s forwards;
+  transform: translateY(-1000px);
+}
+
+.hero__titre {
+  transform: translateY(-1000px);
+}
+
+.hero__description {
+  transform: translateY(-1000px);
+  animation-delay: 1s;
+}
+
+@keyframes contenu {
+  100% {
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
