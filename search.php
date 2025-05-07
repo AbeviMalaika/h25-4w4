@@ -4,11 +4,17 @@
  * Modèle pour les résultats de recherche
  */
 get_header();
+// pour le nombre de post trouvé avec la recherche
+$count = $wp_query->found_posts;
 ?>
 <main class="site__main">
     <section class="recherche__section">
         <h3 class="recherche__section__titre">Résultat(s) de la recherche</h3>
+
         <?php if (have_posts()) : ?>
+            <p>Résultat : 
+                <?php echo $count; ?>
+            </p>
             <?php while (have_posts()) : the_post(); ?>
                 <?php
                 /* On ne veut pas de résultat de recherche affichant la galerie,
