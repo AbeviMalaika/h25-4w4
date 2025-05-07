@@ -3,7 +3,7 @@
 */
 (function () {
 
-    const domaine = window.location.href;
+    const domaine = window.origin + "/4w4/";
 
     (function parcourir_bouton() {
         const categorie__ul__li = document.querySelectorAll(".categorie__ul__li");
@@ -15,6 +15,7 @@
     async function afficherDestination(event) {
         const categoryId = event.target.getAttribute('data-categoryID'); // Remplacez par l'ID de la catégorie souhaitée
         const apiUrl = `${domaine}wp-json/wp/v2/posts?categories=${categoryId}`;
+        console.log(domaine);
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
@@ -25,7 +26,7 @@
                     const articleElement = document.createElement('div');
                     articleElement.classList.add("destination__list__article")
                     console.log(article.title.rendered);
-                    
+
                     articleElement.innerHTML = `
                     <h3>${article.title.rendered}</h3>
                     <button class="bntArticle"><img src=""></button>
@@ -34,14 +35,12 @@
                         <a href="${article.link}">Lire plus</a>
                     </section>
                 `;
-
+                    destinationList.appendChild(articleElement);
+                });
                 let deroulant = document.querySelectorAll('.destination__list__article');
-                // console.log(deroulant);
                 deroulant.forEach(elm => {
                     elm.addEventListener("click", afficherTexte);
                 })
-                    destinationList.appendChild(articleElement);
-                });
             })
             .catch(error => console.error('Erreur lors de la récupération des articles:', error));
     }

@@ -1,4 +1,6 @@
-<?php //***********************************Page pour la présentation d'un article ?>
+<?php //***********************************Page pour la présentation d'un article 
+$destination_imageDefaut = get_theme_mod('destination_imageDefaut', '');
+?>
 <?php get_header() ?>
 <section class="destination">
     <div class="global">
@@ -8,6 +10,10 @@
                         <?php
                         if (has_post_thumbnail()) {
                             the_post_thumbnail('large');
+                        } else{
+                            ?>
+                            <img src="<?php echo $destination_imageDefaut; ?>" alt="">
+                            <?php
                         }
                         ?>
                     </div>
@@ -16,6 +22,10 @@
                         <div class="destination__contenu__categorie">
                             <h6 class="destination__contenu__categorie__titre">Catégorie(s) : </h6>
                             <?= the_category(); ?>
+                        </div>
+                        <div class="destination__contenu__infosArticle">
+                            <p>Auteur(e) : <?php the_author(); ?></p>
+                            <p>Date de publication : <?php the_date(); ?></p>
                         </div>
                         <div class="destination__contenu__temperature">
                             <h6 class="destination__contenu__temperature__titre">Températures : </h6>

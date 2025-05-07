@@ -13,7 +13,7 @@ $hero_courriel = get_theme_mod('hero_courriel', 'courriel@mail.com');
 $hero_texteColo = get_theme_mod('hero_texteColo', '');
 $hero_nbimagescarrousel = get_theme_mod('hero_nbimagescarrousel', '1');
 
-for ($k = 0; $k < 3; $k++) {
+for ($k = 0; $k < $hero_nbimagescarrousel; $k++) {
     $hero_background[$k] = get_theme_mod('hero_background_' . $k, '');
 }
 

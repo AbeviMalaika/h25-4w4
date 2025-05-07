@@ -162,7 +162,7 @@ function theme_4w4_customize_register($wp_customize)
 
         ////////////////////////////////////////// ajout du contrôle de la donnée
         $wp_customize->add_control('hero_icones_' . $k, array(
-            'label' => __('Icones Reseaux Sociaux', 'theme_4w4'),
+            'label' => __('Icones Reseaux Sociaux ' . ($k + 1), 'theme_4w4'),
             'section' => 'hero_section',
             'type' => 'text',
         ));
@@ -178,7 +178,7 @@ function theme_4w4_customize_register($wp_customize)
 
         ////////////////////////////////////////// ajout du contrôle de la donnée
         $wp_customize->add_control('hero_lien_reseaux_' . $k, array(
-            'label' => __('Liens Reseaux Sociaux', 'theme_4w4'),
+            'label' => __('Liens Reseaux Sociaux ' . ($k + 1), 'theme_4w4'),
             'section' => 'hero_section',
             'type' => 'text',
         ));
@@ -336,6 +336,33 @@ function theme_4w4_customize_register($wp_customize)
         'label' => __('Image Background', 'theme_4w4'),
         'section' => 'section_404',
     )));
+
+
+
+
+
+    /*########################### SECTION POUR LES ARTICLES DE DESTINATION ##############################*/
+    /*-----------------------------------------------PAGE ERREUR 404-----------------*/
+    // Création d'une nouvelle section dans le customizer
+    ///////////////////////////////////////////////////////////////Début de la zone 404
+    $wp_customize->add_section('section_destination', array(
+        'title' => __('Section Destination', 'theme_4w4'),
+        'priority' => 30,
+    ));
+    /**********/ ////////////////////////////////////////////////Début du champ destination_imageDefaut*/
+    ////////////////////////////////////////// ajout de la donnée image en background
+    $wp_customize->add_setting('destination_imageDefaut', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    ////////////////////////////////////////// ajout du contrôle de la donnée image en background
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'destination_imageDefaut', array(
+        'label' => __('Image Defaut Destination', 'theme_4w4'),
+        'section' => 'section_destination',
+    )));
 }
 
 add_action('customize_register', 'theme_4w4_customize_register');
+
+
+// destination_imageDefaut
