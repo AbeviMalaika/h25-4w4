@@ -48,11 +48,18 @@ for ($k = 0; $k < $hero_nb_icones; $k++) {
         for ($k = 0; $k < $hero_nbimagescarrousel; $k++) {
             if ($k == 0) {
         ?>
-                <input class="hero__radio__input" data-id_radio="<?php echo $k; ?>" type="radio" name="carrousel" checked>
+                <div class="hero__radio__container">
+                    <input class="hero__radio__input" data-id_radio="<?php echo $k; ?>" type="radio" name="carrousel" checked>
+                    <label for="carrousel<?php echo $k; ?>"><img src="" alt=""></label>
+                </div>
+
             <?php
             } else {
             ?>
-                <input class="hero__radio__input" data-id_radio="<?php echo $k; ?>" type="radio" name="carrousel">
+                <div class="hero__radio__container">
+                    <input class="hero__radio__input" data-id_radio="<?php echo $k; ?>" type="radio" name="carrousel">
+                    <label for="carrousel<?php echo $k; ?>"><img src="" alt=""></label>
+                </div>
             <?php
             }
             ?>

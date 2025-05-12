@@ -569,7 +569,29 @@ footer {
   bottom: 150px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
+}
+.hero__radio input[type=radio] {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 10;
+  opacity: 0;
+}
+.hero__radio__container {
+  position: relative;
+}
+.hero__radio label {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.hero__radio__input ~ label img {
+  content: url(https://s2.svgbox.net/hero-outline.svg?ic=heart);
+}
+.hero__radio__input:checked ~ label img {
+  content: url(https://s2.svgbox.net/hero-solid.svg?ic=heart);
 }
 .hero__contenu {
   z-index: 10;

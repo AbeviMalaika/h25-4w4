@@ -10,7 +10,7 @@
 
     flex-direction: column;
 
-    &__carrousel{
+    &__carrousel {
         transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
         position: absolute;
         min-height: 100vh;
@@ -20,7 +20,8 @@
         z-index: -1;
         opacity: 0;
 
-        &--active{ // .hero__carrousel --active
+        &--active {
+            // .hero__carrousel --active
             transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
             position: absolute;
             min-height: 100vh;
@@ -32,15 +33,45 @@
         }
     }
 
-    &__radio{
+    &__radio {
         position: absolute;
         bottom: 150px;
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 30px;
+
+        input[type=radio] {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            z-index: 10;
+            // -WebKit-appearance: none;
+            opacity: 0;
+        }
+
+        &__container{
+            position: relative;
+        }
+
+        label {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        &__input{
+            &~label img {
+                content: url(https://s2.svgbox.net/hero-outline.svg?ic=heart);
+            }
+    
+            &:checked~label img {
+                content: url(https://s2.svgbox.net/hero-solid.svg?ic=heart);
+            }
+        }
     }
 
-    &__contenu{
+    &__contenu {
         z-index: 10;
     }
 
@@ -67,25 +98,27 @@
         max-width: 700px;
     }
 
-    &__courriel a{
+    &__courriel a {
         text-decoration: none;
     }
 
-    &__coord{
+    &__coord {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 1.3rem 0 1rem 0;
-        &__titre{
+
+        &__titre {
             font-family: $_police__soustitre;
             font-weight: normal;
-            margin: 0;    
+            margin: 0;
         }
 
-        &__infos{
+        &__infos {
             display: flex;
             gap: 1.5vw;
             border-bottom: 1px solid white;
+
             @media screen and (max-width: 800px) {
                 display: flex;
                 gap: 1.5vw;
@@ -104,12 +137,12 @@
     }
 
     &__promo,
-    &__description{
+    &__description {
         font-size: clamp(2rem, 0.8568rem + 0.286vw, 1.2rem);
         font-family: $_police__titre__secondaire;
         margin: 0;
     }
-    
+
     &__bntinscription {
         font-family: $_police__soustitre;
         box-sizing: border-box;
