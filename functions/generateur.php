@@ -37,9 +37,9 @@ function categories_liste($parent_slug)
  * Génére une vague en svg
  * @param string $couleur la couleur de la vague
  */
-function genere_vague($couleur)
+function genere_vague($couleur, $grandeur, $positionnement)
 { ?>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="height: <?php echo $grandeur; ?>; top: <?php echo $positionnement; ?>px">
         <path fill="<?php echo $couleur; ?>" fill-opacity="1"
             d="M0,224L30,186.7C60,149,120,75,180,74.7C240,75,300,149,360,160C420,171,480,117,540,112C600,107,660,149,720,149.3C780,149,840,107,900,101.3C960,96,1020,128,1080,128C1140,128,1200,96,1260,96C1320,96,1380,128,1410,144L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
             <animate
