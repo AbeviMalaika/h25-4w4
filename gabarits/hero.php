@@ -92,11 +92,6 @@ for ($k = 0; $k < $hero_nb_icones; $k++) {
             </p>
         </div>
 
-
-        <h1 class="hero__titre"><?= bloginfo('name')  ?></h1>
-        <p class="hero__description" style="color: <?php echo $hero_texteColo; ?>;">
-            <?= bloginfo('description')  ?>
-        </p>
         <button class="hero__bntinscription">S'inscrire</button>
 
         <div class="hero__coord">

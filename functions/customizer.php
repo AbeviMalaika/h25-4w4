@@ -276,6 +276,17 @@ function theme_4w4_customize_register($wp_customize)
         'type' => 'textarea',
     ));
 
+    /**********/ ////////////////////////////////////////////////Début du champ footer_imgDest*/
+    ////////////////////////////////////////// ajout de la donnée image en background
+    $wp_customize->add_setting('footer_imgDest', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    ////////////////////////////////////////// ajout du contrôle de la donnée image en background
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_imgDest', array(
+        'label' => __('Image Destination Footer', 'theme_4w4'),
+        'section' => 'footer_section',
+    )));
 
     /*########################### SECTION POUR LA PAGE ERREUR 404 - EXAMEN INTRA ##############################*/
     /*-----------------------------------------------PAGE ERREUR 404-----------------*/

@@ -10,6 +10,17 @@
         radio.addEventListener('change', changerImage);
     });
 
+    // Initialisation du du contenu animé dans hero
+    hero__animation.forEach(element => {
+        element.className = "hero__animation";
+    });
+
+    hero__radio__input.forEach(element => {
+        if (element.checked) {
+            hero__animation[element.getAttribute('data-id_radio')].className = 'hero__animation--active';
+        }
+    });
+
     // Initialisation du carrousel
     hero__carrousel.forEach(element => {
         element.className = "hero__carrousel";
@@ -30,9 +41,14 @@
             element.className = 'hero__carrousel';
         });
 
+        hero__animation.forEach(element =>{
+            element.className = "hero__animation";
+        });
+
         hero__radio__input.forEach(element => {
             if (element.checked) {
                 hero__carrousel[element.getAttribute('data-id_radio')].className = 'hero__carrousel--active';
+                hero__animation[element.getAttribute('data-id_radio')].className ='hero__animation--active';
                 index = element.getAttribute('data-id_radio');
             }
         });
@@ -42,6 +58,10 @@
     function changerImageAutomatique() {
         hero__carrousel.forEach(element => {
             element.className = 'hero__carrousel';
+        });
+
+        hero__animation.forEach(element => {
+            element.className = 'hero__animation';
         });
 
         if (index < hero__carrousel.length - 1) {
@@ -57,5 +77,6 @@
         })
 
         hero__carrousel[index].className = 'hero__carrousel--active';
+        hero__animation[index].className = 'hero__animation--active'
     }
 })()

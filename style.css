@@ -227,6 +227,14 @@ a:hover {
 /*
 ************************************************************* Composant : .carte
 */
+@keyframes affichageDescription {
+  0% {
+    font-size: 1.2rem;
+  }
+  100% {
+    font-size: 1.3rem;
+  }
+}
 .carte {
   display: flex;
   flex-direction: column;
@@ -238,6 +246,9 @@ a:hover {
   margin: 20px;
   width: 40vw;
   max-width: 550px;
+}
+.carte:hover .carte__description {
+  animation: affichageDescription linear 400ms forwards;
 }
 @media screen and (max-width: 800px) {
   .carte {
@@ -573,25 +584,32 @@ footer {
 }
 .hero__radio input[type=radio] {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 100%;
+  height: 100%;
   z-index: 10;
   opacity: 0;
 }
 .hero__radio__container {
+  display: flex;
   position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 .hero__radio label {
   position: absolute;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.hero__radio label img {
+  width: 100%;
+  height: 100%;
 }
 .hero__radio__input ~ label img {
-  content: url(https://s2.svgbox.net/hero-outline.svg?ic=heart);
+  content: url(https://s2.svgbox.net/octicons.svg?color=ffffff&ic=circle);
 }
 .hero__radio__input:checked ~ label img {
-  content: url(https://s2.svgbox.net/hero-solid.svg?ic=heart);
+  content: url(https://s2.svgbox.net/materialui.svg?color=ffffff&ic=circle);
 }
 .hero__contenu {
   z-index: 10;
@@ -737,6 +755,9 @@ footer {
 .piedpage__s1__description__titre {
   padding: 0;
   margin: 0 0 15px 0;
+}
+.piedpage__s1__description__img {
+  width: 100%;
 }
 .piedpage__s2 {
   display: flex;
@@ -1093,25 +1114,29 @@ footer {
   display: none;
 }
 .hero__animation--active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero__animation--active .hero__titre, .hero__animation--active .hero__description {
   position: relative;
   animation: contenu linear 1s forwards;
-  transform: translateY(-1000px);
 }
 
 .hero__titre {
   transform: translateY(-1000px);
+  opacity: 0;
 }
 
 .hero__description {
   transform: translateY(-1000px);
   animation-delay: 1s;
+  opacity: 0;
 }
 
 @keyframes contenu {
   100% {
     transform: translateY(0);
+    opacity: 100;
   }
 }/*# sourceMappingURL=style.css.map */

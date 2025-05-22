@@ -1,6 +1,17 @@
 /*
 ************************************************************* Composant : .carte
 */
+
+@keyframes affichageDescription{
+    0%{
+        font-size: 1.2rem;
+    }
+
+    100%{
+        font-size: 1.3rem;
+    }
+}
+
 .carte {
     display: flex;
     flex-direction: column;
@@ -12,6 +23,11 @@
     margin: 20px;
     width: 40vw;
     max-width: 550px;
+    &:hover{
+        .carte__description {
+            animation: affichageDescription linear 400ms forwards;
+        }
+    }
 
     @media screen and (max-width: 800px) {
         width: fit-content;

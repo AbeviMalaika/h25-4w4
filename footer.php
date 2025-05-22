@@ -6,7 +6,7 @@ $footer_adresse = get_theme_mod('footer_adresse', '1234 rue Sherbrooke Est');
 $footer_courriel = get_theme_mod('footer_courriel', 'courriel@mail.com');
 $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
 $footer_couleur = get_theme_mod('footer_couleur', '#aaa');
-
+$footer_imgDest = get_theme_mod('footer_imgDest', '');
 ?>
 
 <?php genere_vague($footer_couleur, "100%", 2); ?>
@@ -39,6 +39,8 @@ $footer_couleur = get_theme_mod('footer_couleur', '#aaa');
             <div class="piedpage__s1__description">
                 <h5 class="piedpage__s1__description__titre">Notre mission</h5>
                 <?php echo $footer_mission; ?>
+                <h6>Une de nos destinations inoubliables</h6>
+                <img class="piedpage__s1__description__img" src="<?php echo $footer_imgDest; ?>" alt="">
             </div>
         </section>
 
