@@ -26,9 +26,6 @@ $pays = array("France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique
         </p>
         <p>Date de l'événement :
             <?php the_field('date_evenement'); ?></p>
-        <p>Description de l'évènement
-            <?php the_field('description_evenement'); ?>
-        </p>
         <div>
             Coordonnées de l'évènement : 
             <?php the_field('coordonnees_evenement'); ?>
