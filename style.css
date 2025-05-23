@@ -235,6 +235,14 @@ a:hover {
     font-size: 1.3rem;
   }
 }
+@keyframes affichageCarte {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #eff5ff;
+  }
+}
 .carte {
   display: flex;
   flex-direction: column;
@@ -246,6 +254,9 @@ a:hover {
   margin: 20px;
   width: 40vw;
   max-width: 550px;
+}
+.carte:hover {
+  animation: affichageCarte linear 400ms forwards;
 }
 .carte:hover .carte__description {
   animation: affichageDescription linear 400ms forwards;
@@ -373,8 +384,12 @@ bouton-categories.scss ---------------------------------------------------- .cat
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .categorie__ul__li {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   background-color: #F3C366;
   border-radius: 7px;
@@ -393,6 +408,10 @@ bouton-categories.scss ---------------------------------------------------- .cat
 }
 .categorie__ul__li:active {
   background-color: #dfa535;
+}
+
+.vague {
+  position: relative;
 }
 
 /*//////////////////////
@@ -582,17 +601,22 @@ footer {
   justify-content: center;
   gap: 30px;
 }
+@media screen and (max-width: 800px) {
+  .hero__radio {
+    bottom: 45px;
+  }
+}
 .hero__radio input[type=radio] {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 10;
-  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+  -WebKit-appearance: none;
 }
 .hero__radio__container {
   display: flex;
   position: relative;
-  cursor: pointer;
   width: 20px;
   height: 20px;
 }
@@ -600,10 +624,12 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .hero__radio label img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .hero__radio__input ~ label img {
   content: url(https://s2.svgbox.net/octicons.svg?color=ffffff&ic=circle);
@@ -618,6 +644,7 @@ footer {
   font-size: clamp(4.5rem, 3vw, 5rem);
   font-weight: normal;
   color: #fff9f9;
+  text-align: center;
   margin: 25px;
 }
 .hero__contenu {
@@ -758,6 +785,8 @@ footer {
 }
 .piedpage__s1__description__img {
   width: 100%;
+  border-radius: 5px;
+  border: 1px solid #F3C366;
 }
 .piedpage__s2 {
   display: flex;
@@ -1108,6 +1137,13 @@ footer {
 .destination__list .affichage {
   max-height: 500px;
   opacity: 1;
+  background-color: rgba(79, 120, 202, 0.1);
+  border: 1px solid #F3C366;
+  border-radius: 5px;
+  padding: 15px;
+}
+.destination__list .affichage p {
+  font-size: 1.2rem;
 }
 
 .hero__animation {
@@ -1118,25 +1154,38 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-.hero__animation--active .hero__titre, .hero__animation--active .hero__description {
+.hero__animation--active .hero__titre, .hero__animation--active .hero__description, .hero__animation--active .hero__promo {
   position: relative;
   animation: contenu linear 1s forwards;
 }
 
 .hero__titre {
-  transform: translateY(-1000px);
+  transform: scale(0);
   opacity: 0;
 }
 
-.hero__description {
-  transform: translateY(-1000px);
+.hero__promo {
+  transform: scale(0);
   animation-delay: 1s;
   opacity: 0;
 }
 
+.hero__description {
+  transform: scale(0);
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+/*ANIMATION POUR LE CONTENU DE LA SECTION HERO*/
 @keyframes contenu {
   100% {
-    transform: translateY(0);
-    opacity: 100;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes contenu {
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */

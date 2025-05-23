@@ -55,8 +55,8 @@
 </section>
 <!-- ////////////////////////////////////////////////////// Section Rest API -->
 <section class="destination">
+<h2 class="destination__titre">Articles par catégories</h2>
     <?php categories_liste("destination"); ?>
-    <h2 class="destination__titre">Articles de la catégorie</h2>
     <div class="destination__list"></div>
 </section>
 

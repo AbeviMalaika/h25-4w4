@@ -40,19 +40,24 @@
         justify-content: center;
         gap: 30px;
 
+        @media screen and (max-width: 800px) {
+            bottom: 45px;
+        }
+
         input[type=radio] {
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: 10;
-            // -WebKit-appearance: none;
-            opacity: 0;
+            z-index: 20;
+            cursor: pointer;
+            -WebKit-appearance: none;
+
+            // opacity: 0;
         }
 
-        &__container{
+        &__container {
             display: flex;
             position: relative;
-            cursor: pointer;
             width: 20px;
             height: 20px;
         }
@@ -61,18 +66,20 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            img{
+            cursor: pointer;
+
+            img {
                 width: 100%;
                 height: 100%;
+                cursor: pointer;
             }
-            // cursor: pointer;
         }
 
-        &__input{
+        &__input {
             &~label img {
                 content: url(https://s2.svgbox.net/octicons.svg?color=ffffff&ic=circle);
             }
-    
+
             &:checked~label img {
                 content: url(https://s2.svgbox.net/materialui.svg?color=ffffff&ic=circle);
             }
@@ -87,6 +94,7 @@
         font-size: clamp(4.5rem, 3vw, 5rem);
         font-weight: normal;
         color: $couleur__principale;
+        text-align: center;
         // text-shadow: 3px 3px 4px $couleur__secondaire;
         margin: 25px;
     }

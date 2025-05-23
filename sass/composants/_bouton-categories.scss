@@ -1,29 +1,37 @@
 /**
 bouton-categories.scss ---------------------------------------------------- .categorie__ul
 */
-.categorie__ul{
+.categorie__ul {
     padding: 0;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    &__li{
+    &__li {
+        display: flex;
+        align-items: center;
         cursor: pointer;
         background-color: $couleur__tertiaire--pale;
         border-radius: 7px;
-        padding: 5px 22px;;
+        padding: 5px 22px;
+        ;
         border-radius: 5px;
         color: $couleur__secondaire;
         font-family: $_police__soustitre;
         list-style: none;
-        &:focus{
+
+        &:focus {
             background-color: $couleur__secondaire--pale;
             color: white;
         }
-        &:hover{
+
+        &:hover {
             background-color: #fad691;
         }
-        &:active{
+
+        &:active {
             background-color: #dfa535;
         }
     }

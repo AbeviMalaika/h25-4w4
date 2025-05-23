@@ -12,6 +12,16 @@
     }
 }
 
+@keyframes affichageCarte{
+    0%{
+        background-color: white;
+    }
+
+    100%{
+        background-color: #eff5ff;
+    }
+}
+
 .carte {
     display: flex;
     flex-direction: column;
@@ -27,6 +37,7 @@
         .carte__description {
             animation: affichageDescription linear 400ms forwards;
         }
+        animation: affichageCarte linear 400ms forwards;
     }
 
     @media screen and (max-width: 800px) {

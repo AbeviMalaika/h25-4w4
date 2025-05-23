@@ -9,7 +9,7 @@ $footer_couleur = get_theme_mod('footer_couleur', '#aaa');
 $footer_imgDest = get_theme_mod('footer_imgDest', '');
 ?>
 
-<?php genere_vague($footer_couleur, "100%", 2); ?>
+<?php genere_vague($footer_couleur, "100%", 35); ?>
 
 <footer style="background-color: <?php echo $footer_couleur; ?>;">
     <div class="piedpage global">

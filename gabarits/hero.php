@@ -69,9 +69,8 @@ for ($k = 0; $k < $hero_nb_icones; $k++) {
     </div>
 
     <div class="hero__contenu global">
-        <p class="hero__promo"><?php echo $hero_promo; ?></p>
-
         <div class="hero__animation hero__animation--active">
+            <p class="hero__promo"><?php echo $hero_promo; ?></p>
             <h1 class="hero__titre"><?= bloginfo('name')  ?></h1>
             <p class="hero__description" style="color: <?php echo $hero_texteColo; ?>;">
                 <?= bloginfo('description')  ?>
@@ -79,16 +78,34 @@ for ($k = 0; $k < $hero_nb_icones; $k++) {
         </div>
 
         <div class="hero__animation">
-            <h1 class="hero__titre"><?= bloginfo('name')  ?></h1>
+            <p class="hero__promo">Le leader québécois des escapades en ligne</p>
+            <h1 class="hero__titre">Voyagez luxueusement</h1>
             <p class="hero__description" style="color: <?php echo $hero_texteColo; ?>;">
-                <?= bloginfo('description')  ?>
+                Embarquez pour des souvenirs inoubliables.
             </p>
         </div>
 
         <div class="hero__animation">
-            <h1 class="hero__titre"><?= bloginfo('name')  ?></h1>
+            <p class="hero__promo">Le meilleur choix pour vos aventures</p>
+            <h1 class="hero__titre">Destinations luxueuses</h1>
             <p class="hero__description" style="color: <?php echo $hero_texteColo; ?>;">
-                <?= bloginfo('description')  ?>
+                Découvrez des destinations exclusives
+            </p>
+        </div>
+
+        <div class="hero__animation">
+            <p class="hero__promo">Répondez à l’appel du monde</p>
+            <h1 class="hero__titre">Club par excellence</h1>
+            <p class="hero__description" style="color: <?php echo $hero_texteColo; ?>;">
+                Le raffinement et l'aventure, main dans la main
+            </p>
+        </div>
+
+        <div class="hero__animation">
+            <p class="hero__promo">Le luxe au bout du monde, à votre portée</p>
+            <h1 class="hero__titre">En quête de souvenir</h1>
+            <p class="hero__description" style="color: <?php echo $hero_texteColo; ?>;">
+                Laissez-vous guider par votre soif d’exploration
             </p>
         </div>
 

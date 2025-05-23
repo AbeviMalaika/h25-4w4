@@ -12,7 +12,7 @@ $count = $wp_query->found_posts;
         <h3 class="recherche__section__titre">Résultat(s) de la recherche</h3>
 
         <?php if (have_posts()) : ?>
-            <p>Résultat : 
+            <p>Résultat(s) : 
                 <?php echo $count; ?>
             </p>
             <?php while (have_posts()) : the_post(); ?>

@@ -48,6 +48,13 @@
     .affichage {
         max-height: 500px;
         opacity: 1;
+        background-color: rgba($color: rgb(79, 120, 202), $alpha: 0.1);
+        border: 1px solid $couleur__tertiaire--pale;
+        border-radius: 5px;
+        padding: 15px;
+        p{
+            font-size: 1.2rem;
+        }
     }
 }
 
