@@ -25,6 +25,7 @@ $footer_imgDest = get_theme_mod('footer_imgDest', '');
             <div class="piedpage__s1__coord">
                 <div class="piedpage__s1__coord__infos">
                     <h5 class="piedpage__s1__coord__infos__titre">Nos coordonnées</h5>
+                    <p>Lien vers GitHub : <a href="https://github.com/AbeviMalaika/h25-4w4/">Malaïka Abevi - GitHub</a></p>
                     <p class="piedpage__s1__coord__infos_adresse"><?php echo $footer_adresse; ?></p>
                     <p class="piedpage__s1__coord__infos_telephone"><?php echo $footer_telephone; ?></p>
                     <p class="piedpage__s1__coord__infos_courriel"><?php echo $footer_courriel; ?></p>
