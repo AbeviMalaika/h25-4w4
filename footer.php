@@ -1,4 +1,5 @@
-<?php //***********************************Page pour le footer/pied de page ?>
+<?php //***********************************Page pour le footer/pied de page 
+?>
 
 <?php
 $footer_telephone = get_theme_mod('footer_telephone', '(123) 456-7890');
@@ -7,15 +8,22 @@ $footer_courriel = get_theme_mod('footer_courriel', 'courriel@mail.com');
 $footer_mission = get_theme_mod('footer_mission', 'Mission du club de voyage');
 $footer_couleur = get_theme_mod('footer_couleur', '#aaa');
 $footer_imgDest = get_theme_mod('footer_imgDest', '');
+
+global $template;
+$current_template_file = basename($template);
 ?>
 
-<?php genere_vague($footer_couleur, "100%", 35); ?>
+
+<?php if ($current_template_file !== "template-pays.php") {
+    genere_vague($footer_couleur, "100%", 35);
+}
+?>
 
 <footer style="background-color: <?php echo $footer_couleur; ?>;">
     <div class="piedpage global">
         <section class="piedpage__s1">
             <div class="piedpage__s1__externe">
-            <h5 class="piedpage__s1__externe__titre">Liens utiles sur le voyage</h5>
+                <h5 class="piedpage__s1__externe__titre">Liens utiles sur le voyage</h5>
                 <?php wp_nav_menu(array(
                     "menu" => "externe",
                     "container" => "nav",

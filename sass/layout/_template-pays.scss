@@ -1,0 +1,17 @@
+/*
+Style pour l;a pays template-pays.php
+*/
+
+.templatePays {
+    .global{
+        max-width: 1300px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__evenement{
+        background-color: white;
+        width: 40%;
+    }
+}

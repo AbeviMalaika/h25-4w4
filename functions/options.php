@@ -133,3 +133,4 @@ function categorie_par_destination($categorie_nom)
 <?php }
 
 add_action('wp_enqueue_scripts', 'theme_4w4_enqueue_styles');
+

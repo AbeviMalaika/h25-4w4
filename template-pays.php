@@ -5,11 +5,10 @@ Template Name: Template Pays
 get_header();
 ?>
 
-<?php 
-$pays = array("France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse");
-; ?>
+<?php
+$pays = array("France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse");; ?>
 
-<section class="populaire">
+<section class="templatePays">
     <div class="global">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <article>
@@ -20,12 +19,22 @@ $pays = array("France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique
         endif; ?>
     </div>
 
-    <p><?php the_field('titre_evenement'); ?></p>
-    <p>Date de l'événement :
-        <?php the_field('date_evenement'); ?></p>
-    <p>Description de l'évènement
-        <?php the_field('description_evenement'); ?>
-    </p>
+    <div class="templatePays__evenement">
+        <h4><?php the_field('titre_evenement'); ?></h4>
+        <p>Conférencier : 
+            <?php the_field('conferencier'); ?>
+        </p>
+        <p>Date de l'événement :
+            <?php the_field('date_evenement'); ?></p>
+        <p>Description de l'évènement
+            <?php the_field('description_evenement'); ?>
+        </p>
+        <div>
+            Coordonnées de l'évènement : 
+            <?php the_field('coordonnees_evenement'); ?>
+        </div>
+    </div>
+
 </section>
 
 <?php creer_vague("#fff9f9",  "#adc5eb"); ?>
@@ -33,7 +42,7 @@ $pays = array("France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique
 <!-- ////////////////////////////////////////////////////// Section Rest API -->
 <section class="destination" data-method="search">
 
-<?php pays_liste($pays); ?>
+    <?php pays_liste($pays); ?>
     <!-- <ul class="categorie__ul">
         <li data-destinationID="france" tabindex="1" class=" categorie__ul__li">France</li>
         <li data-destinationID="etats-unis" tabindex="1" class=" categorie__ul__li">États-Unis</li>
@@ -56,5 +65,5 @@ $pays = array("France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique
     <div class="destination__list"></div>
 </section>
 
-<?php creer_vague("#adc5eb",  "#fff9f9"); ?>
+<?php creer_vague("#adc5eb",  "#1e2b56"); ?>
 <?php get_footer(); ?>
