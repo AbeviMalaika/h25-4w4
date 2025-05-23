@@ -5,6 +5,10 @@ Template Name: Template Pays
 get_header();
 ?>
 
+<?php 
+$pays = array("France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse");
+; ?>
+
 <section class="populaire">
     <div class="global">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -24,12 +28,13 @@ get_header();
     </p>
 </section>
 
-<?php creer_vague("blue", "red"); ?>
+<?php creer_vague("#fff9f9",  "#adc5eb"); ?>
 
 <!-- ////////////////////////////////////////////////////// Section Rest API -->
 <section class="destination" data-method="search">
 
-    <ul class="categorie__ul">
+<?php pays_liste($pays); ?>
+    <!-- <ul class="categorie__ul">
         <li data-destinationID="france" tabindex="1" class=" categorie__ul__li">France</li>
         <li data-destinationID="etats-unis" tabindex="1" class=" categorie__ul__li">États-Unis</li>
         <li data-destinationID="canada" tabindex="1" class=" categorie__ul__li">Canada</li>
@@ -44,11 +49,12 @@ get_header();
         <li data-destinationID="chine" tabindex="1" class=" categorie__ul__li">Chine</li>
         <li data-destinationID="grece" tabindex="1" class=" categorie__ul__li">Grèce</li>
         <li data-destinationID="Suisse" tabindex="1" class=" categorie__ul__li">Suisse</li>
-    </ul>
+    </ul> -->
 
 
     <!-- <h2 class="destination__titre">Articles de la catégorie</h2> -->
     <div class="destination__list"></div>
 </section>
 
+<?php creer_vague("#adc5eb",  "#fff9f9"); ?>
 <?php get_footer(); ?>

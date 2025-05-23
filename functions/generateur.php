@@ -33,6 +33,21 @@ function categories_liste($parent_slug)
     }
 }
 
+function pays_liste($pays)
+{
+    //On vérifie si le tableau est vide ou non
+    if (!empty($pays)) {
+        echo '<ul class="categorie__ul">';
+        foreach ($pays as $lePays) {
+            // Afficher le nom de chaque sous-catégorie
+            echo '<li  data-destinationID="' . $lePays . '" tabindex="1" " class="categorie__ul__li">' . $lePays . '</li>';
+        }
+        echo '</ul>';
+    } else {
+        echo 'Aucune sous-catégorie trouvée';
+    }
+}
+
 /**
  * Génére une vague en svg
  * @param string $couleur la couleur de la vague

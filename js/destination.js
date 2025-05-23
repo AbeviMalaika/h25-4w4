@@ -19,6 +19,7 @@
 
     async function afficherDestination(event) {
         const categoryId = event.target.getAttribute('data-destinationID'); // Remplacez par l'ID de la catégorie souhaitée
+        console
         const apiUrl = `${domaine}wp-json/wp/v2/posts?${method}=${categoryId}`;
         fetch(apiUrl)
             .then(response => response.json())
