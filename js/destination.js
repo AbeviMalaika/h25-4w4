@@ -3,7 +3,9 @@
 */
 (function () {
 
-    const domaine = window.origin + "/4w4/";
+    // const domaine = window.origin + "/4w4/";
+    const domaine = window.origin + "/4w4_09/";
+
 
     (function parcourir_bouton() {
         const categorie__ul__li = document.querySelectorAll(".categorie__ul__li");

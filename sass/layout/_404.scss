@@ -13,6 +13,9 @@
         flex-direction: column;
         align-items: center;
         gap: 40px;
+        background-color: rgb(114 135 147 / 73%);
+        border-radius: 75px;
+        border: 3px solid $couleur__tertiaire;
 
         /*Adaptabilité sur mobile*/
         @media screen and (max-width: 800px) {
@@ -22,8 +25,6 @@
 
     //Titre de la page
     &__titre {
-        // background-color: rgba(255, 255, 255, 0.2);
-        background-color: rgb(24, 45, 86, 0.4);
         font-size: clamp(6rem, 4.75rem + 2.5vw, 7rem);
         text-align: center;
         padding: 20px 40px;
@@ -69,7 +70,7 @@
                 text-decoration: none;
                 color: $couleur__lien;
 
-                &:hover{
+                &:hover {
                     color: $couleur__lien--pale;
                 }
 
@@ -94,7 +95,7 @@
                 justify-content: center;
 
                 li {
-                    background-color: rgb(243 195 102 / 50%);
+                    background-color: rgb(243 195 102);
                     padding: 10px 15px;
                     border-radius: 5px;
                 }

@@ -8,7 +8,18 @@
     width: 100%;
     border-radius: 10px;
     box-shadow: 2px 3px 20px 0px #a1a1a1;
-    background: linear-gradient(2deg,rgba(255, 249, 249, 1) 0%, #dce3ed 50%, rgba(255, 249, 249, 1) 100%);
+    background: linear-gradient(2deg, rgba(255, 249, 249, 1) 0%, #dce3ed 50%, rgba(255, 249, 249, 1) 100%);
+
+    &__titre {
+        font-family: "Italiana", sans-serif;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(18, 47, 91) 20%, rgb(18, 47, 91) 80%, rgba(255, 255, 255, 0) 100%);
+        color: white;
+    }
 
     .global {
         max-width: 1300px;
