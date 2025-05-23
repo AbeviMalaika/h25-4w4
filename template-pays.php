@@ -27,7 +27,7 @@ get_header();
 <?php creer_vague("blue", "red"); ?>
 
 <!-- ////////////////////////////////////////////////////// Section Rest API -->
-<section class="destination">
+<section class="destination" data-method="search">
 
     <ul class="categorie__ul">
         <li data-destinationID="france" tabindex="1" class=" categorie__ul__li">France</li>

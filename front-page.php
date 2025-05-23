@@ -54,7 +54,7 @@
     </div>
 </section>
 <!-- ////////////////////////////////////////////////////// Section Rest API -->
-<section class="destination">
+<section class="destination" data-method="categories">
 <h2 class="destination__titre">Articles par catégories</h2>
     <?php categories_liste("destination"); ?>
     <div class="destination__list"></div>
