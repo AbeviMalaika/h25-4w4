@@ -13,5 +13,8 @@ Style pour l;a pays template-pays.php
     &__evenement{
         background-color: white;
         width: 40%;
+        border: 2px solid $couleur__tertiaire--pale;
+        padding: 10px;
+        border-radius: 10px;
     }
 }

@@ -1215,4 +1215,7 @@ Style pour l;a pays template-pays.php
 .templatePays__evenement {
   background-color: white;
   width: 40%;
+  border: 2px solid #F3C366;
+  padding: 10px;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
